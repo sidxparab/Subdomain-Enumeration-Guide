@@ -91,7 +91,7 @@ sudo unimap --fast-scan -f subdomains.txt --ports $COMMON_PORTS_WEB -q -k --url-
 cat unimap_commonweb.txt | httpx -follow-host-redirects -random-agent -status-code -silent -retries 2 -no-color | cut -d ' ' -f1 | tee probed_common_ports.txt
 ```
 
-* That's it, we have got those web applications on common ports. Go ahead and hunt on them. 🐞 
+* That's it, we have got those hidden web applications running on common ports. Go ahead! and hunt on them. 🐞 
 
 **Some stats:** 🤓 
 
