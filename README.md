@@ -2,7 +2,7 @@
 description: Comprehensive Guide
 ---
 
-# Table of contents
+# Home 🏠
 
 gvggggg
 
