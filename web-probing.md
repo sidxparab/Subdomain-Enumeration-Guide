@@ -36,7 +36,7 @@ GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 
 By default, [**httpx** ](https://github.com/projectdiscovery/httpx)will probes on port **80**\(HTTP\) & **443**\(HTTPS\). Organizations host their web applications on these ports. After subdomain enumeration, the next first task is identifying web applications where vulnerabilities are found in abundance.
 
-* We need to parse 
+* We need to parse the temporary output file `tmp_output.txt` 
 
 ```bash
 cat subdomains.txt | httpx -follow-host-redirects -random-agent -retries 2 -no-color -o tmp_output.txt
@@ -62,7 +62,7 @@ cat tmp_output.txt | cut -d ' ' -f1 | tee output.txt
 
 ### 2\) Using [Unimap](https://github.com/Edu4rdSHL/unimap)
 
-**Unimap** is a port scanner that uses [**Nmap**](https://github.com/nmap/nmap) as its base. Using Unimap we quickly scan for whether any of those 88 common ports are open on the subdomain or not\(this happens at a blazing fast speed\). Once we know that a particular port is open on the subdomain we can later send HTTP probes using **httpx** and check whether a web application is available on that open port or not**.** This method is far more quicker than using httpx only.
+**Unimap** is a port scanner that uses [**Nmap**](https://github.com/nmap/nmap) as its base. Using Unimap we quickly scan for whether any of those 88 common ports are open on the subdomain or not\(this happens at a blazing fast speed\). Once we know that a particular port is open on the subdomain we can later send HTTP probes using **httpx** and check whether a web application is available on that open port or not**.** This method is far more quicker than just using httpx.
 
 **What's so special about Unimap?**
 
