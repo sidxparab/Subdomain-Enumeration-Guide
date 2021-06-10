@@ -93,7 +93,7 @@ cat unimap_commonweb.txt | httpx -follow-host-redirects -random-agent -status-co
 
 * That's it, we have got those hidden web applications running on common ports. Go ahead! and hunt on them. 🐞 
 
-**Some stats:** 🤓 
+ ****📊 **Some stats:** 🤓 
 
 | **Method** | **Execution Time \(150 subdomains\)** |
 | :--- | :--- |

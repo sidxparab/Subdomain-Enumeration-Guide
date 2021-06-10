@@ -38,7 +38,7 @@ Also, a number of sources require you to signup on to their platform and generat
 
 * Yes, absolutely, given below is the comparison between running [**Subfinder** ](https://github.com/projectdiscovery/subfinder)with API keys configured and without.
 * You can clearly see the difference that using API keys gave me **20000 more** subdomains.
-* Further, this passive data would be used to generate permutation/alterations which eventually would give us more subdomains. \( For you to verify the test results.  \[without api keys , with api keys \] \)
+* Further, this passive data would be used to generate permutation/alterations which eventually would give us more subdomains.
 
 {% tabs %}
 {% tab title="Without API keys " %}
