@@ -82,16 +82,21 @@ COMMON_PORTS_WEB="81,300,591,593,832,981,1010,1311,1099,2082,2095,2096,2480,3000
 **2\)** Now we will run a port scan to check all the open ports 
 
 ```bash
-sudo unimap --fast-scan -f subdomains.txt --ports $COMMON_PORTS_WEB -q -k --url-output > uninmap_commonweb.txt
+sudo unimap --fast-scan -f subdomains.txt --ports $COMMON_PORTS_WEB -q -k --url-output > unimap_commonweb.txt
 ```
 
 **3\)** Now that we have a list of open ports, we will check for web applications running on them using **httpx**.
 
 ```bash
-cat uninmap_commonweb.txt | httpx -follow-host-redirects -random-agent -status-code -silent -retries 2 -no-color | cut -d ' ' -f1 | tee probed_common_ports.txt
+cat unimap_commonweb.txt | httpx -follow-host-redirects -random-agent -status-code -silent -retries 2 -no-color | cut -d ' ' -f1 | tee probed_common_ports.txt
 ```
 
 
+
+| **Method** | **Execution Time \(150 subdomains\)** |
+| :--- | :--- |
+| Httpx | 42min 51secs |
+| Unimap | **55 secs** ⚡  |
 
 
 
