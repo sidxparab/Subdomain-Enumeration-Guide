@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Table of contents](README.md)
+* [Home 🏠](README.md)
 
 ## Introduction
 

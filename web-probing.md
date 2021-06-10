@@ -27,18 +27,19 @@ GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 * **random-agent -** Uses a random user-agent for each request
 * **status-code -** Shows the status code
 * **retries** - Number of times to retry if response not received
-* **timeout** - 
 * **o** - Output file
 
 ![](.gitbook/assets/httpx.png)
 
 ## Probing on default ports:
 
-By default, [**httpx** ](https://github.com/projectdiscovery/httpx)will probes on port 80\(HTTP\) & 443\(HTTPS\). Almost all the web applications are hosted in these two ports. After subdomain enumeration, our first task is to check for web applications/websites hosted on them.
+By default, [**httpx** ](https://github.com/projectdiscovery/httpx)will probes on port **80**\(HTTP\) & **443**\(HTTPS\). Organizations host their web applications on these ports. After subdomain enumeration, the next first task is identifying web applications where vulnerabilities are found in abundance.
 
 ```bash
-cat subdoamins.txt | httpx -follow-host-redirects -random-agent -retries 2 -timeout 10 -o output.txt
+cat subdoamins.txt | httpx -follow-host-redirects -random-agent -retries 2 -o output.txt
 ```
+
+## Probing on common ports:
 
 
 
