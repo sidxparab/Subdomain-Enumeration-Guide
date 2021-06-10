@@ -25,6 +25,6 @@
 
 ---
 
-* [Automation 🤖](automation.md)
 * [Web probing](web-probing.md)
+* [Automation 🤖](automation.md)
 
