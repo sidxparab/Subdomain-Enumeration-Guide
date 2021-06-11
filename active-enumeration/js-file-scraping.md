@@ -32,11 +32,18 @@ go get -u github.com/jaeles-project/gospider
 * So, lets first web probe the subdomains:
 
 ```bash
-cat subdomains.txt | httpx -follow-host-redirects -random-agent -retries 2 -no-color -o tmp_output.txt
-cat tmp_output.txt | cut -d ' ' -f1 | tee output.txt
+cat subdomains.txt | httpx -random-agent -retries 2 -no-color -o probed_tmp_scrap.txt
 ```
+
+* Now, that we have web probed URL's, we can send them for crawling to gospider.
 
 ```bash
 gospider -S probed_tmp_scrap.txt --js -t 150 -d 3 --sitemap --robots -w -r > gospider.txt
 ```
+
+{% hint style="danger" %}
+This generates a huge traffic on your target
+{% endhint %}
+
+
 
