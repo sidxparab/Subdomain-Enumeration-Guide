@@ -25,6 +25,17 @@ Javascript files are used by modern web applications providing dynamic content w
 go get -u github.com/jaeles-project/gospider
 ```
 
+### Running:
+
+* Since we are crawling a website, gospider excepts us to provide URL's, means in the form of `http://`  `https://` 
+* So, first we need to web probe all the subdomains we have gathered till now. For this purpose we will use [**httpx**](https://github.com/projectdiscovery/httpx) .
+* So, lets first web probe the subdomains:
+
+```bash
+cat subdomains.txt | httpx -follow-host-redirects -random-agent -retries 2 -no-color -o tmp_output.txt
+cat tmp_output.txt | cut -d ' ' -f1 | tee output.txt
+```
+
 ```bash
 gospider -S probed_tmp_scrap.txt --js -t 150 -d 3 --sitemap --robots -w -r > gospider.txt
 ```
