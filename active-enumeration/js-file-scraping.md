@@ -1,18 +1,12 @@
 # Scraping\(JS/Source code\)
 
+## Source Code Recon
 
-
-
-
-Javascript files are used by modern web applications providing dynamic content which contains various functions & events. Each website's processes its Javascript files are a great resource for finding those internal subdomains used by the organization. Mostly JS files 
-
-
-
-
+JavaScript files are used by modern web applications to provide dynamic content which contains various functions & events. Each website's include JS files and are a great resource for finding those internal subdomains used by the organization.
 
 ## Tools:
 
-### 1\) Gopsider
+### 1\) [Gopsider](https://github.com/jaeles-project/gospider)
 
 * Author: [Jaeles](https://github.com/jaeles-project)
 * Language: Go
@@ -94,5 +88,7 @@ cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains 
 puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 
 ```
 
-![](../.gitbook/assets/copy-of-copy-of-webscraping_meme.png)
+
+
+![](../.gitbook/assets/copy-of-copy-of-copy-of-webscraping_meme.png)
 
