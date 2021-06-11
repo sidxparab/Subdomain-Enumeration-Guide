@@ -23,10 +23,11 @@
 * [Permutation/Alterations](active-enumeration/permutation-alterations.md)
 * [Scraping\(JS/Source code\)](active-enumeration/js-file-scraping.md)
 * [Other methods](active-enumeration/other-methods/README.md)
+  * [VHOST discovery](active-enumeration/other-methods/vhost-discovery.md)
   * [Google analytics](active-enumeration/other-methods/google-analytics.md)
   * [Recursive Enumeration](active-enumeration/other-methods/recursive-enumeration.md)
-  * [TLS, CSP, CNAME](active-enumeration/other-methods/tls-csp-cname.md)
   * [Google Dorking](active-enumeration/other-methods/google-dorking.md)
+  * [TLS, CSP, CNAME](active-enumeration/other-methods/tls-csp-cname.md)
 
 ---
 

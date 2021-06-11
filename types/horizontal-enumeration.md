@@ -42,5 +42,53 @@ Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxm
 
 ![](../.gitbook/assets/whoisxml.png)
 
+{% hint style="warning" %}
+These are not 100% accurate results, they contain false positives
+{% endhint %}
 
+
+
+### 3\) PTR records \(Reverse DNS\)
+
+Now since we have got to know the IP address ranges from ASN of an organization, we can perform PTR queries on the IP addresses and check for valid hosts.  
+  
+**What is reverse DNS?**  
+When a user attempts to reach a domain name in their browser, a DNS lookup occurs, matching the domain name\(example.com\) to the IP address\(such as 192.168.1.1\). A reverse DNS lookup is the opposite of this process: it is a query that starts with the IP address and looks up the domain name.
+
+This means that, since we already know the IP space of an organization we can, we can reverse query the IP addresses and find the valid domains. Sounds cool?
+
+**But how?**  
+PTR records \(pointer record\) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) ****tool we can query a PTR record of an IP address and find the associated hostname/domain name.
+
+### Running:
+
+We will first need to install 2 tools:
+
+* [**Mapcidr**](https://github.com/projectdiscovery/mapcidr) **** :- `GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
+* \*\*\*\*[**dnsx** ](https://github.com/projectdiscovery/dnsx)       :- `GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx`
+
+```bash
+ echo 17.0.0.0/8 | mapcidr -silent | dnsx -ptr -resp-only -o output.txt
+```
+
+#### Breakdown:
+
+* When an IP range is given to **mapcidr** through stdin\(standard input\), it performs expansion spitting out each IP address from the range onto a new line. \(`17.0.0.1`**,** `17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4` 
+* Now when **dnsx** receives each IP address from stdin, it performs reverse DNS and checks for PTR record. If, found it gives us back the hostname/domain name.
+
+![](../.gitbook/assets/ptr.png)
+
+
+
+Apple Inc. has an IP space of **17.0.0.0/8.** This is in CIDR format, but in order to query for PTR records, we need to first list down all the IP addresses by expanding the range. For this purpose, we will use a tool by Project Discovery called
+
+####  [**Mapcidr:**](https://github.com/projectdiscovery/mapcidr)\*\*\*\*
+
+#### Installation:
+
+`GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
+
+#### Usage:
+
+####   
 
