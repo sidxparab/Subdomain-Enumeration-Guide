@@ -29,6 +29,10 @@ go get -u github.com/jaeles-project/gospider
 
 ### Running:
 
+This process is divided into3⃣steps:
+
+### 1\) Web probing subdomains
+
 * Since we are crawling a website, gospider excepts us to provide URL's, means in the form of `http://`  `https://` 
 * So, first we need to web probe all the subdomains we have gathered till now. For this purpose we will use [**httpx**](https://github.com/projectdiscovery/httpx) .
 * So, lets first web probe the subdomains:
@@ -56,6 +60,8 @@ gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gosp
 * **sitemap** -  Try to crawl sitemap.xml
 * **robots** - Try to crawl robots.txt
 
+### 2\) Cleaning the output
+
 > six2dez explain this
 >
 > ```bash
@@ -74,4 +80,18 @@ You can install **unfurl** using this command `go get -u github.com/tomnomnom/un
 ```bash
 cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains | grep ".example.com$" | sort -u scrap_subs.txt
 ```
+
+
+
+### 3\) Resolving our target subdomains
+
+* Now that we have all the subdomains of our target, its time to DNS resolve and check for valid subdomains.
+
+\( hoping you have the the above technqiues, and you know how to run puredns\)
+
+```bash
+puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 
+```
+
+
 
