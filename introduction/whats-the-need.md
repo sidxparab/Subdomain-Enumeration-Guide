@@ -19,6 +19,7 @@ So our main is to try and get the maximum number of subdomains we can, for a roo
 * A good subdomain enumeration will help you find those hidden/untouched subdomains, where your competition to find bugs will also be less. Hence lesser **duplicates**.
 * Finding applications running on hidden, forgotten\(by the organization\) sub-domains may lead to uncovering critical vulnerabilities.
 * Discovering such strangely named subdomains is a critical skill, each bug hunter should possess in today's time.
+* For large organizations, to find what services have they exposed to the internet.
 
 {% hint style="success" %}
 **More the subdomains = More the vulnerabilities.**
@@ -50,7 +51,7 @@ So in such a case, it's always better that you **DNS resolve** the subdomain rat
 
 ### **Moral of the story:**
 
-The methodology of collecting subdomains from tools like amass, subfinder, findomain and directly sending them to httpx/httprobe is absolutely wrong. Instead, you should DNS resolve them using tools like [puredns ](https://github.com/d3mondev/puredns)or [shuffledns](https://github.com/projectdiscovery/shuffledns).   
+The methodology of collecting subdomains from tools like amass, subfinder, findomain and directly sending them to httpx/httprobe is **absolutely wrong**❌. Instead, you should DNS resolve them using tools like [puredns ](https://github.com/d3mondev/puredns)or [shuffledns](https://github.com/projectdiscovery/shuffledns).   
 
 
   

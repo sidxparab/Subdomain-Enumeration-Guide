@@ -1,6 +1,6 @@
 # Vertical Enumeration
 
-cjhcbsdjh
+cj
 
 ![](../.gitbook/assets/enumeration-2-.png)
 

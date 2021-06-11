@@ -22,7 +22,11 @@
 * [DNS Bruteforcing](active-enumeration/dns-bruteforcing.md)
 * [Permutation/Alterations](active-enumeration/permutation-alterations.md)
 * [Scraping\(JS/Source code\)](active-enumeration/js-file-scraping.md)
-* [Other methods](active-enumeration/other-methods.md)
+* [Other methods](active-enumeration/other-methods/README.md)
+  * [Google analytics](active-enumeration/other-methods/google-analytics.md)
+  * [Recursive Enumeration](active-enumeration/other-methods/recursive-enumeration.md)
+  * [TLS, CSP, CNAME](active-enumeration/other-methods/tls-csp-cname.md)
+  * [Google Dorking](active-enumeration/other-methods/google-dorking.md)
 
 ---
 
