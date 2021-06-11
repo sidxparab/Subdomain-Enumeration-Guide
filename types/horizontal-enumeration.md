@@ -12,8 +12,6 @@ gmail.com, android.com, youtube.com, blogger.com are all associated domains of G
   
 Let's look at how to find related domains.
 
-## 
-
 ## Methods:
 
 {% hint style="danger" %}
@@ -27,7 +25,7 @@ Let's find ASN for **Apple Inc.**
 
 ![](../.gitbook/assets/hurricane.png)
 
-Now that we have found out the ASN number, next we need to figure out IP addresses associated with that ASN. For this, we will use **whois** tool.
+Now that we have found out the ASN number, next we need to figure out IP ranges within that ASN. For this, we will use **whois** tool.
 
 ```bash
 whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
