@@ -11,9 +11,11 @@ Thanks to visit this guide. Feel free to enhancement this guide with the with so
 
 Twitter: [@detonxx](https://twitter.com/detonXX)   
   
-**You can support my work by buying me a coffee** 😉 **:**
+**You can support my work by buying me a coffee**  😉 **:**
 
-{% embed url="https://www.buymeacoffee.com/sidxparab" %}
+{% embed url="https://www.buymeacoffee.com/siddheshparab" %}
+
+\*\*\*\*
 
 
 
