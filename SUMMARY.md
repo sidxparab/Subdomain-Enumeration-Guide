@@ -21,7 +21,8 @@
 
 * [DNS Bruteforcing](active-enumeration/dns-bruteforcing.md)
 * [Permutation/Alterations](active-enumeration/permutation-alterations.md)
-* [Scraping](active-enumeration/js-file-scraping.md)
+* [Scraping\(JS/Source code\)](active-enumeration/js-file-scraping.md)
+* [Other methods](active-enumeration/other-methods.md)
 
 ---
 
