@@ -94,5 +94,5 @@ cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains 
 puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 
 ```
 
-![](../.gitbook/assets/copy-of-webscraping_meme.png)
+![](../.gitbook/assets/copy-of-copy-of-webscraping_meme.png)
 
