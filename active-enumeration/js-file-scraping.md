@@ -25,7 +25,7 @@ Javascript files are used by modern web applications providing dynamic content w
 go get -u github.com/jaeles-project/gospider
 ```
 
-**This is a long process so Brace yourself !!!** 
+**This is a long process so Brace yourself !!!** 💪
 
 ### Running:
 
@@ -73,15 +73,16 @@ gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gosp
 This can be done using Tomnomnom's [**unfurl** ](https://github.com/tomnomnom/unfurl) tool. It takes a list of URLs as input and extracts the subdomain/domain part from them.  
 You can install **unfurl** using this command `go get -u github.com/tomnomnom/unfurl` 
 
-
-
-
-
 ```bash
 cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains | grep ".example.com$" | sort -u scrap_subs.txt
 ```
 
-
+**Break down of the command:**  
+**a\)** grep - Extract the links that start with http/https  
+**b\)** sed -  six2dez help plz  
+**c\)** unfurl - Extract domain/subdomain from the urls  
+**d\)** grep - Only select subdomains of our target  
+**e\)** sort - Avoid duplicates
 
 ### 3\) Resolving our target subdomains
 
@@ -93,5 +94,5 @@ cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains 
 puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 
 ```
 
-
+![](../.gitbook/assets/copy-of-webscraping_meme.png)
 
