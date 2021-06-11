@@ -1,10 +1,12 @@
 # Horizontal Enumeration
 
-![](../.gitbook/assets/enumeration-1-.png)
-
 
 
 ssaa
+
+
+
+![](../.gitbook/assets/enumeration-2-.png)
 
 
 

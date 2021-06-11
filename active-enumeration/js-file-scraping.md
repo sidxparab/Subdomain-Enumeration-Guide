@@ -2,9 +2,9 @@
 
 ## Source Code Recon
 
-JavaScript files are used by modern web applications to provide dynamic content which contains various functions & events. Each website's include JS files and are a great resource for finding those internal subdomains used by the organization.
+JavaScript files are used by modern web applications to provide dynamic content which contains various functions & events. Each website includes JS files and are a great resource for finding those internal subdomains used by the organization.
 
-## Tools:
+## Tools: 🛠 
 
 ### 1\) [Gopsider](https://github.com/jaeles-project/gospider)
 
