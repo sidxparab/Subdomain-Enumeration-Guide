@@ -59,15 +59,19 @@ gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gosp
 > six2dez explain this
 >
 > ```bash
-> sed -i '/^.\{2048\}./d' /gospider.txt
+> sed -i '/^.\{2048\}./d' gospider.txt
 > ```
 
  Point to note here is we have got URLs from JS files & source code till now. We are only concerned with subdomains. Hence we must just extract subdomains from the gospider output.
 
-This can be done using Tomnomnom's [unfurl ](https://github.com/tomnomnom/unfurl) tool. It takes in a list of URLs and ecxtract the subdoamin/domain part from them.
+This can be done using Tomnomnom's [**unfurl** ](https://github.com/tomnomnom/unfurl) tool. It takes a list of URLs as input and extracts the subdomain/domain part from them.  
+You can install **unfurl** using this command `go get -u github.com/tomnomnom/unfurl` 
+
+
+
+
 
 ```bash
-go get -u github.com/tomnomnom/unfurl
- | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains | grep ".example.com$" | anew scrap_subs.txt
+cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains | grep ".example.com$" | sort -u scrap_subs.txt
 ```
 
