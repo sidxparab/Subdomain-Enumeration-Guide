@@ -1,0 +1,2 @@
+# Favicon Hashing
+

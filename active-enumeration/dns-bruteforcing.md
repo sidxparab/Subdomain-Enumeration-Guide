@@ -55,9 +55,9 @@ Table of execution time and false positives.Using an 11 million wordlist on **ib
 | :--- | :--- | :--- |
 | Execution Time | 20m 30s | 9m 32s |
 | Valid Results | 2900 | 1025 |
-| False Positives |  |  |
+| False Positives |  | 1 |
 
-\(Above tests were performed in separate VPS\[4cpu/8gb\] and false positives were verified using [dnsx ](https://github.com/projectdiscovery/dnsx)with Google DNS server as a trusted resolver-03/06/2021 \)
+\[ Above tests were performed in separate VPS\[4cpu/8gb\] and false positives were verified using [dnsx ](https://github.com/projectdiscovery/dnsx)with Google DNS server as a trusted resolver-03/06/2021 \]
 
 
 
@@ -118,7 +118,7 @@ dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolve
 Now that we have generated our public DNS resolver we are good to move ahead and perform subdomain bruteforcing using puredns.
 
 ```bash
-puredns bruteforce bruteforce_wordlist.txt target.com -r resolvers.txt
+puredns bruteforce wordlist.txt example.com -r resolvers.txt -w output.txt
 ```
 
 **Flags:**
@@ -135,19 +135,19 @@ While performing DNS queries sometimes we receive **SERVFAIL** error. Puredns by
 
 ### Which wordlist 📄 to use?
 
-The whole idea DNS bruetforcing is of no use if you don't use a great wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's look at what best wordlist:-  
+The whole idea DNS bruteforcing is of no use if you don't use a great wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's look at what best wordlist:-  
   
 **1\) Assetnote** [**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) \(**9 Million**\) ⭐  
-[Assetnote](https://wordlists.assetnote.io/) wordlists are the best. No doubt this is the best subdomain brute forcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
+[Assetnote](https://wordlists.assetnote.io/) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
 
 **2\) Jhaddix** [**all.txt**](https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a) \(**2 Million**\)  
-Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 years ago but still works good.
+Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 years ago but still works well.
 
 **3\) Smaller** [**wordlist**](https://gist.github.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw) \(**102k** \)  
 Created by [six2dez](https://github.com/six2dez) is suitable to be run on home systems.  
 
 
-### Issues faced and how to overcome them:
+### Issues faced and how to overcome them: 👊 
 
 #### 1\) Crashes on low specs\( 1cpu/1gb vps\)
 
@@ -155,7 +155,7 @@ Usually, if you provide a very large wordlist\(50M\) and your target contains si
 
 **2\) Puredns kills my home router** 
 
-Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates a large traffic and makes your home router unable to use for that specific period of time. To overcome this you can use the **`-l`** flag. This flag throttles the massdns threads to your specified amount. It's advisable that you set the value anywhere between `2000-10000`
+Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates large traffic and makes your home router unable to use for that specific period of time. To overcome this you can use the **`-l`** flag. This flag throttles the massdns threads to your specified amount. It's advisable that you set the value anywhere between `2000-10000`
 
 \`\`
 
