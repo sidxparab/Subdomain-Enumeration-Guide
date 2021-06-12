@@ -1,5 +1,5 @@
 ---
-description: Comprehensive Guide
+description: Comprehensive Subdomain Enumeration Guide
 ---
 
 # Home 🏠
