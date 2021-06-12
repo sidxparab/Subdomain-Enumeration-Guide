@@ -54,6 +54,8 @@ gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gosp
 * **sitemap** -  Try to crawl sitemap.xml
 * **robots** - Try to crawl robots.txt
 
+![](../.gitbook/assets/gospider.png)
+
 ### 2\) Cleaning the output
 
 > six2dez explain this
