@@ -20,7 +20,7 @@ I would like to mention [six2dez](https://twitter.com/Six2dez1) for helping me i
 
 ![](.gitbook/assets/twitter-logo.png)
 
-**Twitter**: [@detonxx](https://twitter.com/detonXX)   
+**Twitter**: [@sidxparab](https://twitter.com/sidxparab)  
 
 
 ## Support 🙏 ****❤ 
