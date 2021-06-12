@@ -8,7 +8,7 @@
 
 
 
-## 1\) API keys for Passive DNS data
+## 1\) API keys for Passive DNS data 🔑 
 
 ### What is Passive DNS data?
 
@@ -18,7 +18,7 @@ Hence, we can know, what were the subdomains of a particular root domain that on
 
 There are a number of services/sources\([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [Binaryedge](https://www.binaryedge.io/), [Virus total](https://www.virustotal.com/gui/)\) that provide such historical DNS data. These services provide their API keys so that we can query their enormous data sets. 
 
-### Configuring API keys:
+### Configuring API keys: 
 
 **There are 2 types of passive DNS sources:-**
 
@@ -52,13 +52,13 @@ Also, a number of sources require you to signup on to their platform and generat
 
 ### How much times does it takes to signup and obtain API keys:
 
-* There are in total 19 services on which you can sing up and obtain API keys.
+* There are in total 19 services on which you can sign up and obtain API keys.
 * I have created a detailed excel sheet about which sources to signup on for, what's the validity of API key, their API key quota, rate limits, etc.
 * Depending on your consumption of API queries and the validity of API keys, you need to make keep making new accounts at a regular interval of time in order to get the maximum results.
 
 ![](../.gitbook/assets/excelsheet.png)
 
-💁♂ **Check out the detailed excel sheet** 👉 ****[**here** ](https://docs.google.com/spreadsheets/d/1w75gcdytSRtZqGHMo852x2ffl8CC4FhxmHzR0gvII-Y/edit?usp=sharing)\*\*\*\*👈 ****
+💁♂ **Check out the excel sheet** 👉 ****[**here** ](https://docs.google.com/spreadsheets/d/1w75gcdytSRtZqGHMo852x2ffl8CC4FhxmHzR0gvII-Y/edit?usp=sharing)\*\*\*\*👈 ****
 
 {% hint style="success" %}
 **More the time** you invest in signing up with passive sources, **More the subdomains** you get ✨

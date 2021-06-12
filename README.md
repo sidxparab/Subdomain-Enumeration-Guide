@@ -8,7 +8,11 @@ Thanks to visit this guide. Feel free to enhancement this guide with the with so
 
 
 
-This guide helps build your own reconnaissance methodology.  
+This guide helps build your own reconnaissance methodology.
+
+
+
+Feel free me dm if you are facing any issues.  
 
 
 ![](.gitbook/assets/untitled-design-1-.png)
