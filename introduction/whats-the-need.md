@@ -22,7 +22,7 @@ It is one of the most crucial parts of the reconnaissance phase while performing
 
 A Fully Qualified Domain Name \(**FQDN**\) is the complete domain name for a specific computer, or host, on the internet.
 
-A FQDN looks like this:-
+An FQDN looks like this:-
 
 `myhost.example.com.`   **----&gt;** Fully Qualified Domain Name 
 
