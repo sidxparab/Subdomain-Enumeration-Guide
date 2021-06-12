@@ -41,13 +41,15 @@ Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxm
 These are not 100% accurate results, they contain false positives
 {% endhint %}
 
+[**Whoxy**](https://www.whoxy.com/) is another great resource that gives a decent number of related domains for free.   
+
 ### Paid tools: 💰 
 
 [**Crunchbase**](https://www.crunchbase.com/) is another great alternative for finding acquisitions but requires a paid subscription to view all the acquisitions. But the trial version allows viewing some of the acquisitions.
 
 ![](../.gitbook/assets/crunchbase.png)
 
-### 
+[whoxy](https://www.whoxy.com/)  
 
 ### 3\) PTR records \(Reverse DNS\)
 
