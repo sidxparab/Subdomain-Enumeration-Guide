@@ -49,7 +49,7 @@ python3 ctfr.py -d target.com -o output.txt
 
 ### **2\) One-liners:**
 
-* These are bash onliners for ........
+* These are bash onliners to enumerate subdomain through certificates.
 
 ```text
 curl "https://tls.bufferover.run/dns?q=.dell.com" | jq -r .Results[] | cut -d ',' -f3 | grep -F ".dell.com" | anew -q output.txt
