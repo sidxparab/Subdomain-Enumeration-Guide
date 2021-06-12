@@ -20,6 +20,9 @@ This includes various intensive techniques which we will see further in this gui
    * Recursive Enumeration
    * Favicon Hashing
    * TLS, CSP, CNAME probing
+3. **Web probing**
+   * Default Ports
+   * Common Ports
 
 Each and every technique is explained in detail, so read out the whole guide. 😊 
 
