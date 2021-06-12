@@ -47,6 +47,8 @@ These are not 100% accurate results, they contain false positives
 
 ![](../.gitbook/assets/crunchbase.png)
 
+### 
+
 ### 3\) PTR records \(Reverse DNS\)
 
 Now since we have got to know the IP address ranges from ASN of an organization, we can perform PTR queries on the IP addresses and check for valid hosts.  
