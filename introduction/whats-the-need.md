@@ -6,15 +6,6 @@ It is one of the most crucial parts of the reconnaissance phase while performing
 
 ![](../.gitbook/assets/subdomains.png)
 
-Here "**target.com**" is the root domain.
-
-**internal**.target.com   ----&gt;  first level subdomain  
-**internal.accounts**.target.com    ----&gt; second level subdomain  
-**internal.accounts.dashboard**.target.com  ----&gt; third level subdomain
-
-So our main is to try and get the maximum number of subdomains we can, for a root domain.  
-
-
 ## What's the need?
 
 * Performing subdomain enumeration via various intensive techniques can help enlarge your attack surface as you get more subdomains to find vulnerabilities on.
