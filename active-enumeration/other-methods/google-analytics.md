@@ -23,6 +23,9 @@ go build -ldflags "-s -w"
 
 ### Running:
 
+* The output may contain false positives.
+* Also, you need to further DNS resolve them in order to get the valid ones.
+
 ```bash
 ./analyticsrelationships --url https://www.bugcrowd.com
 ```
