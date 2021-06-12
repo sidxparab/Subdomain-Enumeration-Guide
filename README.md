@@ -1,5 +1,5 @@
 ---
-description: Comprehensive Guide
+description: Comprehensive Subdomain Enumeration Guide
 ---
 
 # Home 🏠
@@ -12,10 +12,8 @@ This guide helps build your own reconnaissance methodology.
 
 
 
-Feel free me dm if you are facing any issues.  
+Feel free to me dm if you are facing any issues.  
 
-
-![](.gitbook/assets/untitled-design-1-.png)
 
 Twitter: [@detonxx](https://twitter.com/detonXX)   
   
@@ -25,19 +23,9 @@ Twitter: [@detonxx](https://twitter.com/detonXX)
 
 ### **You can support my work by buying me a coffee** ☕ **:**
 
-**Doitdoitdoitdoitdoitdoit....** 😉 ****
+**Doitdoitdoitdoitdoitdoit....** 😉 
 
 {% embed url="https://www.buymeacoffee.com/siddheshparab" %}
 
-\*\*\*\*
-
-
-
-
-
-
-
-
-
-
+****
 

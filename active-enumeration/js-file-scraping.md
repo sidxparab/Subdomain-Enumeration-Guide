@@ -58,16 +58,16 @@ gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gosp
 
 ### 2\) Cleaning the output
 
-> six2dez explain this
+> The parth portion of an URL shouldn't have more than 2048 characters. Since, we gopsider 
 >
 > ```bash
 > sed -i '/^.\{2048\}./d' gospider.txt
 > ```
 
- Point to note here is we have got URLs from JS files & source code till now. We are only concerned with subdomains. Hence we must just extract subdomains from the gospider output.
+ The Point to note here is we have got URLs from JS files & source code till now. We are only concerned with subdomains. Hence we must just extract subdomains from the Gospider output.
 
-This can be done using Tomnomnom's [**unfurl** ](https://github.com/tomnomnom/unfurl) tool. It takes a list of URLs as input and extracts the subdomain/domain part from them.  
-You can install **unfurl** using this command `go get -u github.com/tomnomnom/unfurl` 
+This can be done using Tomnomnom's [**unfurl**](https://github.com/tomnomnom/unfurl) tool. It takes a list of URLs as input and extracts the subdomain/domain part from them.  
+You can install **Unfurl** using this command `go get -u github.com/tomnomnom/unfurl` 
 
 ```bash
 cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains | grep ".example.com$" | sort -u scrap_subs.txt
@@ -75,16 +75,16 @@ cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains 
 
 **Break down of the command:**  
 **a\)** grep - Extract the links that start with http/https  
-**b\)** sed -  six2dez help plz  
+**b\)** sed -  Remove " \] " at the end of line  
 **c\)** unfurl - Extract domain/subdomain from the urls  
 **d\)** grep - Only select subdomains of our target  
 **e\)** sort - Avoid duplicates
 
 ### 3\) Resolving our target subdomains
 
-* Now that we have all the subdomains of our target, its time to DNS resolve and check for valid subdomains.
+* Now that we have all the subdomains of our target, it's time to DNS resolve and check for valid subdomains.
 
-\( hoping you have the the above technqiues, and you know how to run puredns\)
+\( hoping you have seen the previous techniques, and you know how to run puredns\)
 
 ```bash
 puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 

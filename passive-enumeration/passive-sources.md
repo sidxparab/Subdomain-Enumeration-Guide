@@ -347,5 +347,9 @@ crobat -s example.com > output.txt
 
 ## **That's it !!! Done with passive things** 🏁 
 
+#### Liked my work? Don't hesitate to buy me a coffee XDD
+
+#### ❤💙💚 [https://www.buymeacoffee.com/siddheshparab](https://www.buymeacoffee.com/siddheshparab) 💚 💙 ❤ 
+
 
 

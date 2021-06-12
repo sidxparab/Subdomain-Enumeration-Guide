@@ -1,6 +1,6 @@
 # Automation 🤖
 
-It would be difficult for a person to perform all the above mentioned techniques. Hence, we need to rely on some kind of tool to automate such intensive steps. Wouldn't it be good if we just had to give our target name BOOM !!💥 the tool performs subdomain enumeration via all these techniques?
+It would be difficult for a person to perform all the above-mentioned techniques. Hence, we need to rely on some kind of tool to automate such intensive steps. Wouldn't it be good if we just had to give our target name **BOOM** !!💥 the tool performs subdomain enumeration via all these techniques?
 
 ## [ReconFTW](https://github.com/six2dez/reconftw)
 
@@ -90,10 +90,10 @@ $HOME/.axiom/interact/axiom-configure
 
 #### Some stats: 📊 
 
-| Task | Axiom \(15 instances\) | Single VPS |
+| **Task** | **Axiom** \(15 instances\) ✅  | **Single VPS** \(4cpu/8gb\) |
 | :--- | :--- | :--- |
 | DNS bruteforcing \(11M wordlist\) | 1m 16s | 10m 28s |
-| Web probing \(50k subdomains\) | 1m 40s |  |
+| Web probing \(50k subdomains\) | 1m 40s | 21m 22s |
 
 
 
@@ -114,4 +114,10 @@ axiom-select 'testy*'
 ```
 
 
+
+
+
+#### Liked my work? Don't hesitate to buy me a coffee XDD
+
+#### ❤💙💚 [https://www.buymeacoffee.com/siddheshparab](https://www.buymeacoffee.com/siddheshparab) 💚 💙 ❤ 
 
