@@ -93,8 +93,8 @@ cat unimap_commonweb.txt | httpx -random-agent -status-code -silent -retries 2 -
 
 | **Method** | **Execution Time \(150 subdomains\)** |
 | :--- | :--- |
-| Httpx | 42min 51secs |
-| Unimap | **55 secs** ⚡  |
+| 1st Method | 42min 51secs |
+| 2nd Method | **55 secs** ⚡  |
 
 
 
