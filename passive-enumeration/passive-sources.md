@@ -102,6 +102,8 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 amass enum -list -config config.ini
 ```
 
+### 
+
 ### 2\) [Subfinder](https://github.com/projectdiscovery/subfinder)
 
 * Author: [projectdiscovery](https://github.com/projectdiscovery)
@@ -123,7 +125,7 @@ GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 * Subfinder's default config file location is at `$HOME/.config/subfinder/config.yaml` 
 * When you install subfinder for the first time the config file doesn't get generated, hence you should run `subfinder -h` command to get it generated.
 * For subfinder you can obtain free API keys by signing up on 18 Passive DNS sources. \(here the list of sources\)
-* The subfinder config file follows YAML\(YAML Ain't Markup Language\) syntax. So, you need to be careful that you don't break the syntax. It's better that you use a text editor and setup syntax highlighting. 
+* The subfinder config file follows YAML\(YAML Ain't Markup Language\) syntax. So, you need to be careful that you don't break the syntax. It's better that you use a text editor and set up syntax highlighting. 
 
 **Example config file:-**
 
@@ -172,9 +174,19 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 * Language: Go
 * Total passive sources: **9**
 
- Built by the legend [Tomnomnom](https://twitter.com/TomNomNom). Extremely fast enumeration tool. But the results lesser subdomains than 
+Don't know why did I include this tool😂just because its build by the legend [Tomnomnom](https://twitter.com/TomNomNom) ?  It doesn't give any unique subdomains compared to other tools but it's extremely fast.
 
+```bash
+go get -u github.com/tomnomnom/assetfinder
+```
 
+**Running:**
+
+```bash
+assetfinder --subs-only example.com > output.txt
+```
+
+### 
 
 ### 4\) [Findomain](https://github.com/Findomain/Findomain)
 
