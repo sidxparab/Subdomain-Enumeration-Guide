@@ -26,7 +26,6 @@
   * [VHOST discovery](active-enumeration/other-methods/vhost-discovery.md)
   * [Google analytics](active-enumeration/other-methods/google-analytics.md)
   * [Recursive Enumeration](active-enumeration/other-methods/recursive-enumeration.md)
-  * [Favicon Hashing](active-enumeration/other-methods/favicon-hashing.md)
   * [TLS, CSP, CNAME](active-enumeration/other-methods/tls-csp-cname.md)
 
 ---
