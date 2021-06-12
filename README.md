@@ -14,9 +14,9 @@ I'm too a beginner in this field and have tried my best to explain the right con
 
 This guide may help you build your own reconnaissance methodology. I believe each one should have their own methodology and keep trying out new things and conclude which fits best for them. 
 
+I would like to mention [six2dez](https://twitter.com/Six2dez1) for helping me in creating this guide.
 
-
-**Thanks 🙏**  for your visit to this guide. Feel free to make PR's to enhance this guide further.
+### **Thanks 🙏**  for your visit to this guide. Feel free to make PR's to enhance this guide further.
 
 ![](.gitbook/assets/twitter-logo.png)
 
