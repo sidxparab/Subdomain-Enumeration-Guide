@@ -88,12 +88,12 @@ $HOME/.axiom/interact/axiom-configure
 
 #### 
 
-#### Some stats: 📊 \(30 instances\)
+#### Some stats: 📊 
 
-| Task | Axiom  | Single VPS |
+| Task | Axiom \(15 instances\) | Single VPS |
 | :--- | :--- | :--- |
-| DNS bruteforcing \(11M wordlist\) | 8m 50s |  |
-| Web probing \(\) |  |  |
+| DNS bruteforcing \(11M wordlist\) | 1m 16s | 10m 28s |
+| Web probing \(50k subdomains\) | 1m 40s |  |
 
 
 
