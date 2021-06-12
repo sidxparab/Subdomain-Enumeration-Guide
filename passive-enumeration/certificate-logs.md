@@ -1,4 +1,4 @@
-# Certificate logs
+# Certificate Logs
 
 ## What are SSL/TLS certificates?
 

@@ -15,7 +15,7 @@
 ## Passive Techniques <a id="passive-enumeration"></a>
 
 * [Passive Sources](passive-enumeration/passive-sources.md)
-* [Certificate logs](passive-enumeration/certificate-logs.md)
+* [Certificate Logs](passive-enumeration/certificate-logs.md)
 
 ## Active Techniques <a id="active-enumeration"></a>
 
@@ -27,7 +27,6 @@
   * [Google analytics](active-enumeration/other-methods/google-analytics.md)
   * [Recursive Enumeration](active-enumeration/other-methods/recursive-enumeration.md)
   * [Favicon Hashing](active-enumeration/other-methods/favicon-hashing.md)
-  * [Google Dorking](active-enumeration/other-methods/google-dorking.md)
   * [TLS, CSP, CNAME](active-enumeration/other-methods/tls-csp-cname.md)
 
 ---
