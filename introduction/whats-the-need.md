@@ -15,7 +15,7 @@ It is one of the most crucial parts of the reconnaissance phase while performing
 * For large organizations, to find what services have they exposed to the internet.
 
 {% hint style="success" %}
-**More the subdomains = More the vulnerabilities.**
+**More the subdomains = More assets to look for vulnerabilities**🐞 
 {% endhint %}
 
 ## ⚠ Common Misconception about "subdomain" 
