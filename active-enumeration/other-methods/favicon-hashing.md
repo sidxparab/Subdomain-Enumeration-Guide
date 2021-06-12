@@ -48,11 +48,20 @@ python3 MurMurHash.py
 
 ### Weaponizing through Shodan:
 
-
-
-
-
-
+* Now we query [Shodan](https://www.shodan.io/) `http.favicon.hash:<hash>` with that favicon hash.
+* This gave us a whopping **162K assets/hosts**. These all can be subdomains or related domains of the Microsoft organization.
 
 ![](../../.gitbook/assets/shodanfavicon.png)
+
+
+
+**You know this is a powerful technique when the Recon king tweets about it.**
+
+![](../../.gitbook/assets/jhaddixtweet.png)
+
+
+
+
+
+
 
