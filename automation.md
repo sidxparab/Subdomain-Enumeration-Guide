@@ -1,6 +1,6 @@
 # Automation 🤖
 
-It would be difficult for a person to perform all the above mentioned techniques. Hence, we need to rely on some kind of tool to automate such intensive steps. Wouldn't it be good if we just had to give our target name BOOM !!💥 the tool performs subdomain enumeration via all these techniques?
+It would be difficult for a person to perform all the above-mentioned techniques. Hence, we need to rely on some kind of tool to automate such intensive steps. Wouldn't it be good if we just had to give our target name **BOOM** !!💥 the tool performs subdomain enumeration via all these techniques?
 
 ## [ReconFTW](https://github.com/six2dez/reconftw)
 
@@ -114,4 +114,10 @@ axiom-select 'testy*'
 ```
 
 
+
+
+
+#### Liked my work? Don't hesitate to buy me a coffee XDD
+
+#### ❤💙💚 [https://www.buymeacoffee.com/siddheshparab](https://www.buymeacoffee.com/siddheshparab) 💚 💙 ❤ 
 
