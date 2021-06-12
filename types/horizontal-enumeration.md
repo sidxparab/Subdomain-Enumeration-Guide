@@ -77,15 +77,7 @@ We will first need to install 2 tools:
 
 
 
-Apple Inc. has an IP space of **17.0.0.0/8.** This is in CIDR format, but in order to query for PTR records, we need to first list down all the IP addresses by expanding the range. For this purpose, we will use a tool by Project Discovery called
 
-####  [**Mapcidr:**](https://github.com/projectdiscovery/mapcidr)\*\*\*\*
-
-#### Installation:
-
-`GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
-
-#### Usage:
 
 ####   
 
