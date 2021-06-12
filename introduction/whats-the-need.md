@@ -4,6 +4,8 @@
 
 It is one of the most crucial parts of the reconnaissance phase while performing a security assessment. **Subdomain Enumeration** is a process of finding sub-domains of one or more root domains.  According to [RFC 1034](https://tools.ietf.org/html/rfc1034), "_a domain is a subdomain of another domain if it is contained within that domain_".
 
+![](../.gitbook/assets/subdomains.png)
+
 Here "**target.com**" is the root domain.
 
 **internal**.target.com   ----&gt;  first level subdomain  

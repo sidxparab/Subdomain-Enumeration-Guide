@@ -58,6 +58,8 @@ This means that, since we already know the IP space of an organization we can, w
 **But how?**  
 PTR records \(pointer record\) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) ****tool we can query a PTR record of an IP address and find the associated hostname/domain name.
 
+**Apple Inc.** 🍎  has **ASN714** which represents IP range **17.0.0.0/8.** So, let's see have to perform reverse DNS.
+
 ### Running:
 
 We will first need to install 2 tools:
@@ -71,7 +73,7 @@ We will first need to install 2 tools:
 
 #### Breakdown:
 
-* When an IP range is given to **mapcidr** through stdin\(standard input\), it performs expansion spitting out each IP address from the range onto a new line. \(`17.0.0.1`**,** `17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4` 
+* When an IP range is given to **mapcidr** through stdin\(standard input\), it performs expansion spitting out each IP address from the range onto a new line:`17.0.0.1`**,** `17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4`
 * Now when **dnsx** receives each IP address from stdin, it performs reverse DNS and checks for PTR record. If, found it gives us back the hostname/domain name.
 
 ![](../.gitbook/assets/ptr.png)
