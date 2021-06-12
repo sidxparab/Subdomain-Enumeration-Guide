@@ -51,11 +51,11 @@ There are currently 2 tools that do the work of DNS bruteforcing and resolution 
 
 Table of execution time and false positives.Using an 11 million wordlist on **ibm.com**
 
-| Tool | Shuffledns | Puredns |
+| **Tool** | **Shuffledns** | **Puredns** ✅  |
 | :--- | :--- | :--- |
 | Execution Time | 20m 30s | 9m 32s |
-| Valid Results | 2900 | 1025 |
-| False Positives |  | 1 |
+| Output Results | 2900 | 1025 |
+| False Positives | 1930 | 0 |
 
 \[ Above tests were performed in separate VPS\[4cpu/8gb\] and false positives were verified using [dnsx ](https://github.com/projectdiscovery/dnsx)with Google DNS server as a trusted resolver-03/06/2021 \]
 

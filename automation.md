@@ -90,7 +90,7 @@ $HOME/.axiom/interact/axiom-configure
 
 #### Some stats: 📊 
 
-| Task | Axiom \(15 instances\) | Single VPS \(4cpu/8gb\) |
+| **Task** | **Axiom** \(15 instances\) ✅  | **Single VPS** \(4cpu/8gb\) |
 | :--- | :--- | :--- |
 | DNS bruteforcing \(11M wordlist\) | 1m 16s | 10m 28s |
 | Web probing \(50k subdomains\) | 1m 40s | 21m 22s |
