@@ -4,19 +4,23 @@ description: Comprehensive Subdomain Enumeration Guide
 
 # Home 🏠
 
-Thanks to visit this guide. Feel free to enhancement this guide with the with some awesome tools or techniques you know, you can contact me by Twitter \([@detonXX](https://twitter.com/detonXX)\)
+## Subdomain Enumeration Guide 2021 📖 
+
+This guide contains all the needed knowledge for performing a good subdomain enumeration. I have tried to cover each topic from a beginner's perspective. Each of the techniques used has a detailed explanation about why this technique was used and how to perform them. I have tried to link various gists, charts, statistics for a better understanding of the concept.
+
+I have tried to include only those tools that give the best results compared to other tools of the same category.
+
+I'm too a beginner in this field and have tried my best to explain the right concepts. If you think any of the content is wrongly explained, I am always open listen to you.
+
+This guide may help you build your own reconnaissance methodology. I believe each one should have their own methodology and keep trying out new things and conclude which fits best for them. 
 
 
 
-This guide helps build your own reconnaissance methodology.
+**Thanks 🙏**  for your visit to this guide. Feel free to make PR's to enhance this guide further.
 
+![](.gitbook/assets/twitter-logo.png)
 
-
-Feel free to me dm if you are facing any issues.  
-
-
-Twitter: [@detonxx](https://twitter.com/detonXX)   
-  
+**Twitter**: [@detonxx](https://twitter.com/detonXX)   
 
 
 ## Support 🙏 ****❤ 
