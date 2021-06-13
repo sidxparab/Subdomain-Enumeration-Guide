@@ -63,9 +63,9 @@ Table of execution time and false positives.Using an 11 million wordlist on **ib
 
 ## [Puredns](https://github.com/d3mondev/puredns)
 
-* Author: [d3mondev](https://github.com/d3mondev)
-* Language: Go
-* Features: Bruteforcing & Resolution
+* **Author:** [d3mondev](https://github.com/d3mondev)
+* **Language**: Go
+* **Features**: DNS Bruteforcing & Resolution
 
 Puredns outperforms the work of DNS bruteforcing & resolving millions of domains at once.
 

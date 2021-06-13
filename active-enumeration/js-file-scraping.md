@@ -8,10 +8,10 @@ JavaScript files are used by modern web applications to provide dynamic content 
 
 ### 1\) [Gopsider](https://github.com/jaeles-project/gospider)
 
-* Author: [Jaeles](https://github.com/jaeles-project)
-* Language: Go
+* **Author**: [Jaeles](https://github.com/jaeles-project)
+* **Language**: Go
 
-[**Gospider**](https://github.com/jaeles-project/gospider) is a fast web spidering tool capable of crawling the whole website within in a short amount of time. This means gospider will visit/scrap each and every URL mentioned in the JS file and source code. So, since source code & JS files makeup a website they may contain links to other subdomains too. 
+[**Gospider**](https://github.com/jaeles-project/gospider) is a fast web spidering tool capable of crawling the whole website within in a short amount of time. This means gospider will visit/scrap each and every URL mentioned in the JS file and source code. So, since source code & JS files make up a website they may contain links to other subdomains too. 
 
 ### Installation:
 
@@ -27,15 +27,15 @@ This process is divided into3⃣steps:
 
 ### 1\) Web probing subdomains
 
-* Since we are crawling a website, gospider excepts us to provide URL's, means in the form of `http://`  `https://` 
-* So, first we need to web probe all the subdomains we have gathered till now. For this purpose we will use [**httpx**](https://github.com/projectdiscovery/httpx) .
+* Since we are crawling a website, gospider excepts us to provide URL's, which means in the form of `http://`  `https://` 
+* So first, we need to web probe all the subdomains we have gathered till now. For this purpose, we will use [**httpx**](https://github.com/projectdiscovery/httpx) .
 * So, lets first web probe the subdomains:
 
 ```bash
 cat subdomains.txt | httpx -random-agent -retries 2 -no-color -o probed_tmp_scrap.txt
 ```
 
-* Now, that we have web probed URL's, we can send them for crawling to gospider.
+* Now, that we have web probed URLs, we can send them for crawling to gospider.
 
 ```bash
 gospider -S probed_tmp_scrap.txt --js -t 50 -d 3 --sitemap --robots -w -r > gospider.txt

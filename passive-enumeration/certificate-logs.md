@@ -26,6 +26,9 @@ As you can see we got a list of subdomains.
 
 ### 1\) [CTFR](https://github.com/UnaPibaGeek/ctfr)
 
+* **Author**: [UnaPibaGeek](https://github.com/UnaPibaGeek)
+* **Language**: Python
+
 This is a simple tool that grabs all the domains from **crt.sh**.
 
 **Installation:**

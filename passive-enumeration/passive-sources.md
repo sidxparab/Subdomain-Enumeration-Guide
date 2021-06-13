@@ -14,17 +14,17 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 * We can also scrape the data from the Internet Archives.
 * Organizations host their source code on Github; as well as security researchers post their recon data which may contain subdomains of our target.   
 
-1. Passive DNS gathering tools
+1. **Passive DNS gathering tools**
    * [Amass](https://github.com/OWASP/Amass)
    * [Subfinder](https://github.com/projectdiscovery/subfinder)
    * [Assetfinder](https://github.com/tomnomnom/assetfinder)
    * [Findomain](https://github.com/Findomain/Findomain)
-2. Internet Archive
+2. **Internet Archive**
    * [gau-plus](https://github.com/bp0lr/gauplus)
    * [waybackurls](https://github.com/tomnomnom/waybackurls)
-3. Github Scraping
+3. **Github Scraping**
    * [github-subdomains](https://github.com/gwen001/github-subdomains)
-4. The Rapid7 Project Sonar
+4. **The Rapid7 Project Sonar**
    * [Crobat](https://github.com/Cgboal/SonarSearch)
 
 
@@ -224,9 +224,7 @@ export findomain_fb_token="YourAccessToken"
 findomain -t example.com -u output.txt
 ```
 
-
-
-**Flags:-**
+**Flags:-**
 
 * **t** - target domain
 * **u** output file
