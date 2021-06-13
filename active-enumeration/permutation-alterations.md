@@ -45,9 +45,13 @@ DNScewl --tL subdomains.txt -p permutations_list.txt --level=0 --subs --no-color
 
 * **tL** - Specify subdomain list
 * **p** - Specify permutation/append list 
-* **level=0** - Intensity of permutation, doesn't use "**-**"
+* **level=0** - Intensity of permutation, doesn't use "-"
 * **subs** - Generate subdomains
 * **no-color** - No colorized output
+
+![](../.gitbook/assets/dnscewl.png)
+
+### 
 
 ### Resolution:
 
