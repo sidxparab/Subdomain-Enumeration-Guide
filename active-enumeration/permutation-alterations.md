@@ -2,7 +2,7 @@
 
 It is almost similar to the previous DNS wordlist bruteforcing but instead of simply performing a dictionary attack we generate combinations/permutations of the already known subdomains.
 
-One more thing to be noted here is, we also need a small wordlist with us in this method, which would contain common words like `mail` , `internal`, `dev`, `demo`, `accounts`, `ftp`, `admin`\(similar to DNS bruteforcing to a smaller\)  
+One more thing to be noted here is, we also need a small wordlist with us in this method, which would contain common words like `mail` , `internal`, `dev`, `demo`, `accounts`, `ftp`, `admin`\(similar to DNS bruteforcing but smaller\)  
   
 For instance, let's consider a subdomain **`dev1.example.com`** . Now we will generate different variations/permutations of this domain.  
   
