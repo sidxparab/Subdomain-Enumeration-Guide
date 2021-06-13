@@ -4,15 +4,11 @@ It is almost similar to the previous DNS wordlist bruteforcing but instead of si
 
 One more thing to be noted here is, we also need a small wordlist with us in this method, which would contain common words like `mail` , `internal`, `dev`, `demo`, `accounts`, `ftp`, `admin`\(similar to DNS bruteforcing but smaller\)  
   
-For instance, let's consider a subdomain **`dev1.example.com`** . Now we will generate different variations/permutations of this domain.  
-  
-The permutations generated with the help above small wordlist would be:-
+For instance, let's consider a subdomain **`dev.example.com`** . Now we will generate different variations/permutations of this domain.
 
-* `dev2.example.com`      `dev-3.example.com`        `dev10.example.com`
-* `mail.dev.example.com`         `mail-dev.example.com`
-* `ftp.dev1.internal.example.com`     `admin.dev8.example.com`
+![](../.gitbook/assets/permutations.png)
 
-Isn't it good that we can generate such great combinations? This is the power of permutation bruteforcing. Now that we have generated these combinations, we further need DNS resolve them and check if we get any valid subdomains. If so it would be a WIN ! WIN ! 🏁 situation for us. 
+Isn't it good that we can generate such great combinations? This is the power of permutation bruteforcing. Now that we have generated these combinations, we further need to DNS resolve them and check if we get any valid subdomains. If so it would be a WIN ! WIN ! 🏁 situation for us. 
 
 ## Tools:
 
