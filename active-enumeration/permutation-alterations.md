@@ -41,9 +41,17 @@ mv DNScewl /usr/bin/DNScewl
 DNScewl --tL subdomains.txt -p permutations_list.txt --level=0 --subs --no-color | tail -n +14  > permutations.txt
 ```
 
+#### Flags:
+
+* **tL** - Specify subdomain list
+* **p** - Specify permutation/append list 
+* **level=0** - Intensity of permutation, doesn't use "**-**"
+* **subs** - Generate subdomains
+* **no-color** - No colorized output
+
 ### Resolution:
 
-* Now that we have made a huge list of all the possible subdomains that could exists , now its time to DNS resolve them and check for valid ones.
+* Now that we have made a huge list of all the possible subdomains that could exist, now it's time to DNS resolve them and check for valid ones.
 * For this, we will again use [Puredns](https://github.com/d3mondev/puredns).
 * It always better to generate fresh public DNS resolvers every time we use them.
 
