@@ -18,15 +18,15 @@ Isn't it good that we can generate such great combinations? This is the power of
 
 ### [DNSCewl](https://github.com/codingo/DNSCewl)
 
-* Author: [codingo](https://github.com/codingo)
-* Language: C++
+* **Author:** [codingo](https://github.com/codingo)
+* **Language**: C++
 
 DNSCewl as the name suggests is a DNS wordlist generator. It is used to generate various combinations or permutations of a root domain with the user-supplied wordlist. Capable of generating 1M combinations in almost 2 secs.
 
 ### Installation:
 
 * First, we need to download the binary.
-* Then move the binary to user's PATH so that it can be accessed from anywhere.
+* Then move the binary to the user's PATH so that it can be accessed from anywhere.
 
 ```bash
 wget https://github.com/codingo/DNSCewl/raw/master/DNScewl
