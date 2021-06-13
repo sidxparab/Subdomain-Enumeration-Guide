@@ -17,7 +17,7 @@ These enumeration methods can go out of scope and backfire you
 
 ### 1\) Discovering the IP space
 
-ASN\(Autonomous System Number\) is a unique identifier of certain IP prefixes. Very large organizations such as Apple, Github, Tesla have their significant IP space. To find an ASN of an organization [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.  
+**ASN**\(Autonomous System Number\) is a unique identifier of certain IP prefixes. Very large organizations such as Apple, Github, Tesla have their significant IP space. To find an ASN of an organization [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.  
 Let's find ASN for **Apple Inc.**
 
 ![](../.gitbook/assets/hurricane.png)
