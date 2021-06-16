@@ -46,8 +46,6 @@ So in such a case, it's always better that you **DNS resolve** the subdomain rat
 
 The methodology of collecting subdomains from tools like amass, subfinder, findomain and directly sending them to httpx/httprobe is **absolutely wrong**❌. Instead, you should DNS resolve them using tools like [puredns ](https://github.com/d3mondev/puredns)or [shuffledns](https://github.com/projectdiscovery/shuffledns). 
 
-![A meme in my native language XD](../.gitbook/assets/memesss.png)
-
   
 
 

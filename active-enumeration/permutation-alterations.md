@@ -2,17 +2,13 @@
 
 It is almost similar to the previous DNS wordlist bruteforcing but instead of simply performing a dictionary attack we generate combinations/permutations of the already known subdomains.
 
-One more thing to be noted here is, we also need a small wordlist with us in this method, which would contain common words like `mail` , `internal`, `dev`, `demo`, `accounts`, `ftp`, `admin`\(similar to DNS bruteforcing to a smaller\)  
+One more thing to be noted here is, we also need a small wordlist with us in this method, which would contain common words like `mail` , `internal`, `dev`, `demo`, `accounts`, `ftp`, `admin`\(similar to DNS bruteforcing but smaller\)  
   
-For instance, let's consider a subdomain **`dev1.example.com`** . Now we will generate different variations/permutations of this domain.  
-  
-The permutations generated with the help above small wordlist would be:-
+For instance, let's consider a subdomain **`dev.example.com`** . Now we will generate different variations/permutations of this domain.
 
-* `dev2.example.com`      `dev-3.example.com`        `dev10.example.com`
-* `mail.dev.example.com`         `mail-dev.example.com`
-* `ftp.dev1.internal.example.com`     `admin.dev8.example.com`
+![](../.gitbook/assets/permutations.png)
 
-Isn't it good that we can generate such great combinations? This is the power of permutation bruteforcing. Now that we have generated these combinations, we further need DNS resolve them and check if we get any valid subdomains. If so it would be a WIN ! WIN ! 🏁 situation for us. 
+Isn't it good that we can generate such great combinations? This is the power of permutation bruteforcing. Now that we have generated these combinations, we further need to DNS resolve them and check if we get any valid subdomains. If so it would be a WIN ! WIN ! 🏁 situation for us. 
 
 ## Tools:
 
@@ -45,9 +41,21 @@ mv DNScewl /usr/bin/DNScewl
 DNScewl --tL subdomains.txt -p permutations_list.txt --level=0 --subs --no-color | tail -n +14  > permutations.txt
 ```
 
+#### Flags:
+
+* **tL** - Specify subdomain list
+* **p** - Specify permutation/append list 
+* **level=0** - Intensity of permutation, doesn't use "-"
+* **subs** - Generate subdomains
+* **no-color** - No colorized output
+
+![](../.gitbook/assets/dnscewl.png)
+
+### 
+
 ### Resolution:
 
-* Now that we have made a huge list of all the possible subdomains that could exists , now its time to DNS resolve them and check for valid ones.
+* Now that we have made a huge list of all the possible subdomains that could exist, now it's time to DNS resolve them and check for valid ones.
 * For this, we will again use [Puredns](https://github.com/d3mondev/puredns).
 * It always better to generate fresh public DNS resolvers every time we use them.
 
