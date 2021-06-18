@@ -16,7 +16,7 @@ Whenever a domain is alive on the internet, to access it, a DNS query needs to b
 
 Hence, we can know, what were the subdomains of a particular root domain that once existed in DNS records. These subdomains in the present time may be alive or dead. \(we need further find out which are the valid ones\). Along with these various companies have their internet crawlers which continuously keep on crawling the whole internet and discover new assets.
 
-There are a number of services/sources\([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Spyse](https://spyse.com/), [Shodan](https://www.shodan.io/), [Whoisxmlapi](https://www.whoisxmlapi.com/), [DNSDB](https://www.farsightsecurity.com/tools/dnsdb-scout/)\) that provide such historical DNS data. These services provide their API keys so that we can query their enormous data sets. 
+There are a number of services/sources\([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Spyse](https://spyse.com/), [Shodan](https://www.shodan.io/), [Whoisxmlapi](https://www.whoisxmlapi.com/), [DNSDB](https://www.farsightsecurity.com/tools/dnsdb-scout/)\) that provide such historical DNS data & crawled data. These services provide their API keys so that we can query their enormous data sets. 
 
 ### Configuring API keys: 
 
