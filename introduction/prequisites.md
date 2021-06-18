@@ -14,7 +14,7 @@
 
 Whenever a domain is alive on the internet, to access it, a DNS query needs to be made to the DNS resolver. With special probes activated on the DNS resolver, it is possible to record these queries. This doesn't record which client made the request but, just the fact that at some point a domain has been associated with a specific DNS record.
 
-Hence, we can know, what were the subdomains of a particular root domain that once existed in DNS records. These subdomains in the present time may be alive or dead. \(we need further find out which are the valid ones\)
+Hence, we can know, what were the subdomains of a particular root domain that once existed in DNS records. These subdomains in the present time may be alive or dead. \(we need further find out which are the valid ones\). Along with these various companies have their internet crawlers which continuously keep on crawling the whole internet and discover new assets.
 
 There are a number of services/sources\([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [Binaryedge](https://www.binaryedge.io/), [Virus total](https://www.virustotal.com/gui/)\) that provide such historical DNS data. These services provide their API keys so that we can query their enormous data sets. 
 
