@@ -110,7 +110,7 @@ There are various cloud providers that provide **free 100$ credits** like [Digit
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
 * [Linode](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)
-* [Vultr](https://www.vultr.com/promo/try100)
+* [Vultr](https://www.vultr.com/?ref=8905902)
 
   
 ****
