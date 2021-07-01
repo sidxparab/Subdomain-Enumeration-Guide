@@ -213,9 +213,9 @@ mv findomain-armv7 /usr/local/bin/findomain
 *  Findomain will pick up them automatically. 
 
 ```bash
-export findomain_virustotal_token="YourAccessToken"
-export findomain_spyse_token="YourAccessToken"
-export findomain_fb_token="YourAccessToken"
+export findomain_virustotal_token="API_KEY"
+export findomain_spyse_token="API_KEY"
+export findomain_fb_token="API_KEY"
 ```
 
 ### **Running Findomain:**
