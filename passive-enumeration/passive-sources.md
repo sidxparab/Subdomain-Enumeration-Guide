@@ -257,14 +257,14 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 #### Running gauplus:
 
 ```bash
- gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | sort -u output.txt
+ gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | anew output.txt
 ```
 
 **Flags:**
 
 * **t** - threads
 * **random-agent** - use random agents while querying 
-* **subs** -  include subdomains of target domain
+* **subs** -  include subdomains of the target domain
 
 ### **6\)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)\*\*\*\*
 
