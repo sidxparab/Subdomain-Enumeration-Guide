@@ -213,9 +213,9 @@ mv findomain-armv7 /usr/local/bin/findomain
 *  Findomain will pick up them automatically. 
 
 ```bash
-export findomain_virustotal_token="YourAccessToken"
-export findomain_spyse_token="YourAccessToken"
-export findomain_fb_token="YourAccessToken"
+export findomain_virustotal_token="API_KEY"
+export findomain_spyse_token="API_KEY"
+export findomain_fb_token="API_KEY"
 ```
 
 ### **Running Findomain:**
@@ -257,14 +257,14 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 #### Running gauplus:
 
 ```bash
- gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | sort -u output.txt
+ gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | anew output.txt
 ```
 
 **Flags:**
 
 * **t** - threads
 * **random-agent** - use random agents while querying 
-* **subs** -  include subdomains of target domain
+* **subs** -  include subdomains of the target domain
 
 ### **6\)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)\*\*\*\*
 
