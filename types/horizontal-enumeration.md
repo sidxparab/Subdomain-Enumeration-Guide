@@ -83,7 +83,11 @@ We will first need to install 2 tools:
 
 ![](../.gitbook/assets/ptr.png)
 
+**Note:** We can also combine the step of discovering the IP space with reverse DNS lookup into one-liner like:
 
+```bash
+ whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq | mapcidr -silent | dnsx -ptr -resp-only
+```
 
 ### 4\) Favicon Hashing
 
