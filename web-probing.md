@@ -19,6 +19,10 @@ Httpx is a highly configurable tool, which means it provides a ton of flags. So,
 ```bash
 GO111MODULE=on go get -v github.com/projectdiscovery/httpx/cmd/httpx
 ```
+### Running Httpx
+```bash
+cat hosts.txt | httpx -follow-redirects -status-code -random-agent -o output.txt
+```
 
 ### Flags:
 

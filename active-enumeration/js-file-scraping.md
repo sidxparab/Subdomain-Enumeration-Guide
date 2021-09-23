@@ -6,7 +6,7 @@ JavaScript files are used by modern web applications to provide dynamic content 
 
 ## Tools: 🛠 
 
-### 1\) [Gopsider](https://github.com/jaeles-project/gospider)
+### 1\) [Gospider](https://github.com/jaeles-project/gospider)
 
 * **Author**: [Jaeles](https://github.com/jaeles-project)
 * **Language**: Go
