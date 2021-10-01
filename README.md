@@ -12,7 +12,7 @@ I have tried to include only those tools that give the best results compared to 
 
 I'm too a beginner in this field and have tried my best to explain the right concepts. If you think any of the content is wrongly explained, I am always open listen to you.
 
-This guide may help you build your own reconnaissance methodology. I believe each one should have their own methodology and keep trying out new things and conclude which fits best for them. 
+This guide may help you build your own recon methodology. I believe each one should have their own methodology and keep trying out new things and find out which fits best for them. 
 
 I would like to thank [six2dez](https://twitter.com/Six2dez1) for helping me in creating this guide. 
 
