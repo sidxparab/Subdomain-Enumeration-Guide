@@ -28,8 +28,5 @@ Last but not the least, I would like to thank [six2dez](https://twitter.com/Six2
 
 **Doitdoitdoitdoitdoitdoit....** 😉
 
-{% embed url="https://www.buymeacoffee.com/siddheshparab" %}
 
-![](https://media.giphy.com/media/TDQOtnWgsBx99cNoyH/giphy.gif)
 
-***
