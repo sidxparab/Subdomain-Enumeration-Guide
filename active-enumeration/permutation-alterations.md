@@ -12,7 +12,8 @@ Isn't it good that we can generate such great combinations? This is the power of
 
 ## Tools:
 
-### [DNSCewl](https://github.com/codingo/DNSCewl)
+### 
+[DNSCewl](https://github.com/codingo/DNSCewl)
 
 * **Author:** [codingo](https://github.com/codingo)
 * **Language**: C++
@@ -69,6 +70,10 @@ puredns resolve permutations.txt -r resolvers.txt
 * **r** - public DNS resolvers list
 
 In such a way, we have got those strange name subdomains and increased our attack surface.
+
+There is another great tool called [Gotator](https://github.com/Josue87/gotator), which generates more permutations and more meangingful permutations.
+Also it contains various different flag to control the permuattions.
+The duplicates produced are also less by this tool.
 
 ### 
 

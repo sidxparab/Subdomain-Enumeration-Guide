@@ -99,7 +99,7 @@ $HOME/.axiom/interact/axiom-configure
 
 ![](.gitbook/assets/axiomxreconftw.png)
 
-Yes, it's possible to integrate **Axiom** in **ReconFTW**. Isn't that great? 😍 
+Yes, it's possible to integrate **Axiom** in **ReconFTW**. Isn't that great? Do try this out !!😍 
 
 ### Usage:
 

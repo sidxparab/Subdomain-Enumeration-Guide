@@ -6,7 +6,7 @@ JavaScript files are used by modern web applications to provide dynamic content 
 
 ## Tools: 🛠 
 
-### 1\) [Gopsider](https://github.com/jaeles-project/gospider)
+### 1\) [Gospider](https://github.com/jaeles-project/gospider)
 
 * **Author**: [Jaeles](https://github.com/jaeles-project)
 * **Language**: Go
@@ -90,7 +90,8 @@ cat gospider.txt | grep -Eo 'https?://[^ ]+' | sed 's/]$//' | unfurl -u domains 
 puredns resolve scrap_subs.txt -w scrap_subs_resolved.txt -r resolvers.txt 
 ```
 
-
+I love this technique as, it also finds hidden Amazon S3 buckets used by the organization.If such buckets are open and expose sensitive data than its a WIN WIN situation for us.
+Also the ouput of this can be sent to secretfinder tool, whihc can find hidden secrets,exposed api tokens etc.
 
 ![](../.gitbook/assets/copy-of-copy-of-copy-of-webscraping_meme.png)
 
