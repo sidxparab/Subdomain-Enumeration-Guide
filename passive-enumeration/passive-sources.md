@@ -33,9 +33,9 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 ### 1) [Amass](https://github.com/OWASP/Amass)
 
-* Author: [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
-* Language: Go
-* Total Passive Sources: **58 **&#x20;
+* **Author:** [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
+* **Language**: Go
+* **Total Passive Sources**: **58 **&#x20;
 
 **Amass **is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. This is because it queries the most number of third-party services which results in more subdomains of a particular target. [These](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are sources that amass queries.
 
@@ -106,9 +106,9 @@ amass enum -list -config config.ini
 
 ### 2) [Subfinder](https://github.com/projectdiscovery/subfinder)
 
-* Author: [projectdiscovery](https://github.com/projectdiscovery)
-* Language: Go
-* Total Passive Sources: **32**
+* **Author**: [projectdiscovery](https://github.com/projectdiscovery)
+* **Language**: Go
+* **Total Passive Sources**: **32**
 
 **Subfinder **tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
 
@@ -170,9 +170,9 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 
 ### **3) **[**Assetfinder**](https://github.com/tomnomnom/assetfinder)****
 
-* Author:  [tomnomnom](https://github.com/tomnomnom)
-* Language: Go
-* Total passive sources: **9**
+* **Author**:  [tomnomnom](https://github.com/tomnomnom)
+* **Language**: Go
+* **Total passive sources**: **9**
 
 Don't know why did I include this tool:joy:just because its build by the legend [Tomnomnom](https://twitter.com/TomNomNom) ?  It doesn't give any unique subdomains compared to other tools but it's extremely fast.
 
@@ -190,9 +190,9 @@ assetfinder --subs-only example.com > output.txt
 
 ### 4) [Findomain](https://github.com/Findomain/Findomain)
 
-* Author: [Edu4rdSHL](https://github.com/Edu4rdSHL)
-* Language: Rust
-* Total Passive sources: 16
+* **Author**: [Edu4rdSHL](https://github.com/Edu4rdSHL)
+* **Language**: Rust
+* **Total Passive sources**: 16
 
 **Findomain **is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. Has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
 
@@ -239,9 +239,9 @@ For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). Wh
 
 ### 5) [Gauplus](https://github.com/bp0lr/gauplus)
 
-* Author: [bpl0r](https://github.com/bp0lr)
-* Language: Go
-* Sources:
+* **Author**: [bpl0r](https://github.com/bp0lr)
+* **Language**: Go
+* **Sources**:
   * &#x20;[web.archive.org](http://web.archive.org)
   * [index.commoncrawl.org](http://index.commoncrawl.org)
   * [otx.alienvault.com](https://otx.alienvault.com)
@@ -268,9 +268,9 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 
 ### **6) **[**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
 
-* Author: [bpl0r](https://github.com/bp0lr)
-* Language: Go
-* Sources:
+* **Author**: [bpl0r](https://github.com/bp0lr)
+* **Language**: Go
+* **Sources**:
   * &#x20;[web.archive.org](http://web.archive.org)
   * [index.commoncrawl.org](http://index.commoncrawl.org)
   * ****[www.virustotal.com](https://www.virustotal.com)
@@ -295,8 +295,8 @@ waybackurls example.com |  unfurl -u domains | sort -u output.txt
 
 ### 7) [Github-subdomains](https://github.com/gwen001/github-subdomains)
 
-* Author: [gwen001](https://github.com/gwen001)
-* Language: Go
+* **Author**: [gwen001](https://github.com/gwen001)
+* **Language**: Go
 
 ** **Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
 
@@ -334,8 +334,8 @@ So this internet-wide DNS dataset could be an excellent resource for us to grab 
 
 ### 8) [Crobat](https://github.com/Cgboal/SonarSearch)
 
-* Author: [Cgboal](https://github.com/Cgboal)
-* Language: Go
+* **Author**: [Cgboal](https://github.com/Cgboal)
+* **Language**: Go
 
 [Cgboal ](https://twitter.com/CalumBoal)has done an excellent work of parsing and indexing the whole Rapid7 Sonar dataset into MongoDB and creating an API to query this database. This Crobat API is freely available at [https://sonar.omnisint.io/](https://sonar.omnisint.io).More over he developed a command-line tool that uses this API and returns the results at a blazing fast speed.
 
