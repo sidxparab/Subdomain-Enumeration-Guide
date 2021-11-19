@@ -4,14 +4,14 @@ Most organizations use [Google Analytics](https://analytics.google.com/analytics
 
 Most people might be familiar with a browser extension called [**BuiltWidth**](https://builtwith.com/toolbar)**.** But using this extension or its website is a manual process.  We need some sort of command-line utility. That's when **AnalyticsRelationships** comes to the rescue.
 
-## Tool: 
+## Tool:&#x20;
 
 ### [AnalyticsRelationships](https://github.com/Josue87/AnalyticsRelationships)
 
 * **Author**: [Josué Encinar](https://github.com/Josue87)
 * **Language**: Go/Python
 
-**AnalyticsRelationships** is a tool to enumerate subdomains via Google Analytics ID. It does not require any login and has the capability to bypass the [BuiltWidth ](https://builtwith.com/)& [HackerTarget ](https://hackertarget.com/)captchas. This tool is available in 2 languages Python & Go. But the Go one is faster compared to the python one.
+**AnalyticsRelationships **is a tool to enumerate subdomains via Google Analytics ID. It does not require any login and has the capability to bypass the [BuiltWidth ](https://builtwith.com)& [HackerTarget ](https://hackertarget.com)captchas. This tool is available in 2 languages Python & Go. But the Go one is faster compared to the python one.
 
 ### Installation:
 
@@ -31,8 +31,6 @@ go build -ldflags "-s -w"
 ```
 
 ![](../../.gitbook/assets/googlenalytics.png)
-
-
 
 
 
