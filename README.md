@@ -16,9 +16,7 @@ This guide may help you build your **own recon methodology**. I believe each one
 
 Last but not the least, I would like to thank [six2dez](https://twitter.com/Six2dez1) for helping me in creating this detailed guide.
 
-### **Thanks 🙏** for your visit to this guide. Feel free to make PR's to enhance this guide further.
-
-![](.gitbook/assets/twitter-logo.png)
+[Follow @sidxparab](https://twitter.com/sidxparab?ref\_src=twsrc%5Etfw)
 
 **Twitter**: [@sidxparab](https://twitter.com/sidxparab)
 
