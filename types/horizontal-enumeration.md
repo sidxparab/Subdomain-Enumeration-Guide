@@ -45,23 +45,17 @@ These are not 100% accurate results, as they contain false positives &#x20;
 
 #### b) **Whoxy **:moneybag:&#x20;
 
-****[**Whoxy**](https://www.whoxy.com) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid tool :(
+****[**Whoxy**](https://www.whoxy.com) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid service :(
 
 To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](https://github.com/MilindPurswani/whoxyrm)**.**
 
 ![](../.gitbook/assets/whoxyrm.png)
 
-
-
-#### c) Crunchbase
-
-### Paid tools: :moneybag:&#x20;
+#### c) Crunchbase:moneybag:&#x20;
 
 [**Crunchbase**](https://www.crunchbase.com) is another great alternative for finding acquisitions but requires a paid subscription to view all the acquisitions. The trial version allows viewing some of the acquisitions.
 
 ![](../.gitbook/assets/crunchbase.png)
-
-****[**Whoxy**](https://www.whoxy.com)** **
 
 ### 3) PTR records (Reverse DNS)
 
