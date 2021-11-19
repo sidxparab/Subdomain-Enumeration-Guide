@@ -16,13 +16,19 @@ This guide may help you build your **own recon methodology**. I believe each one
 
 Last but not the least, I would like to thank [six2dez](https://twitter.com/Six2dez1) for helping me in creating this detailed guide.
 
-[Follow @sidxparab](https://twitter.com/sidxparab?ref\_src=twsrc%5Etfw)
+
 
 **Twitter**: [@sidxparab](https://twitter.com/sidxparab)
 
+**Linkedin**: [@sidxparab](https://www.linkedin.com/in/sidxparab/)
+
+**Medium**: [@sidxparab](https://medium.com/@sidxparab)
+
 ## Support 🙏 :heart:
 
-### **You can support my work by buying me a coffee** ☕ **:**
+### **You can support my work by buying me a coffee** ☕&#x20;
+
+{% embed url="https://buymeacoffee.com/siddheshparab" %}
 
 **Doitdoitdoitdoitdoitdoit....** 😉
 
