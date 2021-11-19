@@ -32,7 +32,9 @@ whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" |
 
 ### 2) Finding related domains/acquisitions
 
-**WhoisXMLAPI** is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renew every month.\
+#### a) **WhoisXMLAPI**
+
+****[**WhoisXMLAPI** ](https://www.whoisxmlapi.com)is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renew every month.\
 Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxmlapi.com/reverse-whois-search) . Now searching with the root domain name like **dell.com** will give all the associated domains.
 
 ![](../.gitbook/assets/whoisxml.png)
@@ -40,6 +42,18 @@ Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxm
 {% hint style="warning" %}
 These are not 100% accurate results, as they contain false positives &#x20;
 {% endhint %}
+
+#### b) **Whoxy **:moneybag:&#x20;
+
+****[**Whoxy**](https://www.whoxy.com) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid tool :(
+
+To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](https://github.com/MilindPurswani/whoxyrm)**.**
+
+![](../.gitbook/assets/whoxyrm.png)
+
+
+
+#### c) Crunchbase
 
 ### Paid tools: :moneybag:&#x20;
 

@@ -9,7 +9,7 @@ Here, we find different levels of subdomains of a particular root/main domain.
 This includes various intensive techniques which we will see further in this guide.
 
 1. **Passive Techniques**
-   * Passive Sources 
+   * Passive Sources&#x20;
    * Certificates Logs
 2. **Active Techniques**
    * DNS bruteforcing
@@ -24,5 +24,4 @@ This includes various intensive techniques which we will see further in this gui
    * Default Ports
    * Common Ports
 
-Each and every technique is explained in detail, so read out the whole guide. 😊 
-
+Each and every technique is explained in detail, so read out the whole guide. :blush:&#x20;
