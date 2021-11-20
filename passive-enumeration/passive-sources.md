@@ -203,8 +203,10 @@ assetfinder --subs-only example.com > output.txt
 * Depending on your architecture download binary from [here](https://github.com/Findomain/Findomain/wiki/Installation#using-upstream-precompiled-binaries)
 
 ```bash
-wget -N -c https://github.com/Findomain/Findomain/releases/latest/download/findomain-armv7
-mv findomain-armv7 /usr/local/bin/findomain
+wget -N -c https://github.com/Findomain/Findomain/releases/latest/download/findomain-linux
+mv findomain-linux /usr/local/bin/findomain
+chmod 755 /usr/local/bin/findomain
+strip -s /usr/local/bin/findomain
 ```
 
 **Configuration:-**
