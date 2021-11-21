@@ -2,11 +2,13 @@
 
 ## 1) TLS Probing
 
-TLS(Transport Layer Security)
+Nowadays generally all websites use HTTPS(HyperText Transfer Protocol Secure). In order to use HTTPS, the website owner needs to issue an SSL(Secure Socket Layer) certificate.
 
+This SSL/TLS(Transport Layer Security) certificate sometimes contains domains/subdomains belonging to the same organization.
 
+Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL certificate of any website.
 
-
+![Hackerone.com contain these subdomains in its TLS certificate](../../.gitbook/assets/TLS.png)
 
 
 
@@ -17,3 +19,10 @@ cat subdomains.txt | httpx -tls-probe -random-agent -status-code -retries 2 -no-
 
 
 ![](<../../.gitbook/assets/tls probing.png>)
+
+
+
+## 2) CSP Probing
+
+
+
