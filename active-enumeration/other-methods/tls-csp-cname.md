@@ -1,4 +1,2 @@
-# TLS, CSP, CNAME
-
-![](../../.gitbook/assets/index.png)
+# TLS, CSP, CNAME Probing
 
