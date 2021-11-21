@@ -26,3 +26,13 @@ cat subdomains.txt | httpx -tls-probe -random-agent -status-code -retries 2 -no-
 
 
 
+
+
+```
+cat subdomains.txt | httpx -csp-probe -random-agent -status-code -retries 2 -no-color | anew csp_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q csp_subdomains.txt
+```
+
+![](../../.gitbook/assets/csp.png)
+
+
+
