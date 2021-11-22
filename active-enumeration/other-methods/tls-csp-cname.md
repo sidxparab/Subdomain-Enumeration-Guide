@@ -33,3 +33,13 @@ cat subdomains.txt | httpx -csp-probe -status-code -retries 2 -no-color | anew c
 ```
 
 ![](../../.gitbook/assets/csp.png)
+
+
+
+
+
+
+
+## 3) CNAME Probing
+
+I have personally&#x20;
