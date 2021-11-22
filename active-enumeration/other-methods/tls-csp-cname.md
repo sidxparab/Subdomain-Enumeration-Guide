@@ -13,7 +13,7 @@ Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL c
 
 
 ```bash
-cat subdomains.txt | httpx -tls-probe -random-agent -status-code -retries 2 -no-color | anew tls_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q tls_subdomains.txt
+cat subdomains.txt | httpx -tls-probe -status-code -retries 2 -no-color | anew tls_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q tls_subdomains.txt
 ```
 
 
@@ -24,5 +24,12 @@ cat subdomains.txt | httpx -tls-probe -random-agent -status-code -retries 2 -no-
 
 ## 2) CSP Probing
 
+In order to defend from the XSS attacks as well as keeping in mind to allow cross-domain resource sharing in websites CSP(Content Security Policies) are used. These CSP headers sometimes contain domains/subdomains from where the content is usually imported.
 
+Hence, these subdomains can be helpful for us. In the below image we can see I extracted domains/subdomains from the CSP header of [twitter.com](https://twitter.com)
 
+```
+cat subdomains.txt | httpx -csp-probe -status-code -retries 2 -no-color | anew csp_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q csp_subdomains.txt
+```
+
+![](../../.gitbook/assets/csp.png)
