@@ -42,4 +42,10 @@ cat subdomains.txt | httpx -csp-probe -status-code -retries 2 -no-color | anew c
 
 ## 3) CNAME Probing
 
-I have personally&#x20;
+I personally came across 2-3 cases where visiting the CNAME of the website showed me the same website without a firewall. (I personally don't know why this happened)
+
+Since then I probe the CNAME's of the subdomains found.
+
+```
+dnsx -retry 3 -cname -l subdomains.txt
+```
