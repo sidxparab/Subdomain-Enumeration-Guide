@@ -53,3 +53,10 @@ python3 hosthunter.py ip_addresses.txt
 
 ## VHOST bruteforcing
 
+
+
+
+
+```
+gobuster vhost -u https://example.com -t 50 -w subdomains.txt
+```
