@@ -29,3 +29,26 @@ It's through the "**Host header**". The web server identifies which content to s
 
 For this purpose, we can use a tool called[ HostHunter](https://github.com/SpiderLabs/HostHunter).
 
+### [HostHunter](https://github.com/SpiderLabs/HostHunter)
+
+* **Author**: [SpiderLabs](https://github.com/SpiderLabs)
+* **Language**: Python
+
+#### Installation:
+
+```
+git clone https://github.com/SpiderLabs/HostHunter.git
+pip3 install -r requirements.txt
+```
+
+#### Running:
+
+```
+python3 hosthunter.py ip_addresses.txt
+```
+
+![A total of 336 websites are hosted on the same IP](../.gitbook/assets/hosthunter.png)
+
+###
+
+### VHOST bruteforcing
