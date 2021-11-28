@@ -49,6 +49,7 @@ python3 hosthunter.py ip_addresses.txt
 
 ![A total of 336 websites are hosted on the same IP](../.gitbook/assets/hosthunter.png)
 
-###
 
-### VHOST bruteforcing
+
+## VHOST bruteforcing
+
