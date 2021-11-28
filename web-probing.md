@@ -8,8 +8,8 @@ Port **80 & 443** are the default ports on which web applications are hosted. Bu
 
 ### [HTTPX](https://github.com/projectdiscovery/httpx)
 
-* Author: [projectdiscovery](https://github.com/projectdiscovery)
-* Language: Go
+* **Author**: [projectdiscovery](https://github.com/projectdiscovery)
+* **Language**: Go
 
 **Httpx** is a fast multi-purpose toolkit that allows running multiple HTTP probers and find for web applications on a particular port. (find hosts ?)\
 Httpx is a highly configurable tool, which means it provides a ton of flags. So, users can get a highly customizable output as per their needs.
@@ -104,7 +104,7 @@ cat unimap_commonweb.txt | httpx -random-agent -status-code -silent -retries 2 -
 
 * That's it, we have got those hidden web applications running on common ports. Go ahead! and hunt on them. 🐞
 
-\*\*\*\*📊 **Some stats:** 🤓
+📊 **Some stats:** 🤓
 
 | **Method** | **Execution Time (150 subdomains)** |
 | ---------- | ----------------------------------- |
