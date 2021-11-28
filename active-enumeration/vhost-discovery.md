@@ -9,9 +9,9 @@ There are mainly 2 types of Virtual hosts:
 1.  **IP-based Virtual Host:**
 
     In IP-based Virtual Host, we have different IP addresses for every website.
-2.  **Name-based Virtual Host:**
+2.  **Name-based Virtual Host:**✔️
 
     In named-based Virtual Host, several websites are hosted on the same IP. Mostly this type is widely and preferred in order to preserve IP space.
 
-
+But when talking about VHOST we are generally talking about **Named-based Virtual hosts.**
 
