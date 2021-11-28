@@ -22,6 +22,7 @@
 * [DNS Bruteforcing](active-enumeration/dns-bruteforcing.md)
 * [Permutation/Alterations](active-enumeration/permutation-alterations.md)
 * [Scraping(JS/Source code)](active-enumeration/js-file-scraping.md)
+* [VHOST discovery](active-enumeration/vhost-discovery.md)
 * [Other methods](active-enumeration/other-methods/README.md)
   * [Google analytics](active-enumeration/other-methods/google-analytics.md)
   * [VHOST discovery](active-enumeration/other-methods/vhost-discovery.md)
