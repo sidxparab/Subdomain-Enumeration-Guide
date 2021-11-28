@@ -1,4 +1,4 @@
-# VHOST discovery
+# VHOST bruteforcing
 
 ## What is Virtual Host?
 
@@ -15,3 +15,10 @@ There are mainly 2 types of Virtual hosts:
 
 But when talking about VHOST we are generally talking about **Named-based Virtual hosts.**
 
+
+
+### How does this actually work?
+
+Now, you would be confused about how will the webserver differentiate to which website it has to send my requests since many websites are being hosted on the same server with the same IP.
+
+It's through the "**Host header**"
