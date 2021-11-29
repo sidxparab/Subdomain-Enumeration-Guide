@@ -12,15 +12,21 @@ Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL c
 
 
 
-```bash
-cat subdomains.txt | httpx -tls-probe -status-code -retries 2 -no-color | anew tls_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q tls_subdomains.txt
+For this purpose, we will be using a tool called [**Cero**](https://github.com/glebarez/cero)****
+
+#### Installation:
+
+```
+go get -u github.com/glebarez/cero
 ```
 
+#### Running:
 
+```
+cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | anew 
+```
 
-![](<../../.gitbook/assets/tls probing.png>)
-
-
+![](../../.gitbook/assets/cero.png)
 
 ## 2) CSP Probing
 

@@ -6,10 +6,10 @@ It's a technique where the person takes a long list of common subdomain names an
 
 Below we can what happens in bruteforcing:
 
-* **admin **           ---->       **admin**.target.com
-* **internal.dev**  ---->      ** internal.dev**.target.com
-* **secret **           ---->       **secret**.target.com
-* **backup01 **     ---->       **backup01**.target.com
+* **admin**           ---->       **admin**.target.com
+* **internal.dev**  ---->      **internal.dev**.target.com
+* **secret**           ---->       **secret**.target.com
+* **backup01**     ---->       **backup01**.target.com
 
 Now that we have a list of probable domain names we need to check whether any of these predicted subdomains exist or not. For that, we need to do a mass DNS resolution. After this process, if any of these subdomains is found valid, it's a win-win situation for us.
 
@@ -23,9 +23,9 @@ Earlier DNS zone transfer vulnerabilities were the key to get the whole DNS infr
 
 #### &#x20;1) Wildcard DNS records
 
-A wildcard DNS record is a record that matches requests for non-existent domain names. Wildcards are denoted by specifying a **`*`** of the left part of a domain name such as **\*.target.com. **That means even if a subdomain doesn't exist it will return a valid response. See the example below:-
+A wildcard DNS record is a record that matches requests for non-existent domain names. Wildcards are denoted by specifying a **`*`** of the left part of a domain name such as **\*.target.com.** That means even if a subdomain doesn't exist it will return a valid response. See the example below:-
 
-**doesntexists.target.com**    ---->   **valid **
+**doesntexists.target.com**    ---->   **valid**&#x20;
 
 **Strange right?** So in short, if a domain is a wildcard domain we will get all valid responses(false positives) while bruteforcing and wouldn't be able to differentiate which are valid and which aren't. To avoid this various wildcard filtering techniques are used by subdomain bruteforcing tools.
 
@@ -36,7 +36,7 @@ While bruteforcing we tend to use a long wordlist of common subdomain names to g
 We can get the list of open public DNS resolvers from here [https://public-dns.info/nameservers.txt](https://public-dns.info/nameservers.txt)
 
 {% hint style="info" %}
-:book: Read** **[**this** ](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers)article on why how to create public resolvers and they are important
+:book: Read **** [**this** ](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers)article on why how to create public resolvers and they are important
 {% endhint %}
 
 **3) Bandwidth**
@@ -51,7 +51,7 @@ There are currently 2 tools that do the work of DNS bruteforcing and resolution 
 
 Table of execution time and false positives.Using an 11 million wordlist on **ibm.com**
 
-| **Tool**        | **Shuffledns** | **Puredns **:white\_check\_mark:  |
+| **Tool**        | **Shuffledns** | **Puredns** :white\_check\_mark:  |
 | --------------- | -------------- | --------------------------------- |
 | Execution Time  | 20m 30s        | 9m 32s                            |
 | Output Results  | 2900           | 1025                              |
@@ -124,7 +124,7 @@ puredns bruteforce wordlist.txt example.com -r resolvers.txt -w output.txt
 **Flags:**
 
 * **bruteforce** - use the bruteforcing mode
-* **r **- Specify your public resolvers
+* **r** - Specify your public resolvers
 * **w** - Output filename
 
 ![](../.gitbook/assets/purednsb.png)
@@ -137,13 +137,13 @@ While performing DNS queries sometimes we receive **SERVFAIL** error. Puredns by
 
 The whole idea DNS bruteforcing is of no use if you don't use a great wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's look at what best wordlist:-\
 \
-**1) Assetnote **[**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) (**9 Million**) ⭐\
+**1) Assetnote** [**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) (**9 Million**) ⭐\
 [Assetnote](https://wordlists.assetnote.io) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
 
-**2) Jhaddix **[**all.txt**](https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a) (**2 Million**)\
+**2) Jhaddix** [**all.txt**](https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a) (**2 Million**)\
 Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 years ago but still works well.
 
-**3) Smaller **[**wordlist**](https://gist.github.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw) (**102k** )\
+**3) Smaller** [**wordlist**](https://gist.github.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw) (**102k** )\
 Created by [six2dez](https://github.com/six2dez) is suitable to be run on home systems.\
 
 
@@ -153,7 +153,7 @@ Created by [six2dez](https://github.com/six2dez) is suitable to be run on home s
 
 Usually, if you provide a very large wordlist(50M) and your target contains significant wildcards then sometimes puredns crashes out due to less memory while filtering wildcards. To overcome this issue you can use **`--wildcard-batch 1000000`** flag. By default, puredns puts all the domains in a single batch to save on the number of DNS queries and execution time. Using this flag takes in a batch of only 1million subdomains at a time for wildcard filtering and after completion of the task takes in the next batch for wildcard filtering.
 
-**2) Puredns kills my home router **
+**2) Puredns kills my home router**&#x20;
 
 Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates large traffic and makes your home router unable to use for that specific period of time. To overcome this you can use the **`-l`** flag. This flag throttles the massdns threads to your specified amount. It's advisable that you set the value anywhere between `2000-10000`
 

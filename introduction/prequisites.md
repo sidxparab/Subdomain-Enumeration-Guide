@@ -23,7 +23,7 @@ There are a number of services/sources([Security trails](https://securitytrails.
 **There are 2 types of passive DNS sources:-**
 
 **1) Allow querying their Datasets freely**\
-****A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like** **[**amass**](https://github.com/OWASP/Amass),** **[**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
+****A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like **** [**amass**](https://github.com/OWASP/Amass), **** [**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
 
 **2) Need to generate API keys to query Datasets**\
 ****Also, a number of sources require you to signup on to their platform and generate a unique API key for yourself so that you are authorized to query and retrieve their historical datasets.
@@ -36,7 +36,7 @@ There are a number of services/sources([Security trails](https://securitytrails.
 
 ### Is it worth making API keys?
 
-* Yes, absolutely, given below is the comparison between running [**Subfinder **](https://github.com/projectdiscovery/subfinder)with API keys configured and without.
+* Yes, absolutely, given below is the comparison between running [**Subfinder** ](https://github.com/projectdiscovery/subfinder)with API keys configured and without.
 * You can clearly see the difference that using API keys gave me **20000 more** subdomains.
 * Further, this passive data would be used to generate permutation/alterations which eventually would give us more subdomains.
 
@@ -58,7 +58,7 @@ There are a number of services/sources([Security trails](https://securitytrails.
 
 ![](../.gitbook/assets/excelsheet.png)
 
-:man\_tipping\_hand:** Check out the excel sheet **:point\_right:** **[**here **](https://docs.google.com/spreadsheets/d/1w75gcdytSRtZqGHMo852x2ffl8CC4FhxmHzR0gvII-Y/edit?usp=sharing)****:point\_left:** **
+:man\_tipping\_hand: **Check out the excel sheet** :point\_right: **** [**here** ](https://docs.google.com/spreadsheets/d/1w75gcdytSRtZqGHMo852x2ffl8CC4FhxmHzR0gvII-Y/edit?usp=sharing)****:point\_left: ****&#x20;
 
 {% hint style="success" %}
 **More the time** you invest in signing up with passive sources, **More the subdomains** you get ✨

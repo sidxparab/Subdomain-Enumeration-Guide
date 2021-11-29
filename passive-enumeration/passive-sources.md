@@ -5,7 +5,7 @@
 Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([Security trails](https://securitytrails.com), [Censys](https://censys.io), [Shodan](https://www.shodan.io), [Binaryedge](https://www.binaryedge.io), [Virus total](https://www.virustotal.com/gui/)) to obtain the subdomains of a particular target.
 
 {% hint style="warning" %}
-It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data)** **first, before proceeding further.
+It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) **** first, before proceeding further.
 {% endhint %}
 
 ### What tools to use?
@@ -35,9 +35,9 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 * **Author:** [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
 * **Language**: Go
-* **Total Passive Sources**: **58 **&#x20;
+* **Total Passive Sources**: **58**&#x20;
 
-**Amass **is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. This is because it queries the most number of third-party services which results in more subdomains of a particular target. [These](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are sources that amass queries.
+**Amass** is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. This is because it queries the most number of third-party services which results in more subdomains of a particular target. [These](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are sources that amass queries.
 
 ### Configuring amass:
 
@@ -54,10 +54,10 @@ go get -v github.com/OWASP/Amass/v3/...
 * ****[**Link**](https://gist.github.com/sidxparab/4cd40d6e2f9422a005b06f19919200d0) to my amass config file for reference.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
 * Amass uses API keys mentioned in the config to query the third-party passive DNS sources.
-* There are in total **18 services **on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
+* There are in total **18 services** on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
 
 {% hint style="info" %}
-Check** **[**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
+Check **** [**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
 {% endhint %}
 
 * Now let's set up our API keys in the `config.ini`config file.
@@ -93,10 +93,10 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 
 * **enum** - Perform DNS enumeration
 * **passive** - passively collect information through the data sources mentioned in the config file.
-* **config **- Specify the location of your config file (default: `$HOME/.config/amass/config.ini` )
+* **config** - Specify the location of your config file (default: `$HOME/.config/amass/config.ini` )
 * **o** - Output filename
 
-**  **:man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
+&#x20; ****  :man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
 
 ```bash
 amass enum -list -config config.ini
@@ -110,7 +110,7 @@ amass enum -list -config config.ini
 * **Language**: Go
 * **Total Passive Sources**: **32**
 
-**Subfinder **tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
+**Subfinder** tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
 
 ### Configuring Subfinder: :gear:&#x20;
 
@@ -120,7 +120,7 @@ amass enum -list -config config.ini
 GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 ```
 
-**Setting up Subfinder config file: **&#x20;
+**Setting up Subfinder config file:**&#x20;
 
 * Subfinder's default config file location is at `$HOME/.config/subfinder/config.yaml`&#x20;
 * When you install subfinder for the first time the config file doesn't get generated, hence you should run `subfinder -h` command to get it generated.
@@ -129,7 +129,7 @@ GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
 **Example config file:-**
 
-* [**Link **](https://gist.github.com/sidxparab/e981c813f4ad057ed080a75a7fe00f4e)to my subfinder config file for reference.
+* [**Link** ](https://gist.github.com/sidxparab/e981c813f4ad057ed080a75a7fe00f4e)to my subfinder config file for reference.
 * Some passive sources like `Censys` , `PassiveTotal` have 2 keys like APP-Id & Secret. For such sources, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
 * Subfinder automatically detects its config file only if at the default position.&#x20;
 
@@ -147,7 +147,7 @@ passivetotal:
 ```
 
 {% hint style="info" %}
-****:man\_mage: **Tip:- **You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com)
+****:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com)
 {% endhint %}
 
 ### **Running Subfinder:**
@@ -163,12 +163,12 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 * **config** - Config file location
 
 {% hint style="info" %}
-:man\_mage:** Tip:-** To view the sources that require API keys `subfinder -ls` command
+:man\_mage: **Tip:-** To view the sources that require API keys `subfinder -ls` command
 {% endhint %}
 
 ### ****
 
-### **3) **[**Assetfinder**](https://github.com/tomnomnom/assetfinder)****
+### **3)** [**Assetfinder**](https://github.com/tomnomnom/assetfinder)****
 
 * **Author**:  [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
@@ -194,7 +194,7 @@ assetfinder --subs-only example.com > output.txt
 * **Language**: Rust
 * **Total Passive sources**: 16
 
-**Findomain **is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. Has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
+**Findomain** is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. Has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
 
 ### Configuring Findomain: :gear:&#x20;
 
@@ -268,7 +268,7 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 * **random-agent** - use random agents while querying&#x20;
 * **subs** -  include subdomains of the target domain
 
-### **6) **[**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
+### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
 
 * **Author**: [bpl0r](https://github.com/bp0lr)
 * **Language**: Go
@@ -285,7 +285,7 @@ Waybackurls returns some unique data that gauplus/gau couldn't find as the sourc
 go get github.com/tomnomnom/waybackurls
 ```
 
-#### ** Running Waybackurls:**
+#### &#x20;**Running Waybackurls:**
 
 ```bash
 waybackurls example.com |  unfurl -u domains | sort -u output.txt
@@ -300,7 +300,7 @@ waybackurls example.com |  unfurl -u domains | sort -u output.txt
 * **Author**: [gwen001](https://github.com/gwen001)
 * **Language**: Go
 
-** **Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
+&#x20;**** Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
 
 **Installation:**
 
@@ -308,7 +308,7 @@ waybackurls example.com |  unfurl -u domains | sort -u output.txt
 go get -u github.com/gwen001/github-subdomains
 ```
 
-**Configuring github-subdomains​​: **:gear:&#x20;
+**Configuring github-subdomains​​:** :gear:&#x20;
 
 * For github-subdomains to scrap domains from GitHub you need to specify a list of github access tokens.
 * [Here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) is an article on how to make these access tokens.
@@ -324,15 +324,15 @@ github-subdomains -d example.com -t tokens.txt -o output.txt
 
 **Flags:**
 
-* **d - **target
+* **d -** target
 * **t** - file containing tokens
 * **o** - output file
 
-## **D) **Rapid7 Project Sonar dataset
+## **D)** Rapid7 Project Sonar dataset
 
 [Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [12 different datasets](https://opendata.rapid7.com) with a total size of over **45.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
 
-So this internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat **comes to the rescue.
+So this internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
 
 ### 8) [Crobat](https://github.com/Cgboal/SonarSearch)
 
@@ -357,7 +357,7 @@ crobat -s example.com > output.txt
 
 * **s** - Target Name
 
-## ****:checkered\_flag:**That's it !!! Done with passive things **:checkered\_flag:&#x20;
+## ****:checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
 
 #### Liked my work? Don't hesitate to buy me a coffee XDD
 

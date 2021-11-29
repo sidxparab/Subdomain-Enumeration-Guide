@@ -43,7 +43,7 @@ Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxm
 These are not 100% accurate results, as they contain false positives &#x20;
 {% endhint %}
 
-#### b) **Whoxy **:moneybag:&#x20;
+#### b) **Whoxy** :moneybag:&#x20;
 
 ****[**Whoxy**](https://www.whoxy.com) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid service :(
 
@@ -67,16 +67,16 @@ When a user attempts to reach a domain name in their browser, a DNS lookup occur
 This means that, since we already know the IP space of an organization we can, we can reverse query the IP addresses and find the valid domains. Sounds cool?
 
 **But how?**\
-****PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx)** **tool we can query a PTR record of an IP address and find the associated hostname/domain name.
+****PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) **** tool we can query a PTR record of an IP address and find the associated hostname/domain name.
 
-**Apple Inc. **:apple:  has **ASN714** which represents IP range **17.0.0.0/8. **So, let's see have to perform reverse DNS.
+**Apple Inc.** :apple:  has **ASN714** which represents IP range **17.0.0.0/8.** So, let's see have to perform reverse DNS.
 
 ### Running:
 
 We will first need to install 2 tools:
 
-* [**Mapcidr**](https://github.com/projectdiscovery/mapcidr)** ** :- `GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
-* ****[**dnsx **](https://github.com/projectdiscovery/dnsx)       :- `GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx`
+* [**Mapcidr**](https://github.com/projectdiscovery/mapcidr) **** :- `GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
+* ****[**dnsx** ](https://github.com/projectdiscovery/dnsx)       :- `GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx`
 
 ```bash
  echo 17.0.0.0/8 | mapcidr -silent | dnsx -ptr -resp-only -o output.txt
@@ -84,8 +84,8 @@ We will first need to install 2 tools:
 
 #### Breakdown:
 
-* When an IP range is given to **mapcidr** through stdin(standard input), it performs expansion spitting out each IP address from the range onto a new line:`17.0.0.1`**, **`17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4`
-* Now when **dnsx **receives each IP address from stdin, it performs reverse DNS and checks for PTR record. If, found it gives us back the hostname/domain name.
+* When an IP range is given to **mapcidr** through stdin(standard input), it performs expansion spitting out each IP address from the range onto a new line:`17.0.0.1`**,** `17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4`
+* Now when **dnsx** receives each IP address from stdin, it performs reverse DNS and checks for PTR record. If, found it gives us back the hostname/domain name.
 
 ![](../.gitbook/assets/ptr.png)
 
@@ -148,7 +148,7 @@ python3 MurMurHash.py
 
 
 
-**You know this is a powerful technique when the Recon king**:crown:** tweets about it.**
+**You know this is a powerful technique when the Recon king**:crown: **tweets about it.**
 
 ![](../.gitbook/assets/jhaddixtweet.png)
 
@@ -156,7 +156,7 @@ python3 MurMurHash.py
 \
 
 
-## ** **:checkered\_flag:**That's it !!! Done with Horizontal Enumeration**:checkered\_flag:&#x20;
+## &#x20;**** :checkered\_flag:**That's it !!! Done with Horizontal Enumeration**:checkered\_flag:&#x20;
 
 #### Liked my work? Don't hesitate to buy me a coffee XDD
 
