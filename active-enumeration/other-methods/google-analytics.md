@@ -11,7 +11,7 @@ Most people might be familiar with a browser extension called [**BuiltWidth**](h
 * **Author**: [Josué Encinar](https://github.com/Josue87)
 * **Language**: Go/Python
 
-**AnalyticsRelationships **is a tool to enumerate subdomains via Google Analytics ID. It does not require any login and has the capability to bypass the [BuiltWidth ](https://builtwith.com)& [HackerTarget ](https://hackertarget.com)captchas. This tool is available in 2 languages Python & Go. But the Go one is faster compared to the python one.
+**AnalyticsRelationships** is a tool to enumerate subdomains via Google Analytics ID. It does not require any login and has the capability to bypass the [BuiltWidth ](https://builtwith.com)& [HackerTarget ](https://hackertarget.com)captchas. This tool is available in 2 languages Python & Go. But the Go one is faster compared to the python one.
 
 ### Installation:
 

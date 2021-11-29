@@ -26,7 +26,7 @@ A Fully Qualified Domain Name (**FQDN**) is the complete domain name for a speci
 
 An FQDN looks like this:-
 
-`myhost.example.com.`  ** ---->** Fully Qualified Domain Name&#x20;
+`myhost.example.com.`  **---->** Fully Qualified Domain Name&#x20;
 
 &#x20;`myhost` **---->** is the host located within domain example.com (subdomain)
 
@@ -36,7 +36,7 @@ An FQDN looks like this:-
 [https://internal.accounts.example.com  ](https://internal.accounts.example.com)\
 [http://internal.accounts.dashboard.example.com](https://internal.accounts.dashboard.example.com)
 
-The above-mentioned **cannot **be called as subdomains. They are links to web applications hosted on ports 80 & 443 of their respective hosts. Most people have a misconception that these are subdomains of a particular target.
+The above-mentioned **cannot** be called as subdomains. They are links to web applications hosted on ports 80 & 443 of their respective hosts. Most people have a misconception that these are subdomains of a particular target.
 
 Let's consider an example, **`admin.example.com`**  is a subdomain on which there may not exist any web-service hosted on port 80 & 443. This means, when we send `admin.example.com` to [httpx](https://github.com/projectdiscovery/httpx)/[httprobe ](https://github.com/tomnomnom/httprobe)(tools that check whether any web app running on port 80/443), it will not return any output.
 
