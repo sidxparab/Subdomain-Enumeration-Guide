@@ -16,17 +16,16 @@
 
 * [Passive Sources](passive-enumeration/passive-sources.md)
 * [Certificate Logs](passive-enumeration/certificate-logs.md)
+* [Recursive Enumeration](passive-enumeration/recursive-enumeration.md)
 
 ## Active Techniques <a href="#active-enumeration" id="active-enumeration"></a>
 
 * [DNS Bruteforcing](active-enumeration/dns-bruteforcing.md)
 * [Permutation/Alterations](active-enumeration/permutation-alterations.md)
 * [Scraping(JS/Source code)](active-enumeration/js-file-scraping.md)
-* [Other methods](active-enumeration/other-methods/README.md)
-  * [Google analytics](active-enumeration/other-methods/google-analytics.md)
-  * [TLS, CSP, CNAME Probing](active-enumeration/other-methods/tls-csp-cname.md)
-  * [VHOST probing](active-enumeration/other-methods/vhost-probing.md)
-  * [Recursive Enumeration](active-enumeration/other-methods/recursive-enumeration.md)
+* [Google analytics](active-enumeration/google-analytics.md)
+* [TLS, CSP, CNAME Probing](active-enumeration/tls-csp-cname.md)
+* [VHOST probing](active-enumeration/vhost-probing.md)
 
 ***
 
