@@ -23,7 +23,7 @@ It's through the "**Host header**". The web server identifies which content to s
 
 
 
-![](<../../.gitbook/assets/Vhost bruteforcing.png>)
+![](<../.gitbook/assets/Vhost bruteforcing.png>)
 
 ### How to identity VHOST on a single IP?
 
@@ -47,15 +47,13 @@ pip3 install -r requirements.txt
 python3 hosthunter.py ip_addresses.txt
 ```
 
-![A total of 336 websites are hosted on the same IP](../../.gitbook/assets/hosthunter.png)
+![A total of 336 websites are hosted on the same IP](../.gitbook/assets/hosthunter.png)
 
 
 
 ## VHOST bruteforcing
 
-
-
-
+> Sorry to say, I couldn't find appropriate content around the internet related to this topic. Me myself don't use this technique, but yes this is also an technique to discover VHOSTS
 
 ```
 gobuster vhost -u https://example.com -t 50 -w subdomains.txt
