@@ -344,7 +344,7 @@ So this internet-wide DNS dataset could be an excellent resource for us to grab 
 ### Installation:
 
 ```bash
-go get github.com/cgboal/sonarsearch/crobat
+go get github.com/cgboal/sonarsearch/cmd/crobat
 ```
 
 ### Running:
