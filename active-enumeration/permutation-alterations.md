@@ -30,7 +30,7 @@ Gotator is DNS wordlist generator tool. It is used to generate various combinati
 ### Installation:
 
 ```bash
-go install -v https://github.com/Josue87/gotator@latest
+go install -v github.com/Josue87/gotator@latest
 ```
 
 ### Running:
