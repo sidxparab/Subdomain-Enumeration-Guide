@@ -2,7 +2,7 @@
 
 ### What is passive subdomain enumeration?
 
-Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([Security trails](https://securitytrails.com), [Censys](https://censys.io), [Shodan](https://www.shodan.io), [Binaryedge](https://www.binaryedge.io), [Virus total](https://www.virustotal.com/gui/)) to obtain the subdomains of a particular target.
+Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [Binaryedge](https://www.binaryedge.io/), [Virus total](https://www.virustotal.com/gui/)) to obtain the subdomains of a particular target.
 
 {% hint style="warning" %}
 It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) **** first, before proceeding further.
@@ -110,7 +110,7 @@ amass enum -list -config config.ini
 * **Language**: Go
 * **Total Passive Sources**: **32**
 
-**Subfinder** tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
+**Subfinder** tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io/) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
 
 ### Configuring Subfinder: :gear:&#x20;
 
@@ -147,7 +147,7 @@ passivetotal:
 ```
 
 {% hint style="info" %}
-****:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com)
+****:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com/)
 {% endhint %}
 
 ### **Running Subfinder:**
@@ -244,9 +244,9 @@ For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). Wh
 * **Author**: [bpl0r](https://github.com/bp0lr)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org)
-  * [index.commoncrawl.org](http://index.commoncrawl.org)
-  * [otx.alienvault.com](https://otx.alienvault.com)
+  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [index.commoncrawl.org](http://index.commoncrawl.org/)
+  * [otx.alienvault.com](https://otx.alienvault.com/)
 
 Gauplus extracts data from internet crawling services. I prefer Gauplus than the original [gau](https://github.com/lc/gau) as sometimes it returns more results, as well as execution, completes faster than the original one.
 
@@ -270,11 +270,11 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 
 ### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
 
-* **Author**: [bpl0r](https://github.com/bp0lr)
+* **Author**: [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org)
-  * [index.commoncrawl.org](http://index.commoncrawl.org)
+  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [index.commoncrawl.org](http://index.commoncrawl.org/)
   * ****[www.virustotal.com](https://www.virustotal.com)
 
 Waybackurls returns some unique data that gauplus/gau couldn't find as the sources are different. Hence, we need to include waybackurls in our arsenal.
@@ -330,7 +330,7 @@ github-subdomains -d example.com -t tokens.txt -o output.txt
 
 ## **D)** Rapid7 Project Sonar dataset
 
-[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [12 different datasets](https://opendata.rapid7.com) with a total size of over **45.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
+[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [12 different datasets](https://opendata.rapid7.com/) with a total size of over **45.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
 
 So this internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
 
@@ -339,7 +339,7 @@ So this internet-wide DNS dataset could be an excellent resource for us to grab 
 * **Author**: [Cgboal](https://github.com/Cgboal)
 * **Language**: Go
 
-[Cgboal ](https://twitter.com/CalumBoal)has done an excellent work of parsing and indexing the whole Rapid7 Sonar dataset into MongoDB and creating an API to query this database. This Crobat API is freely available at [https://sonar.omnisint.io/](https://sonar.omnisint.io).More over he developed a command-line tool that uses this API and returns the results at a blazing fast speed.
+[Cgboal ](https://twitter.com/CalumBoal)has done an excellent work of parsing and indexing the whole Rapid7 Sonar dataset into MongoDB and creating an API to query this database. This Crobat API is freely available at [https://sonar.omnisint.io/](https://sonar.omnisint.io/).More over he developed a command-line tool that uses this API and returns the results at a blazing fast speed.
 
 ### Installation:
 
