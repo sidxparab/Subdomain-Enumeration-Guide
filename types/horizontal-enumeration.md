@@ -17,7 +17,7 @@ These enumeration methods can go out of scope and backfire you
 
 ### 1) Discovering the IP space
 
-**ASN**(Autonomous System Number) is a unique identifier of certain IP prefixes. Very large organizations such as Apple, Github, Tesla have their own significant IP space. To find an ASN of an organization [https://bgp.he.net](https://bgp.he.net) is a useful website where we can query.\
+**ASN**(Autonomous System Number) is a unique identifier of certain IP prefixes. Very large organizations such as Apple, Github, Tesla have their own significant IP space. To find an ASN of an organization [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
 Let's find ASN for **Apple Inc.**
 
 ![](../.gitbook/assets/hurricane.png)
@@ -34,7 +34,7 @@ whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" |
 
 #### a) **WhoisXMLAPI**
 
-****[**WhoisXMLAPI** ](https://www.whoisxmlapi.com)is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renew every month.\
+****[**WhoisXMLAPI** ](https://www.whoisxmlapi.com/)is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renew every month.\
 Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxmlapi.com/reverse-whois-search) . Now searching with the root domain name like **dell.com** will give all the associated domains.
 
 ![](../.gitbook/assets/whoisxml.png)
@@ -45,7 +45,7 @@ These are not 100% accurate results, as they contain false positives &#x20;
 
 #### b) **Whoxy** :moneybag:&#x20;
 
-****[**Whoxy**](https://www.whoxy.com) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid service :(
+****[**Whoxy**](https://www.whoxy.com/) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name. Whoxy has an enormous database of around **329M WHOIS records**. But sadly this is a paid service :(
 
 To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](https://github.com/MilindPurswani/whoxyrm)**.**
 
@@ -53,7 +53,7 @@ To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](ht
 
 #### c) Crunchbase:moneybag:&#x20;
 
-[**Crunchbase**](https://www.crunchbase.com) is another great alternative for finding acquisitions but requires a paid subscription to view all the acquisitions. The trial version allows viewing some of the acquisitions.
+[**Crunchbase**](https://www.crunchbase.com/) is another great alternative for finding acquisitions but requires a paid subscription to view all the acquisitions. The trial version allows viewing some of the acquisitions.
 
 ![](../.gitbook/assets/crunchbase.png)
 
@@ -141,7 +141,7 @@ python3 MurMurHash.py
 
 ### Weaponizing through Shodan:
 
-* Now we query [Shodan](https://www.shodan.io) `http.favicon.hash:<hash>` with that favicon hash.
+* Now we query [Shodan](https://www.shodan.io/) `http.favicon.hash:<hash>` with that favicon hash.
 * This gave us a whopping **162K assets/hosts**. These all can be subdomains or related domains of the Microsoft organization.
 
 ![](../.gitbook/assets/shodanfavicon.png)
