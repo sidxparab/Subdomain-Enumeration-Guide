@@ -88,7 +88,7 @@ python3 setup.py install
 dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolvers.txt
 ```
 
-![](../.gitbook/assets/dnsvalidator1.png)
+<figure><img src="../.gitbook/assets/dnvalidator.png" alt=""><figcaption></figcaption></figure>
 
 ### \[Alternative]
 
