@@ -1,34 +1,34 @@
 # Horizontal Enumeration
 
-While performing a security assessment our main goal is to map out all the domains owned by a single entity. This means knowing all the assets facing the internet of a particular organization. It is a bit trickier to find related domains/acquisitions of a particular organization as this step includes some tedious methods and doesn't give accurate results always. One has to solely perform manual analysis.
+While performing a security assessment our main goal is to map out all the root domains owned by a single entity. This means, making an inventory all the assets facing the internet of a particular organization. It is a bit trickier to find related domains/acquisitions of a particular organization as this step includes some tedious methods and doesn't guarantee accurate results always. One has to solely perform manual analysis to verify the results.
 
 From the below image you can get an idea of what a **horizontal domain correlation** is:
 
 ![](../.gitbook/assets/enumeration-2-.png)
 
 \
-Let's look at how to find these related domains.
+Let's look at how to find these related horizontal domains.
 
 ## Methods:
 
 {% hint style="danger" %}
-These enumeration methods can go out of scope and backfire you
+These enumeration methods can go out of scope and backfire you. Do it with caution!
 {% endhint %}
 
 ### 1) Discovering the IP space
 
-**ASN**(Autonomous System Number) is a unique identifier of certain IP prefixes. Very large organizations such as Apple, Github, Tesla have their own significant IP space. To find an ASN of an organization [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
+**ASN**(Autonomous System Number) is a unique identifier for a set of IP-ranges an organizations owns. Very large organizations such as Apple, GitHub, Tesla have their own significant IP space. To find an ASN of a particular organization, [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
 Let's find ASN for **Apple Inc.**
 
 ![](../.gitbook/assets/hurricane.png)
 
-Now that we have found out the ASN number, next we need to figure out IP ranges within that ASN. For this, we will use **whois** tool.
+Now that we have found out the ASN number of an organization, the next step is to find out the IP ranges that reside inside that ASN. For this, we will use a tool called **whois.**
 
-```bash
-whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
-```
+<pre class="language-bash"><code class="lang-bash">apt-get install whois
+<strong>whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq -u
+</strong></code></pre>
 
-![](../.gitbook/assets/asnip.png)
+<figure><img src="../.gitbook/assets/whoiss.png" alt=""><figcaption></figcaption></figure>
 
 ### 2) Finding related domains/acquisitions
 
