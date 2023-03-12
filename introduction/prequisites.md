@@ -22,11 +22,11 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 
 **There are 2 types of passive DNS sources:-**
 
-**1) Allow querying their Datasets freely**\
+**1) Allow querying their Datasets freely(partially)**\
 ****A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like **** [**amass**](https://github.com/OWASP/Amass), **** [**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
 
 **2) Need to generate API keys to query Datasets**\
-****Also, a number of sources require you to signup on to their platform and generate a unique API key for yourself so that you are authorized to query and retrieve their historical datasets.
+****Also, a number of sources require you to signup on to their platform and generate a unique API key for yourself so that you are authorized to query and retrieve results from their historical DNS datasets.
 
 ### Problems with obtaining free API keys of good passive sources:
 
