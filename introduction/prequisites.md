@@ -64,6 +64,8 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 **More the time** you invest in signing up with passive sources, **More the subdomains** you get ✨
 {% endhint %}
 
+##
+
 ## 2) 100% accurate open public DNS resolvers
 
 ### What is a DNS resolver?
@@ -90,12 +92,14 @@ dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolve
 
 ### \[Alternative]
 
-The above method of using dnsvalidator to populate a list of valid public DNS resolver is too much time and resource consuming. Hence, we can depend upon open-source contributions by other researcher for populating the list of DNS resolvers. Various security researchers/companies have created automations that run dnsvalidator periodically(every 24hrs). One can benfite from such contributions. Below is the periodically verified list of DNS resolvers by [Trickest](https://trickest.com/).
+The above method of using dnsvalidator to populate a list of valid public DNS resolver is too much time and resource consuming. Hence, we can depend upon open-source contributions by other researcher for populating the list of DNS resolvers. Various security researchers/companies have created automations that run dnsvalidator periodically(every 24hrs). One can benefit from such contributions. Below is the periodically verified list of DNS resolvers by [Trickest](https://trickest.com/).
 
 ```
 wget https://raw.githubusercontent.com/trickest/resolvers/main/resolvers.txt
 mv resolvers.txt public_resolvers.txt
 ```
+
+##
 
 ## 3) A VPS (_Most Preferable)_
 
@@ -105,11 +109,11 @@ VPS(Virtual Private Server) can be called as your own dedicated virtual machine 
 
 ### Benefits of a VPS?
 
-VPS tends to have higher bandwidth and better DNS resolution capabilities as compared to your local home system which uses ISP's DNS resolver which is slow.
+VPS tends to have higher bandwidth and better DNS resolution capabilities as compared to your local home router system which uses ISP's DNS resolver(slow).
 
 A VPS helps while performing various bandwidth-intensive tasks such as DNS resolution & brute-forcing. Alongside when performing such tasks on a local system generally blows up your wifi making it unusable for other users connected on the same network.
 
-Also, you can perform tasks 24/7; 365 days in a VPS, unlike your local system.
+Also, with VPS you can perform tasks 24/7; 365 days, unlike your local system.
 
 ### How to get one?
 
