@@ -68,16 +68,16 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 
 ### What is a DNS resolver?
 
-A DNS(Domain Name System) resolver is a service that manages "name to IP address" translations. The process of DNS resolution involves converting a hostname (such as www.example.com) into a computer-friendly IP address (such as 192.168.1.1). In short, we get to know whether a domain is alive or not, when we query a DNS resolver.
+A DNS(Domain Name System) resolver is a service that manages "name to IP address" translations. The process of DNS resolution involves converting a hostname (such as www.example.com) into a computer-friendly IP address (such as 192.168.1.1). In short, if we need to know whether a domain/host is alive or not; we would need to perform a DNS query.
 
 ### Why do we need a public DNS resolvers list?
 
-During various subdomain enumeration techniques like bruteforcing or resolution of a large number of domains, we use a base tool called [MassDNS](https://github.com/blechschmidt/massdns). MassDNS is a simple high-performance tool that is used to check whether a given domain is valid or not. For this purpose, MassDNS needs to be provided with a list of public DNS resolvers. These public resolvers perform DNS queries and check for validation of a domain. Hence, more the number of public resolvers provided, the more concurrent DNS queries are made and thus quicker the output.\
+During various subdomain enumeration techniques like DNS bruteforcing or DNS resolution of a large number of domains, we use a base tool called [MassDNS](https://github.com/blechschmidt/massdns). MassDNS is a simple high-performance tool that is used to check whether a given domain is valid or not. For this purpose, MassDNS needs to be provided with a list of public DNS resolvers. These public resolvers perform DNS queries on our behalf and returns the result. Hence, more the number of public resolvers we provided, the more concurrent DNS queries can be made and thus quicker the output.\
 
 
-### How can we create a list of public resolvers?
+### How can we create a list of valid public resolvers?
 
-[**Dnsvalidator**](https://github.com/vortexau/dnsvalidator) is a tool that helps us to generate a valid list of open public DNS resolvers.[https://public-dns.info](https://public-dns.info/) is a webside that includes a list of around 5.7k open public DNS resolvers. But some of these wouldn't be working. So, dnsvalidator helps us to verify only the valid open public DNS resolvers. Dnsvalidator takes this list of 5.7k public resolvers and queries for its resolution using trusted resolvers like Google DNS(8.8.8.8), Cloudflare DNS(1.1.1.1), Quad9(9.9.9.9).
+[**Dnsvalidator**](https://github.com/vortexau/dnsvalidator) is a tool that helps us to verify/generate a valid list of open public DNS resolvers. The [https://public-dns.info](https://public-dns.info/) is a website that includes a list of around **28.7K** open public DNS resolvers. But some of these resolvers wouldn't be working for us. So, dnsvalidator helps us to verify and return only the valid open public DNS resolvers. Dnsvalidator takes this list of 28.7K public resolvers and queries for its resolution using trusted resolvers like Google DNS(8.8.8.8), Cloudflare DNS(1.1.1.1), Quad9(9.9.9.9).
 
 ```bash
 git clone https://github.com/vortexau/dnsvalidator.git
@@ -87,6 +87,15 @@ dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolve
 ```
 
 ![](../.gitbook/assets/dnsvalidator1.png)
+
+### \[Alternative]
+
+The above method of using dnsvalidator to populate a list of valid public DNS resolver is too much time and resource consuming. Hence, we can depend upon open-source contributions by other researcher for populating the list of DNS resolvers. Various security researchers/companies have created automations that run dnsvalidator periodically(every 24hrs). One can benfite from such contributions. Below is the periodically verified list of DNS resolvers by [Trickest](https://trickest.com/).
+
+```
+wget https://raw.githubusercontent.com/trickest/resolvers/main/resolvers.txt
+mv resolvers.txt public_resolvers.txt
+```
 
 ## 3) A VPS (_Most Preferable)_
 
