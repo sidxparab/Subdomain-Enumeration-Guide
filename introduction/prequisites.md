@@ -90,7 +90,7 @@ dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolve
 
 <figure><img src="../.gitbook/assets/dnvalidator.png" alt=""><figcaption></figcaption></figure>
 
-### \[Alternative]
+### \[Alternative]💁‍♂️
 
 The above method of using dnsvalidator to populate a list of valid public DNS resolver is too much time and resource consuming. Hence, we can depend upon open-source contributions by other researcher for populating the list of DNS resolvers. Various security researchers/companies have created automations that run dnsvalidator periodically(every 24hrs). One can benefit from such contributions. Below is the periodically verified list of DNS resolvers by [Trickest](https://trickest.com/).
 
@@ -122,8 +122,8 @@ There are various cloud providers that provide **free 200$ credits** like [Digit
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3\&utm\_campaign=Referral\_Invite\&utm\_medium=Referral\_Program\&utm\_source=badge)
 
-* [Linode](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)
-* [Vultr](https://www.vultr.com/?ref=8905902)
+* ****[**Linode**](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)****
+* ****[**Vultr**](https://www.vultr.com/?ref=8905902)****
 
 ****\
 ****
