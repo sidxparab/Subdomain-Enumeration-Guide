@@ -12,11 +12,11 @@
 
 ### What is Passive DNS data?
 
-Whenever a domain is alive on the internet, to access it, a DNS query needs to be made to the DNS resolver. With special probes activated on the DNS resolver, it is possible to record these queries into a database. This doesn't record which client made the request but, just the fact that at some point a domain has been associated with a specific DNS record.
+Whenever a domain is alive on the internet, to access it, a DNS query needs to be made to the DNS resolver. With special probes activated on the DNS resolver, it is possible to record these queries and store them into a database. This doesn't record which client made the request but, just the fact that at some point a domain has been associated with a specific DNS record.
 
-Hence, we can know, what were the subdomains of a particular root domain that once existed in DNS records. These subdomains in the present time may be alive or dead. (we need further find out which are the valid ones). Along with these various companies have their internet crawlers which continuously keep on crawling the whole internet and discover new assets.
+Hence, we can know, what subdomains of a particular root domain existed with the help of these DNS record database. These subdomains in the present time may be alive or dead. (we need further find out which are the valid ones). There exists various services/companies that are doing this work for past several years. Along with this, various companies have their internet crawlers which continuously keep on crawling the whole internet and discover new domains.
 
-There are a number of services/sources([Security trails](https://securitytrails.com), [Censys](https://censys.io), [Spyse](https://spyse.com), [Shodan](https://www.shodan.io), [Whoisxmlapi](https://www.whoisxmlapi.com), [DNSDB](https://www.farsightsecurity.com/tools/dnsdb-scout/)) that provide such historical DNS data & crawled data. These services provide their API keys so that we can query their enormous data sets.&#x20;
+There are a number of services/sources([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [VirusTotal](https://www.virustotal.com/), [WhoisXMLAPI](https://www.whoisxmlapi.com/), [DNSDB](https://www.farsightsecurity.com/tools/dnsdb-scout/)) that provide such historical DNS data & crawled data. These services provide their API keys so that we can query and retrieve subdomains of our choice.
 
 ### Configuring API keys:&#x20;
 
@@ -77,7 +77,7 @@ During various subdomain enumeration techniques like bruteforcing or resolution 
 
 ### How can we create a list of public resolvers?
 
-[**Dnsvalidator**](https://github.com/vortexau/dnsvalidator) is a tool that helps us to generate a valid list of open public DNS resolvers.[https://public-dns.info](https://public-dns.info) is a webside that includes a list of around 5.7k open public DNS resolvers. But some of these wouldn't be working. So, dnsvalidator helps us to verify only the valid open public DNS resolvers. Dnsvalidator takes this list of 5.7k public resolvers and queries for its resolution using trusted resolvers like Google DNS(8.8.8.8), Cloudflare DNS(1.1.1.1), Quad9(9.9.9.9).
+[**Dnsvalidator**](https://github.com/vortexau/dnsvalidator) is a tool that helps us to generate a valid list of open public DNS resolvers.[https://public-dns.info](https://public-dns.info/) is a webside that includes a list of around 5.7k open public DNS resolvers. But some of these wouldn't be working. So, dnsvalidator helps us to verify only the valid open public DNS resolvers. Dnsvalidator takes this list of 5.7k public resolvers and queries for its resolution using trusted resolvers like Google DNS(8.8.8.8), Cloudflare DNS(1.1.1.1), Quad9(9.9.9.9).
 
 ```bash
 git clone https://github.com/vortexau/dnsvalidator.git
@@ -104,10 +104,10 @@ Also, you can perform tasks 24/7; 365 days in a VPS, unlike your local system.
 
 ### How to get one?
 
-There are various cloud providers that provide **free 100$ credits** like [Digital Ocean](https://www.digitalocean.com), [Linode](https://www.linode.com), [Vultr](https://www.vultr.com) when you signup for the first time. (CC required)\
+There are various cloud providers that provide **free 100$ credits** like [Digital Ocean](https://www.digitalocean.com/), [Linode](https://www.linode.com/), [Vultr](https://www.vultr.com/) when you signup for the first time. (CC required)\
 **Referral Links:**
 
-[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3)
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3\&utm\_campaign=Referral\_Invite\&utm\_medium=Referral\_Program\&utm\_source=badge)
 
 * [Linode](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)
 * [Vultr](https://www.vultr.com/?ref=8905902)
