@@ -113,7 +113,7 @@ Also, you can perform tasks 24/7; 365 days in a VPS, unlike your local system.
 
 ### How to get one?
 
-There are various cloud providers that provide **free 100$ credits** like [Digital Ocean](https://www.digitalocean.com/), [Linode](https://www.linode.com/), [Vultr](https://www.vultr.com/) when you signup for the first time. (CC required)\
+There are various cloud providers that provide **free 200$ credits** like [Digital Ocean](https://www.digitalocean.com/), [Linode](https://www.linode.com/), [Vultr](https://www.vultr.com/) when you signup for the first time. (**C**redit**C**ard with international transac enabled required)\
 **Referral Links:**
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3\&utm\_campaign=Referral\_Invite\&utm\_medium=Referral\_Program\&utm\_source=badge)
