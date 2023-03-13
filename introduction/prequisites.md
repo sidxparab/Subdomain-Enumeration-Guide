@@ -88,7 +88,7 @@ python3 setup.py install
 dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolvers.txt
 ```
 
-<figure><img src="../.gitbook/assets/dnvalidator.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/dnvalidator.png" alt=""><figcaption><p>This process takes around <strong>2hrs</strong> and gives <strong>13k</strong> valid resolvers. </p></figcaption></figure>
 
 ### \[Alternative]💁‍♂️
 
