@@ -9,28 +9,11 @@ From the below image you can get an idea of what a **horizontal domain correlati
 \
 Let's look at how to find these related horizontal domains.
 
-## Methods:
-
 {% hint style="danger" %}
 These enumeration methods can go out of scope and backfire you. Do it with caution!
 {% endhint %}
 
-### 1) Discovering the IP space
-
-**ASN**(Autonomous System Number) is a unique identifier for a set of IP-ranges an organizations owns. Very large organizations such as Apple, GitHub, Tesla have their own significant IP space. To find an ASN of a particular organization, [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
-Let's find ASN for **Apple Inc.**
-
-![](../.gitbook/assets/hurricane.png)
-
-Now that we have found out the ASN number of an organization, the next step is to find out the IP ranges that reside inside that ASN. For this, we will use a tool called **whois.**
-
-<pre class="language-bash"><code class="lang-bash">apt-get install whois
-<strong>whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq -u
-</strong></code></pre>
-
-<figure><img src="../.gitbook/assets/whoiss.png" alt=""><figcaption></figcaption></figure>
-
-### 1) Finding related domains/acquisitions
+## 1) Finding related domains/acquisitions
 
 #### a) **WhoisXMLAPI**
 
@@ -70,7 +53,9 @@ You can leverage OpenAI's [**ChatGPT**](https://chat.openai.com/) for getting a 
 
 <figure><img src="../.gitbook/assets/ChatGPT acquistion.png" alt=""><figcaption></figcaption></figure>
 
-### 2) Discovering the IP space
+##
+
+## 2) Discovering the IP space
 
 **ASN**(Autonomous System Number) is a unique identifier for a set of IP-ranges an organizations owns. Very large organizations such as Apple, GitHub, Tesla have their own significant IP space. To find an ASN of a particular organization, [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
 Let's find ASN for **Apple Inc.**
@@ -85,11 +70,9 @@ Now that we have found out the ASN number of an organization, the next step is t
 
 <figure><img src="../.gitbook/assets/whoiss.png" alt=""><figcaption></figcaption></figure>
 
-###
 
-###
 
-### 3) PTR records (Reverse DNS)
+## 3) PTR records (Reverse DNS)
 
 Now since we have got to know the IP address ranges from ASN of an organization, we can perform PTR queries on the IP addresses and check for valid hosts.\
 \
