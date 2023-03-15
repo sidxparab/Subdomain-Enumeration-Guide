@@ -49,6 +49,13 @@ These are not 100% accurate results, as they contain false positives &#x20;
 
 To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](https://github.com/MilindPurswani/whoxyrm)**.**
 
+```
+go get -u github.com/milindpurswani/whoxyrm
+export WHOXY_API_KEY="89acb0f4557df3237l1"
+
+whoxyrm -company-name "Red Bull GmBH"
+```
+
 ![](../.gitbook/assets/whoxyrm.png)
 
 #### c) Crunchbase:moneybag:&#x20;
