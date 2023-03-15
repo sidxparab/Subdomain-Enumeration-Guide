@@ -1,6 +1,6 @@
 # Horizontal Enumeration
 
-While performing a security assessment our main goal is to map out all the root domains owned by a single entity. This means, making an inventory all the assets facing the internet of a particular organization. It is a bit trickier to find related domains/acquisitions of a particular organization as this step includes some tedious methods and doesn't guarantee accurate results always. One has to solely perform manual analysis to verify the results.
+While performing a security assessment our main goal is to map out all the root domains owned by a single entity. This means, making an inventory of all the internet facing assets of a particular organization. It is a bit trickier to find related domains/acquisitions of a particular organization as this step includes some tedious methods and doesn't guarantee accurate results always. One has to solely perform manual analysis to verify the results.
 
 From the below image you can get an idea of what a **horizontal domain correlation** is:
 
