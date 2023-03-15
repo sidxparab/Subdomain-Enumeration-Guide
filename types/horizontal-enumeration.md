@@ -13,7 +13,7 @@ Let's look at how to find these related horizontal domains.
 These enumeration methods can go out of scope and backfire you. Do it with caution!
 {% endhint %}
 
-## 1) Finding related domains/acquisitions
+## <mark style="background-color:orange;">1) Finding related domains/acquisitions</mark>
 
 #### a) **WhoisXMLAPI**
 
@@ -55,7 +55,7 @@ You can leverage OpenAI's [**ChatGPT**](https://chat.openai.com/) for getting a 
 
 ##
 
-## 2) Discovering the IP space
+## <mark style="background-color:orange;">2) Discovering the IP space</mark>
 
 **ASN**(Autonomous System Number) is a unique identifier for a set of IP-ranges an organizations owns. Very large organizations such as Apple, GitHub, Tesla have their own significant IP space. To find an ASN of a particular organization, [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
 Let's find ASN for **Apple Inc.**
@@ -72,45 +72,51 @@ Now that we have found out the ASN number of an organization, the next step is t
 
 
 
-## 3) PTR records (Reverse DNS)
+## <mark style="background-color:orange;">3) PTR records (Reverse DNS)</mark>
 
-Now since we have got to know the IP address ranges from ASN of an organization, we can perform PTR queries on the IP addresses and check for valid hosts.\
+Now since we have got to know the IP address ranges from ASN of an organization, we can perform reverse DNS(PTR) queries on the IP addresses and check for valid hosts.\
 \
 **What is reverse DNS?**\
-When a user attempts to reach a domain name in their browser, a DNS lookup occurs, matching the domain name(example.com) to the IP address(such as 192.168.1.1). A reverse DNS lookup is the opposite of this process: it is a query that starts with the IP address and looks up the domain name.
+When a user attempts to open a domain/website in their browser, a DNS lookup occurs. This maps out the IP address(192.168.0.1) of the associated domain name(example.com). A reverse DNS lookup is the opposite of this process; it is a query that starts with the IP address and looks up the associated domain name of it.
 
 This means that, since we already know the IP space of an organization we can, we can reverse query the IP addresses and find the valid domains. Sounds cool?
 
 **But how?**\
-****PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) **** tool we can query a PTR record of an IP address and find the associated hostname/domain name.
+****DNS PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) **** tool we can query a PTR record of an IP address and find the associated hostname/domain name.
 
-**Apple Inc.** :apple:  has **ASN714** which represents IP range **17.0.0.0/8.** So, let's see have to perform reverse DNS.
+**Apple Inc.** :apple:  owns **ASN714** which represents IP range **17.0.0.0/8.** So now, lets perform reverse DNS queries to find out the domain names**.**
 
 ### Running:
 
 We will first need to install 2 tools:
 
-* [**Mapcidr**](https://github.com/projectdiscovery/mapcidr) **** :- `GO111MODULE=on go get -v github.com/projectdiscovery/mapcidr/cmd/mapcidr`
-* ****[**dnsx** ](https://github.com/projectdiscovery/dnsx)       :- `GO111MODULE=on go get -v github.com/projectdiscovery/dnsx/cmd/dnsx`
+*   [**Mapcidr**](https://github.com/projectdiscovery/mapcidr) **** :
+
+    ```
+    go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+    ```
+*   ****[**Dnsx** ](https://github.com/projectdiscovery/dnsx):
+
+    ```
+    go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
+    ```
+
+**One liner:**
 
 ```bash
- echo 17.0.0.0/8 | mapcidr -silent | dnsx -ptr -resp-only -o output.txt
+echo 17.0.0.0/16 | mapcidr -silent | dnsx -ptr -resp-only -o output.txt
 ```
 
 #### Breakdown:
 
-* When an IP range is given to **mapcidr** through stdin(standard input), it performs expansion spitting out each IP address from the range onto a new line:`17.0.0.1`**,** `17.0.0.2`**,** `17.0.0.3`**,** `17.0.0.4`
+* When an IP range is given to **mapcidr** through stdin(standard input), it performs expansion of the CIDR range, spitting out each IP address from the range onto a new line.
 * Now when **dnsx** receives each IP address from stdin, it performs reverse DNS and checks for PTR record. If, found it gives us back the hostname/domain name.
 
 ![](../.gitbook/assets/ptr.png)
 
-**Note:** We can also combine the step of discovering the IP space with reverse DNS lookup into one-liner like:
+##
 
-```bash
- whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq | mapcidr -silent | dnsx -ptr -resp-only
-```
-
-### 4) Favicon Hashing
+## <mark style="background-color:orange;">4) Favicon Hashing</mark>
 
 #### What is a favicon?
 
@@ -123,6 +129,16 @@ The image/icon shown on the left-hand side of a tab is called as **favicon.ico**
 * Visit any website which already posses a favicon ([https://www.microsoft.com](https://www.microsoft.com/en-in))
 * Now, view the source code and find the keyword "**favicon**" in the source code.
 * You will find the link where the favicon is hosted. ([https://c.s-microsoft.com/favicon.ico](https://c.s-microsoft.com/favicon.ico?v2))
+
+<pre><code><strong>#Installation
+</strong><strong>git clone https://github.com/pielco11/fav-up.git
+</strong>cd fav-up/
+pip3 install -r requiremenbashts.txt
+</code></pre>
+
+####
+
+####
 
 #### Generating the MurmurHash value:
 
