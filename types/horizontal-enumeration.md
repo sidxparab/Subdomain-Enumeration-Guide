@@ -64,6 +64,12 @@ whoxyrm -company-name "Red Bull GmBH"
 
 ![](../.gitbook/assets/crunchbase.png)
 
+#### d) ChatGPT
+
+You can leverage OpenAI's [**ChatGPT**](https://chat.openai.com/) for getting a list of acquisitions that are owned by a particular organization. Below is the example of getting acquisitions of Tesla.&#x20;
+
+<figure><img src="../.gitbook/assets/ChatGPT acquistion.png" alt=""><figcaption></figcaption></figure>
+
 ### 3) PTR records (Reverse DNS)
 
 Now since we have got to know the IP address ranges from ASN of an organization, we can perform PTR queries on the IP addresses and check for valid hosts.\
