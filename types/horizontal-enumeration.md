@@ -30,7 +30,7 @@ Now that we have found out the ASN number of an organization, the next step is t
 
 <figure><img src="../.gitbook/assets/whoiss.png" alt=""><figcaption></figcaption></figure>
 
-### 2) Finding related domains/acquisitions
+### 1) Finding related domains/acquisitions
 
 #### a) **WhoisXMLAPI**
 
@@ -62,13 +62,32 @@ whoxyrm -company-name "Red Bull GmBH"
 
 [**Crunchbase**](https://www.crunchbase.com/) is another great alternative for finding acquisitions but requires a paid subscription to view all the acquisitions. The trial version allows viewing some of the acquisitions.
 
-![](../.gitbook/assets/crunchbase.png)
+<figure><img src="../.gitbook/assets/crunchbase.png" alt=""><figcaption></figcaption></figure>
 
 #### d) ChatGPT
 
 You can leverage OpenAI's [**ChatGPT**](https://chat.openai.com/) for getting a list of acquisitions that are owned by a particular organization. Below is the example of getting acquisitions of Tesla.&#x20;
 
 <figure><img src="../.gitbook/assets/ChatGPT acquistion.png" alt=""><figcaption></figcaption></figure>
+
+### 2) Discovering the IP space
+
+**ASN**(Autonomous System Number) is a unique identifier for a set of IP-ranges an organizations owns. Very large organizations such as Apple, GitHub, Tesla have their own significant IP space. To find an ASN of a particular organization, [https://bgp.he.net](https://bgp.he.net/) is a useful website where we can query.\
+Let's find ASN for **Apple Inc.**
+
+![](../.gitbook/assets/hurricane.png)
+
+Now that we have found out the ASN number of an organization, the next step is to find out the IP ranges that reside inside that ASN. For this, we will use a tool called **whois.**
+
+<pre class="language-bash"><code class="lang-bash">apt-get install whois
+<strong>whois -h whois.radb.net  -- '-i origin AS714' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq -u
+</strong></code></pre>
+
+<figure><img src="../.gitbook/assets/whoiss.png" alt=""><figcaption></figcaption></figure>
+
+###
+
+###
 
 ### 3) PTR records (Reverse DNS)
 
