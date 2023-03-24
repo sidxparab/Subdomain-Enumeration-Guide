@@ -20,7 +20,7 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 
 ### Configuring API keys:&#x20;
 
-**There are 2 types of passive DNS sources:-**
+**There are 2 types of passive DNS services:-**
 
 **1) Allow querying their Datasets freely(partially)**\
 ****A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like **** [**amass**](https://github.com/OWASP/Amass), **** [**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
