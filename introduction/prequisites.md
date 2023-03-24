@@ -42,7 +42,7 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 
 {% tabs %}
 {% tab title="Without API keys " %}
-<figure><img src="../.gitbook/assets/subfinder without.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/subfinder without(1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="With API keys" %}
