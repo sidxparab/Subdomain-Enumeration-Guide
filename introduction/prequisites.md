@@ -56,9 +56,9 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 * I have created a detailed excel sheet about which sources to signup on for, what's the validity of API key, their API key quota, rate limits, etc.
 * Depending on your consumption of API queries and the validity of API keys, you need to make keep making new accounts at a regular interval of time in order to get the maximum results.
 
-![](../.gitbook/assets/excelsheet.png)
+<figure><img src="../.gitbook/assets/Excel sheet screenshot.png" alt=""><figcaption></figcaption></figure>
 
-:man\_tipping\_hand: **Check out the excel sheet** :point\_right: **** [**here** ](https://docs.google.com/spreadsheets/d/1w75gcdytSRtZqGHMo852x2ffl8CC4FhxmHzR0gvII-Y/edit?usp=sharing)****:point\_left: ****&#x20;
+:man\_tipping\_hand: **Check out the excel sheet** :point\_right: **** [**here** ](https://docs.google.com/spreadsheets/d/19lns4DUmCts1VXIhmC6x-HaWgNT7vWLH0N68srxS7bI/edit?usp=sharing)****:point\_left: ****&#x20;
 
 {% hint style="success" %}
 **More the time** you invest in signing up with passive sources, **More the subdomains** you get ✨
