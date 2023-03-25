@@ -51,7 +51,7 @@ go get -v github.com/OWASP/Amass/v3/...
 
 **Setting up Amass config file:**
 
-* ****[**Link**](https://gist.github.com/sidxparab/4cd40d6e2f9422a005b06f19919200d0) to my amass config file for reference.
+* ****[**Link** ](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)to my amass config file for reference.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
 * Amass uses API keys mentioned in the config to query the third-party passive DNS sources.
 * There are in total **18 services** on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
@@ -129,7 +129,7 @@ GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
 **Example config file:-**
 
-* [**Link** ](https://gist.github.com/sidxparab/e981c813f4ad057ed080a75a7fe00f4e)to my subfinder config file for reference.
+* ****[**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) **** to my subfinder config file for reference.
 * Some passive sources like `Censys` , `PassiveTotal` have 2 keys like APP-Id & Secret. For such sources, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
 * Subfinder automatically detects its config file only if at the default position.&#x20;
 
