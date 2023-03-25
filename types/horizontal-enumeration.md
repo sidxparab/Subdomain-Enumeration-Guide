@@ -116,73 +116,54 @@ echo 17.0.0.0/16 | mapcidr -silent | dnsx -ptr -resp-only -o output.txt
 
 ##
 
-## <mark style="background-color:orange;">4) Favicon Hashing</mark>
+## <mark style="background-color:orange;">4) Favicon Search</mark>
 
 #### What is a favicon?
 
-The image/icon shown on the left-hand side of a tab is called as **favicon.ico**. This icon is generally fetched from a different source/CDN. Hence, we can find this favicon link from the source code of the website.
+The image/icon shown on the left-hand side of a tab is called as **favicon.ico**. This icon is usually a picture that can be hosted on a different endpoint, host or CDN. We can check whether the URL for the favicon is present in the Web page source code or not.&#x20;
 
-![](../.gitbook/assets/favicon.png)
+<figure><img src="../.gitbook/assets/Github favicon.png" alt=""><figcaption></figcaption></figure>
 
 #### How to find the favicon.ico link?
 
-* Visit any website which already posses a favicon ([https://www.microsoft.com](https://www.microsoft.com/en-in))
+* Visit any website which already posses a favicon ([https://github.com/](https://github.com/))
 * Now, view the source code and find the keyword "**favicon**" in the source code.
-* You will find the link where the favicon is hosted. ([https://c.s-microsoft.com/favicon.ico](https://c.s-microsoft.com/favicon.ico?v2))
+* You will find the link where the favicon is hosted ([https://github.githubassets.com/favicons/favicon.png](https://github.githubassets.com/favicons/favicon.png))
+
+#### How can we leverage this to find different root domains?
+
+* Usually the web assets owned by a particular company will have the same logo/favicon image across various domains.&#x20;
+* Hence, we can make a Internet wide search using Shodan to get all the domains/IP addresses of such web assets that have a common favicon.
+
+### [Fav-UP](https://github.com/pielco11/fav-up):&#x20;
+
+* **Author**: [Francesco Poldi](https://github.com/pielco11)
+* **Language**: Python
+
+Fav-Up is a great tool that can help us in the process to automate the steps of performing a favicon hash search. The FavUp.py is python based tool that performs execution in the following steps:&#x20;
+
+1. First will visit the page source of the mentioned website and try to find the URL on which the favicon is hosted.
+2. After fetching the favicon.ico, now the tool generates [**MurmurHash** ](https://en.wikipedia.org/wiki/MurmurHash)of that favicon which is unique to every favicon.
+3. Now it performs a **Shodan** search to find all the IP addresses that have the same favicon in their title(`http.favicon.hash:<hash>`)
 
 <pre><code><strong>#Installation
 </strong>git clone https://github.com/pielco11/fav-up.git
 cd fav-up/
 pip3 install -r requirements.txt
+apt-get install jq
 
 <strong>#Initializing Shodan API key
 </strong>shodan init A5TCTEH78E6Zhjdva6X2fls6Oob9F2hL
 
+<strong>#Running the tool
+</strong>python3 favUp.py -w www.github.com -sc -o output.json
+
+<strong>#Parsing the output
+</strong>cat output.json | jq -r 'try .found_ips' | sed "s/|/\n/g"
 
 </code></pre>
 
-####
-
-####
-
-#### Generating the MurmurHash value:
-
-To generate the MurmurHash value which is unique to each favicon we will use a tool called **MurMurHash**
-
-### ****[**MurMurHash**](https://github.com/Viralmaniar/MurMurHash)****
-
-* **Author**: [Viral Maniar](https://github.com/Viralmaniar)
-* **Language**: Python
-
-**MurMurHash** is a simple tool used to generate hash for the given favicon.
-
-#### Installation:
-
-```bash
-git clone https://github.com/Viralmaniar/MurMurHash.git
-cd MurMurHash/
-pip3 install -r requirements.txt
-```
-
-#### Running:&#x20;
-
-* Upon running the tool, it will ask you to enter the URL for the hash.
-* And after entering the favicon link it will provide you with a unique hash value (**-2057558656**)&#x20;
-
-```bash
-python3 MurMurHash.py
-```
-
-![](../.gitbook/assets/favicontool.png)
-
-### Weaponizing through Shodan:
-
-* Now we query [Shodan](https://www.shodan.io/) `http.favicon.hash:<hash>` with that favicon hash.
-* This gave us a whopping **162K assets/hosts**. These all can be subdomains or related domains of the Microsoft organization.
-
-![](../.gitbook/assets/shodanfavicon.png)
-
-
+<figure><img src="../.gitbook/assets/favUp(1).png" alt=""><figcaption></figcaption></figure>
 
 **You know this is a powerful technique when the Recon king**:crown: **tweets about it.**
 
