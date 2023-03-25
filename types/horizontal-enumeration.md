@@ -131,9 +131,14 @@ The image/icon shown on the left-hand side of a tab is called as **favicon.ico**
 * You will find the link where the favicon is hosted. ([https://c.s-microsoft.com/favicon.ico](https://c.s-microsoft.com/favicon.ico?v2))
 
 <pre><code><strong>#Installation
-</strong><strong>git clone https://github.com/pielco11/fav-up.git
-</strong>cd fav-up/
-pip3 install -r requiremenbashts.txt
+</strong>git clone https://github.com/pielco11/fav-up.git
+cd fav-up/
+pip3 install -r requirements.txt
+
+<strong>#Initializing Shodan API key
+</strong>shodan init A5TCTEH78E6Zhjdva6X2fls6Oob9F2hL
+
+
 </code></pre>
 
 ####
