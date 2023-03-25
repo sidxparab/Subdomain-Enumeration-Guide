@@ -37,7 +37,7 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 ### Is it worth making API keys?
 
 * Yes, absolutely, given below is the comparison between running [**Subfinder** ](https://github.com/projectdiscovery/subfinder)with API keys configured and without.
-* You can clearly see the difference that using API keys gave me **20000 more** subdomains.
+* You can clearly see the difference that using API keys gave me a whopping **198,669 more**💥 subdomains.
 * Further, this passive data would be used to generate permutation/alterations which eventually would give us more subdomains.
 
 {% tabs %}
@@ -46,7 +46,7 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 {% endtab %}
 
 {% tab title="With API keys" %}
-![](../.gitbook/assets/subfinderconfig.png)
+<figure><img src="../.gitbook/assets/Subfinder With.png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 
