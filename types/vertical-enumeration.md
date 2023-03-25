@@ -13,7 +13,7 @@ Vertical Enumeration can be performed with the help of below mentioned technique
    * Certificates Logs
 2. **Active Techniques**
    * DNS bruteforcing
-   * Permutations
+   * Permutations/Alterations
    * JS/Source Code Scraping
    * VHOST discovery
    * Google Analytics
