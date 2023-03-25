@@ -19,6 +19,7 @@ Vertical Enumeration can be performed with the help of below mentioned technique
    * Google Analytics
    * Recursive Enumeration
    * TLS, CSP, CNAME probing
+   * Regex Permutations
 3. **Web probing**
    * Default Ports
    * Common Ports
