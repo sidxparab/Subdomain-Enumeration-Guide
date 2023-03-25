@@ -138,7 +138,7 @@ While performing DNS queries sometimes we receive **SERVFAIL** error. Puredns by
 The whole idea DNS bruteforcing is of no use if you don't use a great wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's look at what best wordlist:-\
 \
 **1) Assetnote** [**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) (**9 Million**) ⭐\
-[Assetnote](https://wordlists.assetnote.io) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
+[Assetnote](https://wordlists.assetnote.io/) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
 
 **2) Jhaddix** [**all.txt**](https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a) (**2 Million**)\
 Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 years ago but still works well.

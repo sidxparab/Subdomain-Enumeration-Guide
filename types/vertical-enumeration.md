@@ -1,25 +1,25 @@
 # Vertical Enumeration
 
-Vertical Enumeration or Vertical domain correlation is a process of finding out domains of the same root domain. This type of enumeration contains various techniques and can be automated too.
+Vertical Enumeration or Vertical domain correlation is a process of finding out hosts located on the same root domain. This type of enumeration contains various techniques and can be automated too.
 
 Here, we find different levels of subdomains of a particular root/main domain.
 
 ![](../.gitbook/assets/enumeration-2-.png)
 
-This includes various intensive techniques which we will see further in this guide.
+Vertical Enumeration can be performed with the help of below mentioned techniques:&#x20;
 
 1. **Passive Techniques**
    * Passive Sources&#x20;
    * Certificates Logs
 2. **Active Techniques**
    * DNS bruteforcing
-   * Permutations
+   * Permutations/Alterations
    * JS/Source Code Scraping
    * VHOST discovery
    * Google Analytics
    * Recursive Enumeration
-   * Favicon Hashing
    * TLS, CSP, CNAME probing
+   * Regex Permutations
 3. **Web probing**
    * Default Ports
    * Common Ports

@@ -2,17 +2,17 @@
 
 ## **What is subdomain enumeration?**
 
-It is one of the most crucial parts of the reconnaissance phase while performing a security assessment. **Subdomain Enumeration** is a process of finding sub-domains of one or more root domains.  According to [RFC 1034](https://tools.ietf.org/html/rfc1034), "_a domain is a subdomain of another domain if it is contained within that domain_".
+It is one of the most crucial parts of the reconnaissance phase while performing a security assessment. **Subdomain Enumeration** is a process of finding sub-domains associated to the root domain. According to [RFC 1034](https://tools.ietf.org/html/rfc1034), "_a domain is a subdomain of another domain if it is contained within that domain_".
 
 ![](../.gitbook/assets/subdomains.png)
 
 ## What's the need?
 
-* Performing subdomain enumeration via various intensive techniques can help enlarge your attack surface as you get more assets to find vulnerabilities on.
-* A good subdomain enumeration will help you find those hidden/untouched subdomains, where your competition to find bugs will also be less. Hence lesser **duplicates**.
+* Performing subdomain enumeration via various intensive techniques can help enlarge your attack surface, as you get more assets to find vulnerabilities on.
+* A good subdomain enumeration will help you find those hidden/untouched subdomains, resulting lesser people finding bugs on that particular domain. Hence lesser **duplicates**.
 * Finding applications running on hidden, forgotten(by the organization) sub-domains may lead to uncovering critical vulnerabilities.
 * Discovering such strangely named subdomains is a critical skill, each bug hunter should possess in today's time.
-*   For large organizations, to find what services have they exposed to the internet.
+*   For large organizations, to find what services have they exposed to the internet while performing an internal pentest.
 
 
 
@@ -28,21 +28,23 @@ An FQDN looks like this:-
 
 `myhost.example.com.`  **---->** Fully Qualified Domain Name&#x20;
 
-&#x20;`myhost` **---->** is the host located within domain example.com (subdomain)
+&#x20;`myhost` **---->** is the host located within the domain example.com (subdomain)
+
+
 
 **Hence;**\
-[https://example.com](https://example.com)\
-[http://myhost.example.com](http://myhost.example.com)\
-[https://internal.accounts.example.com  ](https://internal.accounts.example.com)\
-[http://internal.accounts.dashboard.example.com](https://internal.accounts.dashboard.example.com)
+[**https://**example.com](https://example.com)\
+[**http://**myhost.example.com](http://myhost.example.com)\
+[**https://**internal.accounts.example.com  ](https://internal.accounts.example.com)\
+[**http://**internal.accounts.dashboard.example.com](https://internal.accounts.dashboard.example.com)
 
-The above-mentioned **cannot** be called as subdomains. They are links to web applications hosted on ports 80 & 443 of their respective hosts. Most people have a misconception that these are subdomains of a particular target.
+The above-mentioned **cannot** be called as subdomains. They are the hyperlinks to web applications hosted the respective hosts. Most people have a misconception that these are subdomains of a particular target.
 
-Let's consider an example, **`admin.example.com`**  is a subdomain on which there may not exist any web-service hosted on port 80 & 443. This means, when we send `admin.example.com` to [httpx](https://github.com/projectdiscovery/httpx)/[httprobe ](https://github.com/tomnomnom/httprobe)(tools that check whether any web app running on port 80/443), it will not return any output.
+Let's consider an example, **`admin.example.com`**  is a subdomain on which there isn't any web service hosted. This means that, when we send web probes to `admin.example.com` using [httpx](https://github.com/projectdiscovery/httpx)/[httprobe ](https://github.com/tomnomnom/httprobe)**(**tools that check whether any web service is running on that host), it will not return any output.
 
-This doesn't mean that `admin.example.com` is not a valid subdomain of root domain `example.com`There may be web services hosted on them but not on the default ports(80/443). Also, there may be some other **vulnerable services** running on the subdomain whose exploits are publicly available. \
+This doesn't mean that `admin.example.com` is not a valid subdomain of root domain `example.com`There may exists other services like SSH, SMTP, SMB, WinRM(non-web) hosted on that subdomain that cannot be accessed through your web browser. Surprisingly these services may be vulnerable and their exploits would be publicly available. \
 \
-So in such a case, it's always better that you **DNS resolve** the subdomain rather than directly **web probing** them.
+So in such a case, it's always better that you **DNS resolve** the subdomains that are gathered from passive enumeration to get the valid ones. Later you can send the valid/alive subdomains for **web probing** and find out the hosted web applications on them.
 
 ### **Moral of the story:**
 
