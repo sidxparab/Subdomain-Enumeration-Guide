@@ -2,10 +2,10 @@
 
 ### What is passive subdomain enumeration?
 
-Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [Binaryedge](https://www.binaryedge.io/), [Virus total](https://www.virustotal.com/gui/)) to obtain the subdomains of a particular target.
+Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target.
 
 {% hint style="warning" %}
-It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) **** first, before proceeding further.
+It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
 {% endhint %}
 
 ### What tools to use?
@@ -51,13 +51,13 @@ go get -v github.com/OWASP/Amass/v3/...
 
 **Setting up Amass config file:**
 
-* ****[**Link** ](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)to my amass config file for reference.
+* [**Link** ](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)to my amass config file for reference.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
 * Amass uses API keys mentioned in the config to query the third-party passive DNS sources.
 * There are in total **18 services** on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
 
 {% hint style="info" %}
-Check **** [**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
+Check [**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
 {% endhint %}
 
 * Now let's set up our API keys in the `config.ini`config file.
@@ -96,7 +96,7 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 * **config** - Specify the location of your config file (default: `$HOME/.config/amass/config.ini` )
 * **o** - Output filename
 
-&#x20; ****  :man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
+&#x20; :man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
 
 ```bash
 amass enum -list -config config.ini
@@ -129,7 +129,7 @@ GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
 **Example config file:-**
 
-* ****[**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) **** to my subfinder config file for reference.
+* [**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) to my subfinder config file for reference.
 * Some passive sources like `Censys` , `PassiveTotal` have 2 keys like APP-Id & Secret. For such sources, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
 * Subfinder automatically detects its config file only if at the default position.&#x20;
 
@@ -147,7 +147,7 @@ passivetotal:
 ```
 
 {% hint style="info" %}
-****:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com/)
+:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com/)
 {% endhint %}
 
 ### **Running Subfinder:**
@@ -166,9 +166,9 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 :man\_mage: **Tip:-** To view the sources that require API keys `subfinder -ls` command
 {% endhint %}
 
-### ****
+###
 
-### **3)** [**Assetfinder**](https://github.com/tomnomnom/assetfinder)****
+### **3)** [**Assetfinder**](https://github.com/tomnomnom/assetfinder)
 
 * **Author**:  [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
@@ -268,14 +268,14 @@ GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
 * **random-agent** - use random agents while querying&#x20;
 * **subs** -  include subdomains of the target domain
 
-### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
+### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)
 
 * **Author**: [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
 * **Sources**:
   * &#x20;[web.archive.org](http://web.archive.org/)
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
-  * ****[www.virustotal.com](https://www.virustotal.com)
+  * [www.virustotal.com](https://www.virustotal.com)
 
 Waybackurls returns some unique data that gauplus/gau couldn't find as the sources are different. Hence, we need to include waybackurls in our arsenal.
 
@@ -300,7 +300,7 @@ waybackurls example.com |  unfurl -u domains | sort -u output.txt
 * **Author**: [gwen001](https://github.com/gwen001)
 * **Language**: Go
 
-&#x20;**** Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
+&#x20;Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
 
 **Installation:**
 
@@ -357,7 +357,7 @@ crobat -s example.com > output.txt
 
 * **s** - Target Name
 
-## ****:checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
+## :checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
 
 #### Liked my work? Don't hesitate to buy me a coffee XDD
 
