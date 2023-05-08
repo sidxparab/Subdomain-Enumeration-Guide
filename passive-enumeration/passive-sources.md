@@ -4,15 +4,11 @@
 
 Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target.
 
+There are in total around [58 passive DNS sources](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
+
 {% hint style="warning" %}
 It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
 {% endhint %}
-
-### What tools to use?
-
-* There are in total around 58 passive DNS sources that we can query([list](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228)). It's difficult to manually query these third-party services. Thus, various tools are developed which do this work on our behalf.
-* We can also scrape the data from the Internet Archives.
-* Organizations host their source code on Github; as well as security researchers post their recon data which may contain subdomains of our target.  &#x20;
 
 1. **Passive DNS gathering tools**
    * [Amass](https://github.com/OWASP/Amass)
