@@ -4,7 +4,7 @@
 
 Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target.
 
-There are in total around [58 passive DNS sources](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
+There are in total around [**90** passive DNS sources](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
 
 {% hint style="warning" %}
 It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
@@ -31,7 +31,7 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 * **Author:** [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
 * **Language**: Go
-* **Total Passive Sources**: **58**&#x20;
+* **Total Passive Sources**: **82**&#x20;
 
 **Amass** is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. This is because it queries the most number of third-party services which results in more subdomains of a particular target. [These](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are sources that amass queries.
 
