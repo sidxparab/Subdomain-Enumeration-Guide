@@ -21,7 +21,9 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 3. **Github Scraping**
    * [github-subdomains](https://github.com/gwen001/github-subdomains)
 4. **GitLab Scraping**
-   * [GitLab Scraping](https://github.com/gwen001/gitlab-subdomains)
+   * [gitlab-subdomains](https://github.com/gwen001/gitlab-subdomains)
+
+
 
 
 
@@ -35,7 +37,7 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 [**Amass** ](https://github.com/owasp-amass/amass)is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. Amass queries the most number of third-party services which results in more subdomains of a particular target. [**These**](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are passive services that amass queries.
 
-### Configuring amass:
+### :gear: Configuring amass:
 
 * Since amass written in Go, you need your Go environment properly set up([Steps](https://gist.github.com/sidxparab/e3856c5e27b8a9b27b5b4911eb9e4ae6) to setup Go environment)
 
@@ -47,34 +49,33 @@ go install -v github.com/owasp-amass/amass/v3/...@master
 
 **Setting up Amass config file:**
 
+* [**Link**](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642) to my amass config file for reference.
 * To make it possible for Amass to query the passive DNS datasets, it necessary for us to setup the API keys of those services in the Amass configuration file.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
-* [**Link**](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642) to my amass config file for reference.
 
 {% hint style="info" %}
 To get to know to create API keys, check out [**this article**](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)**.**
 {% endhint %}
 
 * Now let's set up our API keys in the `config.ini`config file.
-* Open the config file in a text editor and then uncomment the required lines and add your API keys
-* Refer to my config file(this is exactly how your amass config file should be).&#x20;
+* Open the config file in a text editor and then uncomment the required lines and add your API keys.
+* Refer to [my config file](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)(this is exactly how your amass config file should be)
 
-```php
-# https://otx.alienvault.com (Free)
-[data_sources.AlienVault]
+<pre class="language-bash"><code class="lang-bash"><strong># https://otx.alienvault.com (Free)
+</strong>[data_sources.AlienVault]
 [data_sources.AlienVault.Credentials]
 apikey = dca0d4d692a6fd757107333d43d5f284f9a38f245d267b1cd72b4c5c6d5c31
 
-#How to Add 2 API keys for a single service
 
-# https://app.binaryedge.com (Free)
-[data_sources.BinaryEdge]
+<strong>#How to Add 2 API keys for a single service
+</strong><strong># https://app.binaryedge.com (Free)
+</strong>[data_sources.BinaryEdge]
 ttl = 10080
 [data_sources.BinaryEdge.account1]
 apikey = d749e0d3-ff9e-gcd0-a913-b5e62f6f216a
 [data_sources.BinaryEdge.account2]
 apikey = afdb97ff-t65e-r47f-bba7-c51dc5d83347
-```
+</code></pre>
 
 ### **Running Amass:**
 
@@ -91,41 +92,39 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 * **config** - Specify the location of your config file (default: `$HOME/.config/amass/config.ini` )
 * **o** - Output filename
 
-&#x20; :man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
-
-```bash
-amass enum -list -config config.ini
-```
+{% hint style="success" %}
+:man\_mage:**Tip**: After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:\
+_amass enum -list -config config.ini_
+{% endhint %}
 
 ###
 
-### 2) [Subfinder](https://github.com/projectdiscovery/subfinder)
+### <mark style="background-color:orange;">2) Subfinder</mark>
 
 * **Author**: [projectdiscovery](https://github.com/projectdiscovery)
 * **Language**: Go
-* **Total Passive Sources**: **32**
+* **Total Passive Sources**: **38**
 
-**Subfinder** tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io/) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
+[**Subfinder** ](https://github.com/projectdiscovery/subfinder)is yet another great tool that one should have in their pipeline. There are some unique sources that subfinder queries for, that amass doesn't. This tool is been developed by the famous ProjectDiscovery team, who's tools are used by every other bugbounty hunter.
 
-### Configuring Subfinder: :gear:&#x20;
+### :gear:Configuring Subfinder: &#x20;
 
 **Installation:**
 
 ```bash
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-**Setting up Subfinder config file:**&#x20;
+**Setting up Subfinder configuration file:**&#x20;
 
-* Subfinder's default config file location is at `$HOME/.config/subfinder/config.yaml`&#x20;
-* When you install subfinder for the first time the config file doesn't get generated, hence you should run `subfinder -h` command to get it generated.
-* For subfinder you can obtain free API keys by signing up on 18 Passive DNS sources. (here the list of sources)
+* Subfinder's default config file location is at _`$HOME/.config/subfinder/provider-config.yaml`_&#x20;
+* After your first installation, if you didn't find the configuration file populated by default run the following command again `subfinder` in order to get it generated.&#x20;
 * The subfinder config file follows YAML(YAML Ain't Markup Language) syntax. So, you need to be careful that you don't break the syntax. It's better that you use a text editor and set up syntax highlighting.&#x20;
 
 **Example config file:-**
 
 * [**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) to my subfinder config file for reference.
-* Some passive sources like `Censys` , `PassiveTotal` have 2 keys like APP-Id & Secret. For such sources, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
+* Some passive sources like `Censys` , `PassiveTotal` use 2 keys in combination in order to authenticate a user. For such services, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
 * Subfinder automatically detects its config file only if at the default position.&#x20;
 
 ```yaml
@@ -138,12 +137,8 @@ github:
   - d23a554bbc1aabb208c9acfbd2dd41ce7fc9db39
   - asdsd54bbc1aabb208c9acfbd2dd41ce7fc9db39
 passivetotal:
-  - sample-email@user.com:sample_password
+  - sample-email@user.com:password123
 ```
-
-{% hint style="info" %}
-:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com/)
-{% endhint %}
 
 ### **Running Subfinder:**
 
@@ -157,13 +152,13 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 * **all** - Use all passive sources (slow enumeration but more results)
 * **config** - Config file location
 
-{% hint style="info" %}
+{% hint style="success" %}
 :man\_mage: **Tip:-** To view the sources that require API keys `subfinder -ls` command
 {% endhint %}
 
 ###
 
-### **3)** [**Assetfinder**](https://github.com/tomnomnom/assetfinder)
+### <mark style="background-color:orange;">**3) Assetfinder**</mark>
 
 * **Author**:  [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
@@ -172,7 +167,7 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 Don't know why did I include this tool:joy:just because its build by the legend [Tomnomnom](https://twitter.com/TomNomNom) ?  It doesn't give any unique subdomains compared to other tools but it's extremely fast.
 
 ```bash
-go get -u github.com/tomnomnom/assetfinder
+go install github.com/tomnomnom/assetfinder@latest
 ```
 
 **Running:**
@@ -183,13 +178,13 @@ assetfinder --subs-only example.com > output.txt
 
 ###
 
-### 4) [Findomain](https://github.com/Findomain/Findomain)
+### <mark style="background-color:orange;">4) Findomain</mark>
 
 * **Author**: [Edu4rdSHL](https://github.com/Edu4rdSHL)
 * **Language**: Rust
-* **Total Passive sources**: 16
+* **Total Passive sources**: 21
 
-**Findomain** is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. Has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
+[**Findomain** ](https://github.com/Findomain/Findomain)is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. It also has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
 
 ### Configuring Findomain: :gear:&#x20;
 
@@ -198,10 +193,10 @@ assetfinder --subs-only example.com > output.txt
 * Depending on your architecture download binary from [here](https://github.com/Findomain/Findomain/wiki/Installation#using-upstream-precompiled-binaries)
 
 ```bash
-wget -N -c https://github.com/Findomain/Findomain/releases/latest/download/findomain-linux
-mv findomain-linux /usr/local/bin/findomain
+wget -N -c https://github.com/Findomain/Findomain/releases/download/9.0.0/findomain-linux.zip
+unzip findomain-linux.zip
+mv findomain /usr/local/bin/findomain
 chmod 755 /usr/local/bin/findomain
-strip -s /usr/local/bin/findomain
 ```
 
 **Configuration:-**
@@ -211,7 +206,6 @@ strip -s /usr/local/bin/findomain
 
 ```bash
 export findomain_virustotal_token="API_KEY"
-export findomain_spyse_token="API_KEY"
 export findomain_fb_token="API_KEY"
 ```
 
@@ -223,8 +217,8 @@ findomain -t example.com -u output.txt
 
 **Flags:-**
 
-* **t** - target domain
-* **u** output file
+* **t** - Target domain
+* **u** - Output file
 
 ## B) Internet Archives
 
