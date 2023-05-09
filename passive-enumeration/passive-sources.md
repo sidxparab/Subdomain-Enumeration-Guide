@@ -2,15 +2,15 @@
 
 ### What is passive subdomain enumeration?
 
-Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target.
+Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target. Here we don't send any active probes to our target, instead passively try to scrape information available from the internet.
 
-There are in total around [**90** **passive DNS sources**](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
+There are in total around [**90** **passive DNS sources**](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228)**/services** that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
 
 {% hint style="warning" %}
 It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
 {% endhint %}
 
-1. **Passive DNS gathering tools**
+1. **Passive DNS enumeration tools**
    * [Amass](https://github.com/OWASP/Amass)
    * [Subfinder](https://github.com/projectdiscovery/subfinder)
    * [Assetfinder](https://github.com/tomnomnom/assetfinder)
