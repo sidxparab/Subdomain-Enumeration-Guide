@@ -283,31 +283,35 @@ go install github.com/tomnomnom/waybackurls@latest
 #### &#x20;**Running Waybackurls:**
 
 ```bash
-waybackurls example.com |  unfurl -u domains | sort -u output.txt
+waybackurls example.com |  unfurl -u domains | sort -u -o output.txt
 ```
 
 
 
-## C) Github Scraping
 
-### 7) [Github-subdomains](https://github.com/gwen001/github-subdomains)
+
+
+
+## <mark style="color:orange;">C) Github Scraping</mark>
+
+### <mark style="background-color:blue;">7) Github-subdomains</mark>
 
 * **Author**: [gwen001](https://github.com/gwen001)
 * **Language**: Go
 
-&#x20;Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
+Organizations sometimes host their source code on GitHub, also employees working at these organizations sometimes leak the source code on GitHub. Additionally, I have came around instances where security researchers host their reconnaissance data in public repositories. The tool Github-subdomains can help you extract these exposed/leaked subdomains of your target from GitHub.
 
 **Installation:**
 
 ```bash
-go get -u github.com/gwen001/github-subdomains
+go install github.com/gwen001/github-subdomains@latest
 ```
 
-**Configuring github-subdomains​​:** :gear:&#x20;
+:gear:**Configuring github-subdomains​​:**&#x20;
 
-* For github-subdomains to scrap domains from GitHub you need to specify a list of github access tokens.
-* [Here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) is an article on how to make these access tokens.
-* These access tokens are used by the tool to perform searches and find data on behalf of you.
+* For github-subdomains to scrap domains from GitHub you need to specify a list of GitHub access tokens.
+* [**Here**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) is an article on how to generate these GitHub access tokens.
+* These access tokens are used by the tool to perform searches and find subdomains on behalf of you.
 * I always prefer that you make at least 10 tokens from 3 different accounts(30 in total) to avoid rate limiting.&#x20;
 * Specify 1 token per line.
 
@@ -323,11 +327,13 @@ github-subdomains -d example.com -t tokens.txt -o output.txt
 * **t** - file containing tokens
 * **o** - output file
 
-## **D)** Rapid7 Project Sonar dataset
 
-[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [12 different datasets](https://opendata.rapid7.com/) with a total size of over **45.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
 
-So this internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
+## ~~**D)** Rapid7 Project Sonar dataset(depreciated)~~
+
+[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [8 different datasets](https://opendata.rapid7.com/) with a total size of over **66.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
+
+This internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
 
 ### 8) [Crobat](https://github.com/Cgboal/SonarSearch)
 
