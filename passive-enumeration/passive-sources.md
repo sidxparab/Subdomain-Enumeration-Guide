@@ -2,9 +2,9 @@
 
 ### What is passive subdomain enumeration?
 
-Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/)) to obtain the subdomains of a particular target. Here we don't send any active probes to our target, instead passively try to scrape information available from the internet.
+Passive subdomain enumeration is a technique to query for passive DNS datasets provided by services like [SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/), etc. to obtain the subdomains of a particular target. Here we don't send any active probes to our target, instead passively try to scrape information available from the internet.
 
-There are in total around [**90** **passive DNS sources**](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228)**/services** that we can query. It's difficult to manually query these third-party services. Thus, to ease this process various tools are developed which automate these processes.
+There are in total around[ **90** **passive DNS sources/services**](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that provide such datasets to query them. It's difficult to manually query these third-party services thus, to ease this process various tools are developed which automate these processes.
 
 {% hint style="warning" %}
 It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
@@ -16,12 +16,12 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
    * [Assetfinder](https://github.com/tomnomnom/assetfinder)
    * [Findomain](https://github.com/Findomain/Findomain)
 2. **Internet Archive**
-   * [gau-plus](https://github.com/bp0lr/gauplus)
+   * [gau](https://github.com/lc/gau)
    * [waybackurls](https://github.com/tomnomnom/waybackurls)
 3. **Github Scraping**
    * [github-subdomains](https://github.com/gwen001/github-subdomains)
-4. **The Rapid7 Project Sonar**
-   * [Crobat](https://github.com/Cgboal/SonarSearch)
+4. **GitLab Scraping**
+   * [GitLab Scraping](https://github.com/gwen001/gitlab-subdomains)
 
 
 
@@ -37,7 +37,7 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 ### Configuring amass:
 
-* Since amass written in Go, you need your Go environment properly set up. ([Steps](https://gist.github.com/sidxparab/e3856c5e27b8a9b27b5b4911eb9e4ae6) to setup Go environment)
+* Since amass written in Go, you need your Go environment properly set up([Steps](https://gist.github.com/sidxparab/e3856c5e27b8a9b27b5b4911eb9e4ae6) to setup Go environment)
 
 **Installation:**
 
@@ -47,13 +47,12 @@ go install -v github.com/owasp-amass/amass/v3/...@master
 
 **Setting up Amass config file:**
 
-* [**Link** ](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)to my amass config file for reference.
+* To make it possible for Amass to query the passive DNS datasets, it necessary for us to setup the API keys of those services in the Amass configuration file.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
-* Amass uses API keys mentioned in the config to query the third-party passive DNS sources.
-* There are in total **18 services** on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
+* [**Link**](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642) to my amass config file for reference.
 
 {% hint style="info" %}
-Check [**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
+To get to know to create API keys, check out [**this article**](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)**.**
 {% endhint %}
 
 * Now let's set up our API keys in the `config.ini`config file.
