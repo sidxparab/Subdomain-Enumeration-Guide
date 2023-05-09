@@ -27,9 +27,9 @@ It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/
 
 
 
-## A) Passive DNS gathering tools&#x20;
+## <mark style="color:orange;">A) Passive DNS gathering tools</mark>&#x20;
 
-### <mark style="background-color:orange;">1) Amass</mark>
+### <mark style="background-color:blue;">1) Amass</mark>
 
 * **Author:** [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
 * **Language**: Go
@@ -99,7 +99,7 @@ _amass enum -list -config config.ini_
 
 ###
 
-### <mark style="background-color:orange;">2) Subfinder</mark>
+### <mark style="background-color:blue;">2) Subfinder</mark>
 
 * **Author**: [projectdiscovery](https://github.com/projectdiscovery)
 * **Language**: Go
@@ -158,7 +158,7 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 
 ###
 
-### <mark style="background-color:orange;">**3) Assetfinder**</mark>
+### <mark style="background-color:blue;">**3) Assetfinder**</mark>
 
 * **Author**:  [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
@@ -178,7 +178,7 @@ assetfinder --subs-only example.com > output.txt
 
 ###
 
-### <mark style="background-color:orange;">4) Findomain</mark>
+### <mark style="background-color:blue;">4) Findomain</mark>
 
 * **Author**: [Edu4rdSHL](https://github.com/Edu4rdSHL)
 * **Language**: Rust
@@ -220,49 +220,55 @@ findomain -t example.com -u output.txt
 * **t** - Target domain
 * **u** - Output file
 
-## B) Internet Archives
 
-Internet Archives are web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of any website that once existed. These can be a useful source to grab subdomains of a particular target that once existed and perform permutations on them to get more valid subdomains.
 
-Internet Archive when queried gives back URLs.Since we are only concerned with the subdomains, we need to process those URLs to grab only unique subdomains from them. &#x20;
 
-For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). When given URLs through `stdin` along with the "domain" flag, it extracts the domain part from them.
 
-### 5) [Gauplus](https://github.com/bp0lr/gauplus)
+## <mark style="color:orange;">B) Internet Archives</mark>
 
-* **Author**: [bpl0r](https://github.com/bp0lr)
+Internet Archives deploy their own web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of any website that once existed. These can be a useful source to grab subdomains of a particular target that once existed and perform permutations(more on this later) on them to get more valid subdomains.
+
+Internet Archive when queried gives back URLs. Since we are only concerned with the subdomains, we need to process those URLs to grab only unique FQDN subdomains from them. &#x20;
+
+For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). This tool helps to extract the domain name from a list of URLs.&#x20;
+
+### <mark style="background-color:blue;">5) Gau</mark>
+
+* **Author**: [lc](https://github.com/lc)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [web.archive.org](http://web.archive.org/)
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
   * [otx.alienvault.com](https://otx.alienvault.com/)
+  * [urlscan.io](https://urlscan.io/)
 
-Gauplus extracts data from internet crawling services. I prefer Gauplus than the original [gau](https://github.com/lc/gau) as sometimes it returns more results, as well as execution, completes faster than the original one.
+[Gau ](https://github.com/lc/gau)works by extracting all the data from internet crawling services.&#x20;
 
 #### Installation:
 
 ```bash
-GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+go install github.com/lc/gau/v2/cmd/gau@latest
 ```
 
 #### Running gauplus:
 
 ```bash
- gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | anew output.txt
+gau --threads 5 --subs example.com |  unfurl -u domains | sort -u -o output_unfurl.txt
 ```
 
 **Flags:**
 
-* **t** - threads
-* **random-agent** - use random agents while querying&#x20;
-* **subs** -  include subdomains of the target domain
+* **threads** - How many workers to spawn
+* **subs** -  Include subdomains of the target domain
 
-### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)
+
+
+### <mark style="background-color:blue;">**6) Waybackurls**</mark>
 
 * **Author**: [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [web.archive.org](http://web.archive.org/)
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
   * [www.virustotal.com](https://www.virustotal.com)
 
@@ -271,7 +277,7 @@ Waybackurls returns some unique data that gauplus/gau couldn't find as the sourc
 #### Installation:
 
 ```bash
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 ```
 
 #### &#x20;**Running Waybackurls:**
