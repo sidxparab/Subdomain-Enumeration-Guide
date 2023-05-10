@@ -226,7 +226,7 @@ findomain -t example.com -u output.txt
 
 ## <mark style="color:orange;">B) Internet Archives</mark>
 
-Internet Archives deploy their own web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of any website that once existed. These can be a useful source to grab subdomains of a particular target that once existed and perform permutations(more on this later) on them to get more valid subdomains.
+Internet Archives deploy their own web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of all the websites that once existed. hence, Internet Archives can be a useful source to grab subdomains of a particular target that once existed and later perform permutations(more on this later) on them to get more valid subdomains.
 
 Internet Archive when queried gives back URLs. Since we are only concerned with the subdomains, we need to process those URLs to grab only unique FQDN subdomains from them. &#x20;
 
@@ -357,6 +357,12 @@ crobat -s example.com > output.txt
 **Flags:**
 
 * **s** - Target Name
+
+
+
+
+
+
 
 ## :checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
 
