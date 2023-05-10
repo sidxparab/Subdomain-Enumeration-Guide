@@ -242,7 +242,7 @@ For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). Th
   * [otx.alienvault.com](https://otx.alienvault.com/)
   * [urlscan.io](https://urlscan.io/)
 
-[Gau ](https://github.com/lc/gau)works by extracting all the data from internet crawling services.&#x20;
+[**Gau** ](https://github.com/lc/gau)works by querying all the above 4 internet archive services and grabs all the URLs that their internet-wide crawler had once crawled. So through this process we get tons of URL's belonging to our target that once existed. After collecting the URLs we extract only the domain/subdomain part from those URLs.
 
 #### Installation:
 
@@ -272,7 +272,7 @@ gau --threads 5 --subs example.com |  unfurl -u domains | sort -u -o output_unfu
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
   * [www.virustotal.com](https://www.virustotal.com)
 
-Waybackurls returns some unique data that gauplus/gau couldn't find as the sources are different. Hence, we need to include waybackurls in our arsenal.
+[**Waybackurls**](https://github.com/tomnomnom/waybackurls) works similar to Gau, but I have found that it returns some unique data that Gau couldn't find. Hence, we need to include waybackurls in our arsenal.
 
 #### Installation:
 
@@ -292,7 +292,7 @@ waybackurls example.com |  unfurl -u domains | sort -u -o output.txt
 
 
 
-## <mark style="color:orange;">C) Github Scraping</mark>
+## <mark style="color:orange;">C) GitHub Scraping</mark>
 
 ### <mark style="background-color:blue;">7) Github-subdomains</mark>
 
@@ -310,7 +310,7 @@ go install github.com/gwen001/github-subdomains@latest
 :gear:**Configuring github-subdomains​​:**&#x20;
 
 * For github-subdomains to scrap domains from GitHub you need to specify a list of GitHub access tokens.
-* [**Here**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) is an article on how to generate these GitHub access tokens.
+* [**Here**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) is an article on how you can generate your GitHub access tokens.
 * These access tokens are used by the tool to perform searches and find subdomains on behalf of you.
 * I always prefer that you make at least 10 tokens from 3 different accounts(30 in total) to avoid rate limiting.&#x20;
 * Specify 1 token per line.
