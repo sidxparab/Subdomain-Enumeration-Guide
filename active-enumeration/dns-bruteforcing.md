@@ -21,49 +21,13 @@ At times passive DNS data doesn't give all the hosts/subdomains associated with 
 
 Earlier DNS zone transfer vulnerabilities were the key to get the whole DNS zone data of a particular organization. But lately, the DNS servers have been secured and zone transfers are found very rarely.
 
-### Problems faced during subdomain bruteforcing
-
-#### &#x20;1) Wildcard DNS records
-
-A wildcard DNS record is a record that matches requests for non-existent domain names. Wildcards are denoted by specifying a **`*`** of the left part of a domain name such as **\*.target.com.** That means even if a subdomain doesn't exist it will return a valid response. See the example below:-
-
-**doesntexists.target.com**    ---->   **valid**&#x20;
-
-**Strange right?** So in short, if a domain is a wildcard domain we will get all valid responses(false positives) while bruteforcing and wouldn't be able to differentiate which are valid and which aren't. To avoid this various wildcard filtering techniques are used by subdomain bruteforcing tools.
-
-**2) Open Public resolvers**
-
-While bruteforcing we tend to use a long wordlist of common subdomain names to get those hidden domains, hence the domains to be resolved will also be large. Such large resolutions cannot be performed by your system's DNS resolver, hence we depend on freely available public resolvers. Also, using public resolvers eliminates the changes of DNS rate limits.
-
-We can get the list of open public DNS resolvers from here [https://public-dns.info/nameservers.txt](https://public-dns.info/nameservers.txt)
-
-{% hint style="info" %}
-:book: Read [**this** ](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers)article on why how to create public resolvers and they are important
-{% endhint %}
-
-**3) Bandwidth**
-
-While performing subdomain bruteforcing [massdns](https://github.com/blechschmidt/massdns) is used as a base tool for DNS querying at very high concurrent rates. For this, the underlying system should also possess a higher bandwidth.&#x20;
-
-## How to perform subdomain bruteforcing:
-
-### Which tool to choose?
-
-There are currently 2 tools that do the work of DNS bruteforcing and resolution that are [**shuffledns**](https://github.com/projectdiscovery/shuffledns) & [**puredns**](https://github.com/d3mondev/puredns). But there are just some reasons why I prefer puredns over shuffledns.
-
-Table of execution time and false positives.Using an 11 million wordlist on **ibm.com**
-
-| **Tool**        | **Shuffledns** | **Puredns** :white\_check\_mark:  |
-| --------------- | -------------- | --------------------------------- |
-| Execution Time  | 20m 30s        | 9m 32s                            |
-| Output Results  | 2900           | 1025                              |
-| False Positives | 1930           | 0                                 |
-
-\[ Above tests were performed in separate VPS\[4cpu/8gb] and false positives were verified using [dnsx ](https://github.com/projectdiscovery/dnsx)with Google DNS server as a trusted resolver-03/06/2021 ]
 
 
 
-## [Puredns](https://github.com/d3mondev/puredns)
+
+## 🔧Tool:
+
+### [Puredns](https://github.com/d3mondev/puredns)
 
 * **Author:** [d3mondev](https://github.com/d3mondev)
 * **Language**: Go
