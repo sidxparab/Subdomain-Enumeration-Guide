@@ -47,6 +47,8 @@ pip3 install -r requirements.txt
 
 **Running CTFR:**
 
+<figure><img src="../.gitbook/assets/ctfr.png" alt="" width="375"><figcaption></figcaption></figure>
+
 ```
 python3 ctfr.py -d target.com -o output.txt
 ```
