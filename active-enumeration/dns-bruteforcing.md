@@ -57,17 +57,25 @@ Once, all the alive subdomains are found, puredns again runs the DNS resolution 
 
 Since this tool is written in Go, your Go environment should be configured properly.
 
-```bash
-go install github.com/d3mondev/puredns/v2@latest
-```
+<pre class="language-bash"><code class="lang-bash"><strong>#Prerequisites
+</strong>git clone https://github.com/blechschmidt/massdns.git
+cd massdns
+make
+sudo make install
+
+<strong>#Installing the tool
+</strong>go install github.com/d3mondev/puredns/v2@latest
+</code></pre>
 
 ### Running Puredns:
 
-Before we start using puredns for bruteforcing we need to generate our public DNS resolvers. For this, we will use a tool called [dnsvalidator](https://github.com/vortexau/dnsvalidator). Check [my previous page](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers) to know more about public DNS resolvers and why they are important.
+Before we start using puredns for bruteforcing we need to generate our public DNS resolvers list. For this, we will use a tool called [dnsvalidator](https://github.com/vortexau/dnsvalidator). Check [my previous page](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers) to know more about public DNS resolvers and why they are important.
 
 ```bash
 git clone https://github.com/vortexau/dnsvalidator.git
 cd dnsvalidator/
+pip3 install -r requirements.txt
+pip3  install setuptools==58.2.0
 python3 setup.py install
 ```
 
