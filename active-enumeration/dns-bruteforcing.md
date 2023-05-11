@@ -109,27 +109,27 @@ While performing DNS queries sometimes we receive **SERVFAIL** error. Puredns by
 
 ### Which wordlist :page\_facing\_up: to use?
 
-The whole effort of DNS bruteforcing is a waste if you dont use a good subdomain bruteforcing wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's have a look at some great wordlists:-\
+The whole effort of DNS bruteforcing is a waste if you don't use a good subdomain bruteforcing wordlist. Selection of the wordlist is the most important aspect of bruteforcing. Let's have a look at some great wordlists:-\
 \
 **1) Assetnote** [**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) (**9 Million**) ⭐\
 [Assetnote](https://wordlists.assetnote.io/) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
 
-**2) Jhaddix** [**all.txt**](https://gist.github.com/jhaddix/f64c97d0863a78454e44c2f7119c2a6a) (**2 Million**)\
-Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 years ago but still works well.
+**2) n0kovo** [**n0kovo\_subdomains\_huge.txt**](https://github.com/n0kovo/n0kovo\_subdomains/blob/main/n0kovo\_subdomains\_huge.txt) (**3 Million**)\
+[N0kovo ](https://github.com/n0kovo)created this wordlist by scanning the whole IPv4 and collecting all the subdomain names from the TLS certificates. You can check out [this blog](https://n0kovo.github.io/posts/subdomain-enumeration-creating-a-highly-efficient-wordlist-by-scanning-the-entire-internet/#benchmarking-) to see how good this bruteforcing wordlist performs as compared other big wordlists. So, if you are target contains a lot of wildcards this would be best wordlist for bruteforcing_(considering the computation bottleneck for wildcard filtering)._
 
 **3) Smaller** [**wordlist**](https://gist.github.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw) (**102k** )\
-Created by [six2dez](https://github.com/six2dez) is suitable to be run on home systems.\
+Created by [six2dez](https://github.com/six2dez) is suitable to be run if you are using your personal computer which is consuming your home wifi router internet.\
 
 
 
 
 ### 🙁Problems faced during subdomain bruteforcing
 
-#### &#x20;1) Wildcard DNS records
+#### &#x20;1) Wildcard filtering
 
-A wildcard DNS record is a record that matches requests for non-existent domain names. Wildcards are denoted by specifying a **`*`** of the left part of a domain name such as **\*.target.com.** That means even if a subdomain doesn't exist it will return a valid response. See the example below:-
+A wildcard DNS record is a record that matches requests for non-existent domain names. Wildcards are denoted by specifying a **`*`** of the left part of a domain name such as **\*.example.com.** That means even if a subdomain doesn't vlid it will return a valid response. See the example below:-
 
-**doesntexists.target.com**    ---->   **valid**&#x20;
+**doesntexists.example.com**    ---->   **valid**&#x20;
 
 **Strange right?** So in short, if a domain is a wildcard domain we will get all valid responses(false positives) while bruteforcing and wouldn't be able to differentiate which are valid and which aren't. To avoid this various wildcard filtering techniques are used by subdomain bruteforcing tools.
 
