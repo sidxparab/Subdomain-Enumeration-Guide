@@ -26,7 +26,11 @@ We can find all SSL certificates belonging to a domain by issuing a GET request 
 
 As you can see we got a list of subdomains.
 
-### Tool:  [CTFR](https://github.com/UnaPibaGeek/ctfr)
+
+
+## 🔧Tool: &#x20;
+
+### <mark style="background-color:blue;">CTFR</mark>
 
 * **Author**: [UnaPibaGeek](https://github.com/UnaPibaGeek)
 * **Language**: Python
