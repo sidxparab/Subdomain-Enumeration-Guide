@@ -15,7 +15,8 @@ For a better understanding look at the image below:
 ### Things to keep in mind:
 
 * This technique is only useful when your target has a large number of multi-level subdomains_(not effective for small & medium scope targets)._
-* This technique should be performed in the end and only on valid list of subdomains that you have gathered using other Passive + Active techniques.&#x20;
+* It is recommended to execute this technique as the final step, exclusively on a validated list of subdomains that you have collected through other Passive + Active techniques.
+* This techniques may consume all your passive DNS service's API keys quota_(if they are configured)._&#x20;
 * This techniques takes time to return the final results.
 
 ### Workflow:
@@ -23,13 +24,13 @@ For a better understanding look at the image below:
 1. Read the list of subdomains from the file "subdomains.txt".
 2.  Process the subdomains in two steps:
 
-    a. Find the Top-10 most frequent occuring Second-Level domains(backup, dev,&#x20;
+    **a)** Find the Top-10 most frequent occuring Second-Level Domain names with the help of tools like cut, sort, rev, uniq, etc.\
+    **b)** Find the Top-10 most frequent occuring Third-Level domains.
+3. Now run passive subdomain enumeration on these 10 Second-level domain names and 10 Third-level domain names using tools like amass, subfinder, assetfinder, findomain.
+4. Keep appending the results to `passive_recursive.txt` file.&#x20;
+5. Now after finding out the a list of domain names, run puredns to DNS resolve them and find the alive subdomains.&#x20;
 
 
-
-
-
-Run the below script on the subdomains that you have already found.
 
 _Replace `subdomains.txt` with the filename of your subdomains list._
 
