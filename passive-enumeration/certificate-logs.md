@@ -60,10 +60,13 @@ python3 ctfr.py -d target.com -o output.txt
 
 ## 2) tls.bufferover.run
 
-[**tls.bufferover.run**](https://tls.bufferover.run/) is a service that scans the whole IPv4 address space and&#x20;
+[**tls.bufferover.run**](https://tls.bufferover.run/) is a service that scans the whole IPv4 address space and grabs all the necessary data from the TLS certificates of those hosts. These TLS certificate include a field called as "**Subject**" that hold necessary information from our perspective. The Subject field contains a component called as "**Common Name(CN)**" which indicates the Fully Qualified Domain Name(FQDN) of that host. So, we can leverage this to look for subdomains of our target. But inorder to query this service we must&#x20;
 
-### **2) One-liners:**
 
+
+#### Creating API key:
+
+* Inorder&#x20;
 * These are bash onliners to enumerate subdomain through certificates.
 
 ```
