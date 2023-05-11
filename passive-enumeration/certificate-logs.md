@@ -49,8 +49,8 @@ python3 ctfr.py -d target.com -o output.txt
 
 **Flags:**
 
-* **d** - target
-* **o** - output
+* **d** - Target domain
+* **o** - Output file
 
 
 
