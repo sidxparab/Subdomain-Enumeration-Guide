@@ -2,14 +2,14 @@
 
 ## What is DNS bruteforcing?
 
-It's a technique where the person takes a long list of common subdomain names and append their target to them and based on the response determines whether they are valid or not. This is similar to the dictionary attack.
+In simple terms DNS bruteforcing is a technique where, we prepend a long list of common subdomains names to our target domain and try to DNS resolve this new list in hope to find valid subdomains of our target domain.
 
-Below we can what happens in bruteforcing:
+This is what happens during DNS bruteforcing:
 
-* **admin**           ---->       **admin**.target.com
-* **internal.dev**  ---->      **internal.dev**.target.com
-* **secret**           ---->       **secret**.target.com
-* **backup01**     ---->       **backup01**.target.com
+* **admin**           ---->       **admin**.example.com
+* **internal.dev**  ---->      **internal.dev**.example.com
+* **secret**           ---->       **secret**.example.com
+* **backup01**     ---->       **backup01**.example.com
 
 Now that we have a list of probable domain names we need to check whether any of these predicted subdomains exist or not. For that, we need to do a mass DNS resolution. After this process, if any of these subdomains is found valid, it's a win-win situation for us.
 
@@ -36,7 +36,7 @@ While bruteforcing we tend to use a long wordlist of common subdomain names to g
 We can get the list of open public DNS resolvers from here [https://public-dns.info/nameservers.txt](https://public-dns.info/nameservers.txt)
 
 {% hint style="info" %}
-:book: Read **** [**this** ](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers)article on why how to create public resolvers and they are important
+:book: Read [**this** ](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#2-100-accurate-public-dns-resolvers)article on why how to create public resolvers and they are important
 {% endhint %}
 
 **3) Bandwidth**
@@ -157,7 +157,7 @@ Usually, if you provide a very large wordlist(50M) and your target contains sign
 
 Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates large traffic and makes your home router unable to use for that specific period of time. To overcome this you can use the **`-l`** flag. This flag throttles the massdns threads to your specified amount. It's advisable that you set the value anywhere between `2000-10000`
 
-``
+
 
 
 
