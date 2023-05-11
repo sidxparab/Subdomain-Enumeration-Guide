@@ -79,7 +79,7 @@ pip3  install setuptools==58.2.0
 python3 setup.py install
 ```
 
-**Generating list of open public resolvers**
+**Generating list of open public DNS resolvers**
 
 &#x20;It's very important to note that even if one of your public resolver is failing/not working you have a greater chance of missing an important subdomain. Hence, it's always advised that you generate a fresh public DNS resolvers list before execution.
 
@@ -88,6 +88,16 @@ dnsvalidator -tL https://public-dns.info/nameservers.txt -threads 100 -o resolve
 ```
 
 ![](../.gitbook/assets/dnsvalidator1.png)
+
+#### Downloading a pre-populated list of valid DNS resolvers:
+
+Various open source contributors like [proabiral](https://github.com/proabiral/Fresh-Resolvers), [cxosmo](https://github.com/cxosmo/dns-resolvers), [janmasarik ](https://github.com/janmasarik/resolvers)have set up their GitHub-Actions or VPS in order to generate valid public DNS resolvers periodically(every 24hrs). We can make use of these DNS resolvers rather than generating our own resolvers using dnsvalidator which consumes alot of time. To aggregate all of these efforts [Trickest](https://github.com/trickest) have come up with their own repository called [**resolvers**](https://github.com/trickest/resolvers). It is a merged list of all the DNS resolvers, which they validate every 24 hours.
+
+```bash
+wget https://raw.githubusercontent.com/trickest/resolvers/main/resolvers.txt
+```
+
+
 
 Now that we have generated our public DNS resolver we are good to move ahead and perform subdomain bruteforcing using puredns.
 
