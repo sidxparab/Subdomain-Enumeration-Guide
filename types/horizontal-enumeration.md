@@ -17,7 +17,7 @@ These enumeration methods can go out of scope and backfire you. Do it with cauti
 
 #### a) **WhoisXMLAPI**
 
-****[**WhoisXMLAPI** ](https://www.whoisxmlapi.com/)is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renews every month.\
+[**WhoisXMLAPI** ](https://www.whoisxmlapi.com/)is an excellent source that provides a good amount of related domains & acquisitions based on the WHOIS record. Singing up on their platform will assign you **500 free credits** which renews every month.\
 Visit [https://tools.whoisxmlapi.com/reverse-whois-search](https://tools.whoisxmlapi.com/reverse-whois-search) . Searching with the root domain name like **dell.com** will give you a list of all the associated domains.
 
 ![](../.gitbook/assets/whoisxml.png)
@@ -28,7 +28,7 @@ These are not 100% accurate results, as they contain false positives &#x20;
 
 #### b) **Whoxy** :moneybag:&#x20;
 
-****[**Whoxy**](https://www.whoxy.com/) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name, Domain keyword. Whoxy has an enormous database of around **455M WHOIS records**. But sadly this is a paid service :(
+[**Whoxy**](https://www.whoxy.com/) is yet another great source to perform reverse WHOIS on parameters like Company Name, Registrant Email address, Owner Name, Domain keyword. Whoxy has an enormous database of around **455M WHOIS records**. But sadly this is a paid service :(
 
 To effectively use Whoxy API there's a command-line tool called [**whoxyrm**](https://github.com/MilindPurswani/whoxyrm)**.**
 
@@ -82,7 +82,7 @@ When a user attempts to open a domain/website in their browser, a DNS lookup occ
 This means that, since we already know the IP space of an organization we can, we can reverse query the IP addresses and find the valid domains. Sounds cool?
 
 **But how?**\
-****DNS PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) **** tool we can query a PTR record of an IP address and find the associated hostname/domain name.
+DNS PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) tool we can query a PTR record of an IP address and find the associated hostname/domain name.
 
 **Apple Inc.** :apple:  owns **ASN714** which represents IP range **17.0.0.0/8.** So now, lets perform reverse DNS queries to find out the domain names**.**
 
@@ -90,12 +90,12 @@ This means that, since we already know the IP space of an organization we can, w
 
 We will first need to install 2 tools:
 
-*   [**Mapcidr**](https://github.com/projectdiscovery/mapcidr) **** :
+*   [**Mapcidr**](https://github.com/projectdiscovery/mapcidr)  :
 
     ```
     go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
     ```
-*   ****[**Dnsx** ](https://github.com/projectdiscovery/dnsx):
+*   [**Dnsx** ](https://github.com/projectdiscovery/dnsx):
 
     ```
     go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
@@ -173,7 +173,7 @@ apt-get install jq
 \
 
 
-## &#x20;**** :checkered\_flag:**That's it !!! Done with Horizontal Enumeration**:checkered\_flag:&#x20;
+## &#x20;:checkered\_flag:**That's it !!! Done with Horizontal Enumeration**:checkered\_flag:&#x20;
 
 #### Liked my work? Don't hesitate to buy me a coffee XDD
 

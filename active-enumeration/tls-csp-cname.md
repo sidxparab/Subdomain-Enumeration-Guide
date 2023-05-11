@@ -8,11 +8,11 @@ This SSL/TLS(Transport Layer Security) certificate sometimes contains domains/su
 
 Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL certificate of any website.
 
-![Hackerone.com contain these subdomains in its TLS certificate](../../.gitbook/assets/TLS.png)
+![Hackerone.com contain these subdomains in its TLS certificate](../.gitbook/assets/TLS.png)
 
 
 
-For this purpose, we will be using a tool called [**Cero**](https://github.com/glebarez/cero)****
+For this purpose, we will be using a tool called [**Cero**](https://github.com/glebarez/cero)
 
 #### Installation:
 
@@ -26,7 +26,7 @@ go get -u github.com/glebarez/cero
 cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | anew 
 ```
 
-![](../../.gitbook/assets/cero.png)
+![](../.gitbook/assets/cero.png)
 
 ## 2) CSP Probing
 
@@ -38,13 +38,7 @@ Hence, these subdomains can be helpful for us. In the below image we can see I e
 cat subdomains.txt | httpx -csp-probe -status-code -retries 2 -no-color | anew csp_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q csp_subdomains.txt
 ```
 
-![](../../.gitbook/assets/csp.png)
-
-
-
-
-
-
+![](../.gitbook/assets/csp.png)
 
 ## 3) CNAME Probing
 

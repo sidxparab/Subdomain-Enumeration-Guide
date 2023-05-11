@@ -4,6 +4,8 @@
 
 In simple terms DNS bruteforcing is a technique where, we prepend a long list of common subdomains names to our target domain and try to DNS resolve this new list in hope to find valid subdomains of our target domain.
 
+<figure><img src="../.gitbook/assets/inspire black desktop wallpaper.png" alt=""><figcaption></figcaption></figure>
+
 This is what happens during DNS bruteforcing:
 
 * **admin**           ---->       **admin**.example.com
