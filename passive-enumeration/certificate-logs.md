@@ -56,24 +56,23 @@ python3 ctfr.py -d target.com -o output.txt
 
 
 
+## <mark style="background-color:blue;">2) tls.bufferover.run</mark>
 
-
-## 2) tls.bufferover.run
-
-[**tls.bufferover.run**](https://tls.bufferover.run/) is a service that scans the whole IPv4 address space and grabs all the necessary data from the TLS certificates of those hosts. These TLS certificate include a field called as "**Subject**" that hold necessary information from our perspective. The Subject field contains a component called as "**Common Name(CN)**" which indicates the Fully Qualified Domain Name(FQDN) of that host. So, we can leverage this to look for subdomains of our target. But inorder to query this service we must&#x20;
+[**tls.bufferover.run**](https://tls.bufferover.run/) is a service that scans the whole IPv4 address space and grabs all the necessary data from the TLS certificates of those hosts. These TLS certificate include a field called as "**Subject**" that hold necessary information from our perspective. The Subject field contains a component called as "**CommonName(CN)**" which indicates the Fully Qualified Domain Name(FQDN) of that host. So, we can leverage this to look for subdomains of our target. But inorder to query this service we must&#x20;
 
 
 
 #### Creating API key:
 
-* Inorder&#x20;
-* These are bash onliners to enumerate subdomain through certificates.
+* Inorder get the results we need to create an API key for this services.
+* Visit [https://tls.bufferover.run/](https://tls.bufferover.run/) and enter your email-id for the "Free-Tier" plan.
+* You will instantly get the API key in your email Inbox.&#x20;
 
-```
-curl "https://tls.bufferover.run/dns?q=.dell.com" | jq -r .Results[] | cut -d ',' -f4 | grep -F ".dell.com" | anew -q output.txt
-```
+#### Querying for results:
+
+* Replace the target and API key with yours.
 
 ```bash
-curl "https://dns.bufferover.run/dns?q=.dell.com" | jq -r '.FDNS_A'[],'.RDNS'[]  | cut -d ',' -f2 | grep -F ".dell.com" | anew -q output.txt
+curl 'https://tls.bufferover.run/dns?q=.dell.com' -H 'x-api-key: TYvnAWCtsmJKTjcYs9bE91aNs8GZZMo5lCX3i06a'| jq -r .Results[] | cut -d ',' -f5 | grep -F ".dell.com" | sort -u output.txt
 ```
 
