@@ -149,13 +149,9 @@ Created by the great [Jhaddix](https://twitter.com/Jhaddix). Was last updated 2 
 Created by [six2dez](https://github.com/six2dez) is suitable to be run on home systems.\
 
 
-### Why do we perform subdomain bruteforcing?
 
-At times passive DNS data doesn't give all the hosts/subdomains associated with our target. Also, there would some newer subdomains that still wouldn't have been crawled by the internet crawlers. In such a case subdomain bruteforcing proves beneficial.
 
-Earlier DNS zone transfer vulnerabilities were the key to get the whole DNS zone data of a particular organization. But lately, the DNS servers have been secured and zone transfers are found very rarely.
-
-### Problems faced during subdomain bruteforcing
+### 🙁Problems faced during subdomain bruteforcing
 
 #### &#x20;1) Wildcard DNS records
 
@@ -179,23 +175,9 @@ We can get the list of open public DNS resolvers from here [https://public-dns.i
 
 While performing subdomain bruteforcing [massdns](https://github.com/blechschmidt/massdns) is used as a base tool for DNS querying at very high concurrent rates. For this, the underlying system should also possess a higher bandwidth.&#x20;
 
-## How to perform subdomain bruteforcing:
 
-### Which tool to choose?
 
-There are currently 2 tools that do the work of DNS bruteforcing and resolution that are [**shuffledns**](https://github.com/projectdiscovery/shuffledns) & [**puredns**](https://github.com/d3mondev/puredns). But there are just some reasons why I prefer puredns over shuffledns.
-
-Table of execution time and false positives.Using an 11 million wordlist on **ibm.com**
-
-| **Tool**        | **Shuffledns** | **Puredns** :white\_check\_mark:  |
-| --------------- | -------------- | --------------------------------- |
-| Execution Time  | 20m 30s        | 9m 32s                            |
-| Output Results  | 2900           | 1025                              |
-| False Positives | 1930           | 0                                 |
-
-\[ Above tests were performed in separate VPS\[4cpu/8gb] and false positives were verified using [dnsx ](https://github.com/projectdiscovery/dnsx)with Google DNS server as a trusted resolver-03/06/2021 ]
-
-### Issues faced and how to overcome them: :punch:&#x20;
+## :punch:Issues faced and how to overcome them:&#x20;
 
 #### 1) Crashes on low specs( 1cpu/1gb vps)
 
