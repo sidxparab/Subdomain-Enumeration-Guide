@@ -26,7 +26,7 @@ go install github.com/glebarez/cero@latest
 cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | sort -u
 ```
 
-![](../.gitbook/assets/cero.png)
+![](../.gitbook/assets/ceroo\(1\).png)
 
 ## 2) CSP Probing
 
