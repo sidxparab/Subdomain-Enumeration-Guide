@@ -163,13 +163,11 @@ While performing subdomain bruteforcing [massdns](https://github.com/blechschmid
 
 #### 1) Crashes on low specs( 1cpu/1gb vps)
 
-Usually, if you provide a very large wordlist(50M) and your target contains significant wildcards then sometimes puredns crashes out due to less memory while filtering wildcards. To overcome this issue you can use **`--wildcard-batch 1000000`** flag. By default, puredns puts all the domains in a single batch to save on the number of DNS queries and execution time. Using this flag takes in a batch of only 1million subdomains at a time for wildcard filtering and after completion of the task takes in the next batch for wildcard filtering.
+Usually, if you provide a very large bruteforce wordlist and your target domain contains significant wildcards then sometimes puredns crashes out due to less memory while filtering out wildcards. To overcome this issue you can use **`--wildcard-batch 1000000`** flag. By default, puredns puts all the domains in a single batch to save on the number of DNS queries and execution time. Using this flag takes in a batch of only 1 million subdomains at a time for wildcard filtering and after completion of the task takes in the next batch for wildcard filtering.
 
 **2) Puredns kills my home router**&#x20;
 
-Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates large traffic and makes your home router unable to use for that specific period of time. To overcome this you can use the **`-l`** flag. This flag throttles the massdns threads to your specified amount. It's advisable that you set the value anywhere between `2000-10000`
-
-
+Massdns is the one to be blamed for. Massdns tries to perform DNS resolution using public resolvers at an unlimited rate. This generates very large traffic consuming up the whole bandwidth, thus making other applications laggy/unresponsive. To overcome this you can use the **`-l`** flag which rate limits the number of DNS queries to public resolvers. It's advisable that you set the value anywhere between `2000-10000`
 
 
 
