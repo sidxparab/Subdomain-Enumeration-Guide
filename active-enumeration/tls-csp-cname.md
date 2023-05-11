@@ -2,9 +2,9 @@
 
 ## 1) TLS Probing
 
-Nowadays generally all websites use HTTPS(HyperText Transfer Protocol Secure). In order to use HTTPS, the website owner needs to issue an SSL(Secure Socket Layer) certificate.
+Nowadays generally all websites communicate over HTTPS(HyperText Transfer Protocol Secure). In order to use HTTPS, the website owner needs to issue an SSL(Secure Socket Layer) certificate.
 
-This SSL/TLS(Transport Layer Security) certificate sometimes contains domains/subdomains belonging to the same organization.
+This SSL/TLS(Transport Layer Security) certificate contains hostname belonging to the same organization.
 
 Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL certificate of any website.
 
@@ -16,14 +16,14 @@ For this purpose, we will be using a tool called [**Cero**](https://github.com/g
 
 #### Installation:
 
-```
-go get -u github.com/glebarez/cero
+```bash
+go install github.com/glebarez/cero@latest
 ```
 
 #### Running:
 
-```
-cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | anew 
+```bash
+cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | sort -u
 ```
 
 ![](../.gitbook/assets/cero.png)
