@@ -4,8 +4,6 @@
 
 In simple terms DNS bruteforcing is a technique where, we prepend a long list of common subdomains names to our target domain and try to DNS resolve this new list in hope to find valid subdomains of our target domain.
 
-<figure><img src="../.gitbook/assets/inspire black desktop wallpaper.png" alt=""><figcaption></figcaption></figure>
-
 This is what happens during DNS bruteforcing:
 
 * **admin**           ---->       **admin**.example.com
@@ -13,13 +11,15 @@ This is what happens during DNS bruteforcing:
 * **secret**           ---->       **secret**.example.com
 * **backup01**     ---->       **backup01**.example.com
 
-Now that we have a list of probable domain names we need to check whether any of these predicted subdomains exist or not. For that, we need to do a mass DNS resolution. After this process, if any of these subdomains is found valid, it's a win-win situation for us.
+Now that we have a list of probable domain names that could exists, we can perform DNS resolution on this domain list. This would yield us live subdomains. After this process, if any of these subdomains is found valid, it's a win-win situation for us.
+
+<figure><img src="../.gitbook/assets/DNS bruteforcing.png" alt=""><figcaption></figcaption></figure>
 
 ### Why do we perform subdomain bruteforcing?
 
 At times passive DNS data doesn't give all the hosts/subdomains associated with our target. Also, there would some newer subdomains that still wouldn't have been crawled by the internet crawlers. In such a case subdomain bruteforcing proves beneficial.
 
-Earlier DNS zone transfer vulnerabilities were the key to get the whole DNS infrastructure of a particular organization. But lately, the DNS servers have been secured and zone transfers are found very rarely.
+Earlier DNS zone transfer vulnerabilities were the key to get the whole DNS zone data of a particular organization. But lately, the DNS servers have been secured and zone transfers are found very rarely.
 
 ### Problems faced during subdomain bruteforcing
 
