@@ -8,7 +8,7 @@ This SSL/TLS(Transport Layer Security) certificate contains hostname belonging t
 
 Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL certificate of any website.
 
-![Hackerone.com contain these subdomains in its TLS certificate](../.gitbook/assets/TLS.png)
+![Hackerone.com contain these subdomains in its TLS certificate](../.gitbook/assets/TLscert\_yahoo.png)
 
 
 
