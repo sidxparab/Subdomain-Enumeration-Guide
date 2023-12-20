@@ -23,10 +23,10 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 **There are 2 types of passive DNS services:-**
 
 **1) Allow querying their Datasets freely(partially)**\
-****A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like **** [**amass**](https://github.com/OWASP/Amass), **** [**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
+A number of sources allow users to freely query their DNS datasets. Check out which sources allow to freely query their dataset here. (we don't need to care about these sources as our subdomain enumeration tools like [**amass**](https://github.com/OWASP/Amass), [**subfinder**](https://github.com/projectdiscovery/subfinder), [**assetfinder**](https://github.com/tomnomnom/assetfinder) will query them and do the work for us:yum: )
 
 **2) Need to generate API keys to query Datasets**\
-****Also, a number of sources require you to signup on to their platform and generate a unique API key for yourself so that you are authorized to query and retrieve results from their historical DNS datasets.
+Also, a number of sources require you to signup on to their platform and generate a unique API key for yourself so that you are authorized to query and retrieve results from their historical DNS datasets.
 
 ### Problems with obtaining free API keys of good passive sources:
 
@@ -58,7 +58,7 @@ There are a number of services/sources([SecurityTrails](https://securitytrails.c
 
 <figure><img src="../.gitbook/assets/Excel sheet screenshot.png" alt=""><figcaption></figcaption></figure>
 
-:man\_tipping\_hand: **Check out the excel sheet** :point\_right: **** [**here** ](https://docs.google.com/spreadsheets/d/19lns4DUmCts1VXIhmC6x-HaWgNT7vWLH0N68srxS7bI/edit?usp=sharing)****:point\_left: ****&#x20;
+:man\_tipping\_hand: **Check out the excel sheet** :point\_right: [**here** ](https://docs.google.com/spreadsheets/d/19lns4DUmCts1VXIhmC6x-HaWgNT7vWLH0N68srxS7bI/edit?usp=sharing):point\_left:&#x20;
 
 {% hint style="success" %}
 **More the time** you invest in signing up with passive sources, **More the subdomains** you get ✨
@@ -122,11 +122,11 @@ There are various cloud providers that provide **free 200$ credits** like [Digit
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=9961f826b4d3\&utm\_campaign=Referral\_Invite\&utm\_medium=Referral\_Program\&utm\_source=badge)
 
-* ****[**Linode**](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)****
-* ****[**Vultr**](https://www.vultr.com/?ref=8905902)****
+* [**Linode**](https://www.linode.com/?r=3e95d563ede9af9901189e9476917c9338b7108f)
+* [**Vultr**](https://www.vultr.com/?ref=8905902)
 
-****\
-****
+\
+
 
 
 

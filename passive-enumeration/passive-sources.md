@@ -2,84 +2,80 @@
 
 ### What is passive subdomain enumeration?
 
-Passive subdomain enumeration is a technique to query passive DNS datasets provided by sources ([Security trails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [Binaryedge](https://www.binaryedge.io/), [Virus total](https://www.virustotal.com/gui/)) to obtain the subdomains of a particular target.
+Passive subdomain enumeration is a technique to query for passive DNS datasets provided by services like [SecurityTrails](https://securitytrails.com/), [Censys](https://censys.io/), [Shodan](https://www.shodan.io/), [BinaryEdge](https://www.binaryedge.io/), [VirusTotal](https://www.virustotal.com/gui/), [Whoisxmlapi](https://main.whoisxmlapi.com/), etc. to obtain the subdomains of a particular target. Here we don't send any active probes to our target, instead passively try to scrape information available from the internet.
+
+There are in total around[ **90** **passive DNS sources/services**](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228) that provide such datasets to query them. It's difficult to manually query these third-party services thus, to ease this process various tools are developed which automate these processes.
 
 {% hint style="warning" %}
-It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) **** first, before proceeding further.
+It's highly recommended to read [**this**](https://app.gitbook.com/@sidxparab/s/subdomain-enumeration-guide/introduction/prequisites#what-is-passive-dns-data) section first, before proceeding further.
 {% endhint %}
 
-### What tools to use?
-
-* There are in total around 58 passive DNS sources that we can query([list](https://gist.github.com/sidxparab/22c54fd0b64492b6ae3224db8c706228)). It's difficult to manually query these third-party services. Thus, various tools are developed which do this work on our behalf.
-* We can also scrape the data from the Internet Archives.
-* Organizations host their source code on Github; as well as security researchers post their recon data which may contain subdomains of our target.  &#x20;
-
-1. **Passive DNS gathering tools**
+1. **Passive DNS enumeration tools**
    * [Amass](https://github.com/OWASP/Amass)
    * [Subfinder](https://github.com/projectdiscovery/subfinder)
    * [Assetfinder](https://github.com/tomnomnom/assetfinder)
    * [Findomain](https://github.com/Findomain/Findomain)
 2. **Internet Archive**
-   * [gau-plus](https://github.com/bp0lr/gauplus)
+   * [gau](https://github.com/lc/gau)
    * [waybackurls](https://github.com/tomnomnom/waybackurls)
 3. **Github Scraping**
    * [github-subdomains](https://github.com/gwen001/github-subdomains)
-4. **The Rapid7 Project Sonar**
-   * [Crobat](https://github.com/Cgboal/SonarSearch)
+4. **GitLab Scraping**
+   * [gitlab-subdomains](https://github.com/gwen001/gitlab-subdomains)
 
 
 
-## A) Passive DNS gathering tools&#x20;
 
-### 1) [Amass](https://github.com/OWASP/Amass)
+
+## <mark style="color:orange;">A) Passive DNS gathering tools</mark>&#x20;
+
+### <mark style="background-color:blue;">1) Amass</mark>
 
 * **Author:** [OWASP](https://github.com/OWASP) (mainly [caffix](https://github.com/caffix)).
 * **Language**: Go
-* **Total Passive Sources**: **58**&#x20;
+* **Total Passive Sources**: **82**&#x20;
 
-**Amass** is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. This is because it queries the most number of third-party services which results in more subdomains of a particular target. [These](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are sources that amass queries.
+[**Amass** ](https://github.com/owasp-amass/amass)is a Swiss army knife for subdomains enumeration that outperforms passive enumeration the best. Amass queries the most number of third-party services which results in more subdomains of a particular target. [**These**](https://gist.github.com/sidxparab/e625a264322e4c9db3c3f1844b4a00b6) are passive services that amass queries.
 
-### Configuring amass:
+### :gear: Configuring amass:
 
-* Since amass written in Go, you need your Go environment properly set up. ([Steps](https://gist.github.com/sidxparab/e3856c5e27b8a9b27b5b4911eb9e4ae6) to setup Go environment)
+* Since amass written in Go, you need your Go environment properly set up([Steps](https://gist.github.com/sidxparab/e3856c5e27b8a9b27b5b4911eb9e4ae6) to setup Go environment)
 
 **Installation:**
 
 ```bash
-go get -v github.com/OWASP/Amass/v3/...
+go install -v github.com/owasp-amass/amass/v3/...@master
 ```
 
 **Setting up Amass config file:**
 
-* ****[**Link** ](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)to my amass config file for reference.
+* [**Link**](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642) to my amass config file for reference.
+* To make it possible for Amass to query the passive DNS datasets, it necessary for us to setup the API keys of those services in the Amass configuration file.
 * By default, amass config file is located at `$HOME/.config/amass/config.ini`&#x20;
-* Amass uses API keys mentioned in the config to query the third-party passive DNS sources.
-* There are in total **18 services** on which you can signup and assign yourself with a free API key that will be used to query the large datasets.
 
 {% hint style="info" %}
-Check **** [**this** ](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)article on how to create API keys
+To get to know to create API keys, check out [**this article**](https://dhiyaneshgeek.github.io/bug/bounty/2020/02/06/recon-with-me/)**.**
 {% endhint %}
 
 * Now let's set up our API keys in the `config.ini`config file.
-* Open the config file in a text editor and then uncomment the required lines and add your API keys
-* Refer to my config file(this is exactly how your amass config file should be).&#x20;
+* Open the config file in a text editor and then uncomment the required lines and add your API keys.
+* Refer to [my config file](https://gist.github.com/sidxparab/b4ffb99c98136dc4a238cbb88a77f642)(this is exactly how your amass config file should be)
 
-```php
-# https://otx.alienvault.com (Free)
-[data_sources.AlienVault]
+<pre class="language-bash"><code class="lang-bash"><strong># https://otx.alienvault.com (Free)
+</strong>[data_sources.AlienVault]
 [data_sources.AlienVault.Credentials]
 apikey = dca0d4d692a6fd757107333d43d5f284f9a38f245d267b1cd72b4c5c6d5c31
 
-#How to Add 2 API keys for a single service
 
-# https://app.binaryedge.com (Free)
-[data_sources.BinaryEdge]
+<strong>#How to Add 2 API keys for a single service
+</strong><strong># https://app.binaryedge.com (Free)
+</strong>[data_sources.BinaryEdge]
 ttl = 10080
 [data_sources.BinaryEdge.account1]
 apikey = d749e0d3-ff9e-gcd0-a913-b5e62f6f216a
 [data_sources.BinaryEdge.account2]
 apikey = afdb97ff-t65e-r47f-bba7-c51dc5d83347
-```
+</code></pre>
 
 ### **Running Amass:**
 
@@ -96,41 +92,39 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 * **config** - Specify the location of your config file (default: `$HOME/.config/amass/config.ini` )
 * **o** - Output filename
 
-&#x20; ****  :man\_mage: **Tip**:- After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:-
-
-```bash
-amass enum -list -config config.ini
-```
+{% hint style="success" %}
+:man\_mage:**Tip**: After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:\
+_amass enum -list -config config.ini_
+{% endhint %}
 
 ###
 
-### 2) [Subfinder](https://github.com/projectdiscovery/subfinder)
+### <mark style="background-color:blue;">2) Subfinder</mark>
 
 * **Author**: [projectdiscovery](https://github.com/projectdiscovery)
 * **Language**: Go
-* **Total Passive Sources**: **32**
+* **Total Passive Sources**: **38**
 
-**Subfinder** tool provides the most number of subdomains compared to any other tool :rocket: . After all, it's been developed by the great [ProjectDiscovery](https://projectdiscovery.io/) team on whose tools most security researchers depend upon. So, by setting up API keys will definitely provide you more subdomains. Simply, the best.
+[**Subfinder** ](https://github.com/projectdiscovery/subfinder)is yet another great tool that one should have in their pipeline. There are some unique sources that subfinder queries for, that amass doesn't. This tool is been developed by the famous ProjectDiscovery team, who's tools are used by every other bugbounty hunter.
 
-### Configuring Subfinder: :gear:&#x20;
+### :gear:Configuring Subfinder: &#x20;
 
 **Installation:**
 
 ```bash
-GO111MODULE=on go get -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-**Setting up Subfinder config file:**&#x20;
+**Setting up Subfinder configuration file:**&#x20;
 
-* Subfinder's default config file location is at `$HOME/.config/subfinder/config.yaml`&#x20;
-* When you install subfinder for the first time the config file doesn't get generated, hence you should run `subfinder -h` command to get it generated.
-* For subfinder you can obtain free API keys by signing up on 18 Passive DNS sources. (here the list of sources)
+* Subfinder's default config file location is at _`$HOME/.config/subfinder/provider-config.yaml`_&#x20;
+* After your first installation, if you didn't find the configuration file populated by default run the following command again `subfinder` in order to get it generated.&#x20;
 * The subfinder config file follows YAML(YAML Ain't Markup Language) syntax. So, you need to be careful that you don't break the syntax. It's better that you use a text editor and set up syntax highlighting.&#x20;
 
 **Example config file:-**
 
-* ****[**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) **** to my subfinder config file for reference.
-* Some passive sources like `Censys` , `PassiveTotal` have 2 keys like APP-Id & Secret. For such sources, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
+* [**Link**](https://gist.github.com/sidxparab/ba50e138e5c912c7c59532ce38399d1b) to my subfinder config file for reference.
+* Some passive sources like `Censys` , `PassiveTotal` use 2 keys in combination in order to authenticate a user. For such services, both values need to be mentioned with a colon(:) in between them. _(Check how have I mentioned the "Censys" source values- `APP-id`:`Secret` in the below example )_
 * Subfinder automatically detects its config file only if at the default position.&#x20;
 
 ```yaml
@@ -143,12 +137,8 @@ github:
   - d23a554bbc1aabb208c9acfbd2dd41ce7fc9db39
   - asdsd54bbc1aabb208c9acfbd2dd41ce7fc9db39
 passivetotal:
-  - sample-email@user.com:sample_password
+  - sample-email@user.com:password123
 ```
-
-{% hint style="info" %}
-****:man\_mage: **Tip:-** You can verify your YAML config file syntax on [yamllint.com](http://www.yamllint.com/)
-{% endhint %}
 
 ### **Running Subfinder:**
 
@@ -162,13 +152,13 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 * **all** - Use all passive sources (slow enumeration but more results)
 * **config** - Config file location
 
-{% hint style="info" %}
+{% hint style="success" %}
 :man\_mage: **Tip:-** To view the sources that require API keys `subfinder -ls` command
 {% endhint %}
 
-### ****
+###
 
-### **3)** [**Assetfinder**](https://github.com/tomnomnom/assetfinder)****
+### <mark style="background-color:blue;">**3) Assetfinder**</mark>
 
 * **Author**:  [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
@@ -177,7 +167,7 @@ subfinder -d example.com -all -config config.yaml -o output.txt
 Don't know why did I include this tool:joy:just because its build by the legend [Tomnomnom](https://twitter.com/TomNomNom) ?  It doesn't give any unique subdomains compared to other tools but it's extremely fast.
 
 ```bash
-go get -u github.com/tomnomnom/assetfinder
+go install github.com/tomnomnom/assetfinder@latest
 ```
 
 **Running:**
@@ -188,13 +178,13 @@ assetfinder --subs-only example.com > output.txt
 
 ###
 
-### 4) [Findomain](https://github.com/Findomain/Findomain)
+### <mark style="background-color:blue;">4) Findomain</mark>
 
 * **Author**: [Edu4rdSHL](https://github.com/Edu4rdSHL)
 * **Language**: Rust
-* **Total Passive sources**: 16
+* **Total Passive sources**: 21
 
-**Findomain** is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. Has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
+[**Findomain** ](https://github.com/Findomain/Findomain)is one of the standard subdomain finder tools in the industry. Another extremely fast enumeration tool. It also has a paid version that offers much more features like subdomain monitoring, resolution, less resource consumption.&#x20;
 
 ### Configuring Findomain: :gear:&#x20;
 
@@ -203,10 +193,10 @@ assetfinder --subs-only example.com > output.txt
 * Depending on your architecture download binary from [here](https://github.com/Findomain/Findomain/wiki/Installation#using-upstream-precompiled-binaries)
 
 ```bash
-wget -N -c https://github.com/Findomain/Findomain/releases/latest/download/findomain-linux
-mv findomain-linux /usr/local/bin/findomain
+wget -N -c https://github.com/Findomain/Findomain/releases/download/9.0.0/findomain-linux.zip
+unzip findomain-linux.zip
+mv findomain /usr/local/bin/findomain
 chmod 755 /usr/local/bin/findomain
-strip -s /usr/local/bin/findomain
 ```
 
 **Configuration:-**
@@ -216,7 +206,6 @@ strip -s /usr/local/bin/findomain
 
 ```bash
 export findomain_virustotal_token="API_KEY"
-export findomain_spyse_token="API_KEY"
 export findomain_fb_token="API_KEY"
 ```
 
@@ -228,91 +217,101 @@ findomain -t example.com -u output.txt
 
 **Flags:-**
 
-* **t** - target domain
-* **u** output file
+* **t** - Target domain
+* **u** - Output file
 
-## B) Internet Archives
 
-Internet Archives are web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of any website that once existed. These can be a useful source to grab subdomains of a particular target that once existed and perform permutations on them to get more valid subdomains.
 
-Internet Archive when queried gives back URLs.Since we are only concerned with the subdomains, we need to process those URLs to grab only unique subdomains from them. &#x20;
 
-For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). When given URLs through `stdin` along with the "domain" flag, it extracts the domain part from them.
 
-### 5) [Gauplus](https://github.com/bp0lr/gauplus)
+## <mark style="color:orange;">B) Internet Archives</mark>
 
-* **Author**: [bpl0r](https://github.com/bp0lr)
+Internet Archives deploy their own web crawlers and indexing systems that crawl each website on the internet. Hence, they have historical data of all the websites that once existed. hence, Internet Archives can be a useful source to grab subdomains of a particular target that once existed and later perform permutations(more on this later) on them to get more valid subdomains.
+
+Internet Archive when queried gives back URLs. Since we are only concerned with the subdomains, we need to process those URLs to grab only unique FQDN subdomains from them. &#x20;
+
+For this, we use a tool called [unfurl](https://github.com/tomnomnom/unfurl). This tool helps to extract the domain name from a list of URLs.&#x20;
+
+### <mark style="background-color:blue;">5) Gau</mark>
+
+* **Author**: [lc](https://github.com/lc)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [web.archive.org](http://web.archive.org/)
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
   * [otx.alienvault.com](https://otx.alienvault.com/)
+  * [urlscan.io](https://urlscan.io/)
 
-Gauplus extracts data from internet crawling services. I prefer Gauplus than the original [gau](https://github.com/lc/gau) as sometimes it returns more results, as well as execution, completes faster than the original one.
+[**Gau** ](https://github.com/lc/gau)works by querying all the above 4 internet archive services and grabs all the URLs that their internet-wide crawler had once crawled. So through this process we get tons of URL's belonging to our target that once existed. After collecting the URLs we extract only the domain/subdomain part from those URLs.
 
 #### Installation:
 
 ```bash
-GO111MODULE=on go get -u -v github.com/bp0lr/gauplus
+go install github.com/lc/gau/v2/cmd/gau@latest
 ```
 
 #### Running gauplus:
 
 ```bash
- gauplus -t 5 -random-agent -subs example.com |  unfurl -u domains | anew output.txt
+gau --threads 5 --subs example.com |  unfurl -u domains | sort -u -o output_unfurl.txt
 ```
 
 **Flags:**
 
-* **t** - threads
-* **random-agent** - use random agents while querying&#x20;
-* **subs** -  include subdomains of the target domain
+* **threads** - How many workers to spawn
+* **subs** -  Include subdomains of the target domain
 
-### **6)** [**Waybackurls**](https://github.com/tomnomnom/waybackurls)****
+
+
+### <mark style="background-color:blue;">**6) Waybackurls**</mark>
 
 * **Author**: [tomnomnom](https://github.com/tomnomnom)
 * **Language**: Go
 * **Sources**:
-  * &#x20;[web.archive.org](http://web.archive.org/)
+  * [web.archive.org](http://web.archive.org/)
   * [index.commoncrawl.org](http://index.commoncrawl.org/)
-  * ****[www.virustotal.com](https://www.virustotal.com)
+  * [www.virustotal.com](https://www.virustotal.com)
 
-Waybackurls returns some unique data that gauplus/gau couldn't find as the sources are different. Hence, we need to include waybackurls in our arsenal.
+[**Waybackurls**](https://github.com/tomnomnom/waybackurls) works similar to Gau, but I have found that it returns some unique data that Gau couldn't find. Hence, we need to include waybackurls in our arsenal.
 
 #### Installation:
 
 ```bash
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 ```
 
 #### &#x20;**Running Waybackurls:**
 
 ```bash
-waybackurls example.com |  unfurl -u domains | sort -u output.txt
+waybackurls example.com |  unfurl -u domains | sort -u -o output.txt
 ```
 
 
 
-## C) Github Scraping
 
-### 7) [Github-subdomains](https://github.com/gwen001/github-subdomains)
+
+
+
+## <mark style="color:orange;">C) GitHub Scraping</mark>
+
+### <mark style="background-color:blue;">7) Github-subdomains</mark>
 
 * **Author**: [gwen001](https://github.com/gwen001)
 * **Language**: Go
 
-&#x20;**** Its often seen that organizations host their source on GitHub. Also, various security researchers host their recon data in public repositories. Github-subdomains tool helps to extract subdomains of your target from github.
+Organizations sometimes host their source code on GitHub, also employees working at these organizations sometimes leak the source code on GitHub. Additionally, I have came around instances where security researchers host their reconnaissance data in public repositories. The tool Github-subdomains can help you extract these exposed/leaked subdomains of your target from GitHub.
 
 **Installation:**
 
 ```bash
-go get -u github.com/gwen001/github-subdomains
+go install github.com/gwen001/github-subdomains@latest
 ```
 
-**Configuring github-subdomains​​:** :gear:&#x20;
+:gear:**Configuring github-subdomains​​:**&#x20;
 
-* For github-subdomains to scrap domains from GitHub you need to specify a list of github access tokens.
-* [Here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) is an article on how to make these access tokens.
-* These access tokens are used by the tool to perform searches and find data on behalf of you.
+* For github-subdomains to scrap domains from GitHub you need to specify a list of GitHub access tokens.
+* [**Here**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-personal-access-token-classic) is an article on how you can generate your GitHub access tokens.
+* These access tokens are used by the tool to perform searches and find subdomains on behalf of you.
 * I always prefer that you make at least 10 tokens from 3 different accounts(30 in total) to avoid rate limiting.&#x20;
 * Specify 1 token per line.
 
@@ -328,11 +327,13 @@ github-subdomains -d example.com -t tokens.txt -o output.txt
 * **t** - file containing tokens
 * **o** - output file
 
-## **D)** Rapid7 Project Sonar dataset
 
-[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [12 different datasets](https://opendata.rapid7.com/) with a total size of over **45.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
 
-So this internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
+## ~~**D)** Rapid7 Project Sonar dataset(depreciated)~~
+
+[Project Sonar](https://opendata.rapid7.com/about/) is a security research project by Rapid7 that conducts internet-wide scans. Rapid7 has been generous and made this data freely available to the public. Project Sonar contains [8 different datasets](https://opendata.rapid7.com/) with a total size of over **66.6 TB** which are updated on a regular basis. You can read here how you can parse these datasets on your own using this [guide](https://0xpatrik.com/project-sonar-guide/).&#x20;
+
+This internet-wide DNS dataset could be an excellent resource for us to grab our subdomains right? But querying such large datasets could take up significant time. That's when **Crobat** comes to the rescue.
 
 ### 8) [Crobat](https://github.com/Cgboal/SonarSearch)
 
@@ -357,7 +358,13 @@ crobat -s example.com > output.txt
 
 * **s** - Target Name
 
-## ****:checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
+
+
+
+
+
+
+## :checkered\_flag:**That's it !!! Done with passive things** :checkered\_flag:&#x20;
 
 #### Liked my work? Don't hesitate to buy me a coffee XDD
 

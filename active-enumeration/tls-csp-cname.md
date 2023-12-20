@@ -2,31 +2,31 @@
 
 ## 1) TLS Probing
 
-Nowadays generally all websites use HTTPS(HyperText Transfer Protocol Secure). In order to use HTTPS, the website owner needs to issue an SSL(Secure Socket Layer) certificate.
+Nowadays generally all websites communicate over HTTPS(HyperText Transfer Protocol Secure). In order to use HTTPS, the website owner needs to issue an SSL(Secure Socket Layer) certificate.
 
-This SSL/TLS(Transport Layer Security) certificate sometimes contains domains/subdomains belonging to the same organization.
+This SSL/TLS(Transport Layer Security) certificate contains hostname belonging to the same organization.
 
 Clicking on the "Lock🔒" button in the address bar, you can view the TLS/SSL certificate of any website.
 
-![Hackerone.com contain these subdomains in its TLS certificate](../../.gitbook/assets/TLS.png)
+![Hackerone.com contain these subdomains in its TLS certificate](../.gitbook/assets/TLscert\_yahoo.png)
 
 
 
-For this purpose, we will be using a tool called [**Cero**](https://github.com/glebarez/cero)****
+For this purpose, we will be using a tool called [**Cero**](https://github.com/glebarez/cero)
 
 #### Installation:
 
-```
-go get -u github.com/glebarez/cero
+```bash
+go install github.com/glebarez/cero@latest
 ```
 
 #### Running:
 
-```
-cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | anew 
+```bash
+cero in.search.yahoo.com | sed 's/^*.//' | grep -e "\." | sort -u
 ```
 
-![](../../.gitbook/assets/cero.png)
+![](../.gitbook/assets/ceroo\(1\).png)
 
 ## 2) CSP Probing
 
@@ -38,13 +38,7 @@ Hence, these subdomains can be helpful for us. In the below image we can see I e
 cat subdomains.txt | httpx -csp-probe -status-code -retries 2 -no-color | anew csp_probed.txt | cut -d ' ' -f1 | unfurl -u domains | anew -q csp_subdomains.txt
 ```
 
-![](../../.gitbook/assets/csp.png)
-
-
-
-
-
-
+![](../.gitbook/assets/csp.png)
 
 ## 3) CNAME Probing
 
