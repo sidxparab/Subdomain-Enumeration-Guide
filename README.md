@@ -4,9 +4,9 @@ description: Comprehensive Subdomain Enumeration Guide
 
 # Home 🏠
 
-## Subdomain Enumeration Guide 2023 📖
+## Subdomain Enumeration Guide 2024 📖
 
-This guide contains all the needed knowledge for performing a good subdomain enumeration. I have tried to cover each technique and explained it from a beginner's perspective. Each of the techniques used has a detailed explanation about why this technique was used and how to perform them. I have tried to link various gists, charts, statistics for a better understanding of the concept.
+This guide contains all the required knowledge for performing a good subdomain enumeration. I have tried to cover each technique and explained it from a beginner's perspective. Each of the techniques used has a detailed explanation about why this technique was used and how to perform them. I have tried to link various gists, charts, statistics for a better understanding of the concept.
 
 There exists various tools over the internet which perform the same tasks. So, I have tried to include only those tools that yield the best results compared to other tools from the same category.
 
@@ -18,11 +18,11 @@ Last but not the least, I would like to thank [**six2dez**](https://twitter.com/
 
 
 
-**Twitter**: [@sidxparab](https://twitter.com/sidxparab)
+**Twitter**:   [@sidxparab](https://twitter.com/sidxparab)
 
 **LinkedIn**: [@sidxparab](https://www.linkedin.com/in/sidxparab/)
 
-**Medium**: [@sidxparab](https://medium.com/@sidxparab)
+**Medium**:  [@sidxparab](https://medium.com/@sidxparab)
 
 ## Support 🙏 :heart:
 
