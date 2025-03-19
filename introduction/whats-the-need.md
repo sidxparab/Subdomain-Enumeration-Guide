@@ -33,14 +33,14 @@ An FQDN looks like this:-
 
 
 **Hence;**\
-[**https://**example.com](https://example.com)\
-[**http://**myhost.example.com](http://myhost.example.com)\
-[**https://**internal.accounts.example.com  ](https://internal.accounts.example.com)\
-[**http://**internal.accounts.dashboard.example.com](https://internal.accounts.dashboard.example.com)
+[**https://**&#x65;xample.com](https://example.com)\
+[**http://**&#x6D;yhost.example.com](http://myhost.example.com)\
+[**https://**&#x69;nternal.accounts.example.com  ](https://internal.accounts.example.com)\
+[**http://**&#x69;nternal.accounts.dashboard.example.com](https://internal.accounts.dashboard.example.com)
 
 The above-mentioned **cannot** be called as subdomains. They are the hyperlinks to web applications hosted the respective hosts. Most people have a misconception that these are subdomains of a particular target.
 
-Let's consider an example, **`admin.example.com`**  is a subdomain on which there isn't any web service hosted. This means that, when we send web probes to `admin.example.com` using [httpx](https://github.com/projectdiscovery/httpx)/[httprobe ](https://github.com/tomnomnom/httprobe)**(**tools that check whether any web service is running on that host), it will not return any output.
+Let's consider an example, **`admin.example.com`**  is a subdomain on which there isn't any web service hosted. This means that, when we send web probes to `admin.example.com` using [httpx](https://github.com/projectdiscovery/httpx)/[httprobe ](https://github.com/tomnomnom/httprobe)**(**&#x74;ools that check whether any web service is running on that host), it will not return any output.
 
 This doesn't mean that `admin.example.com` is not a valid subdomain of root domain `example.com`There may exists other services like SSH, SMTP, SMB, WinRM(non-web) hosted on that subdomain that cannot be accessed through your web browser. Surprisingly these services may be vulnerable and their exploits would be publicly available. \
 \

@@ -51,7 +51,7 @@ Effective detection of wildcards are key to get accurate results. If wildcards a
 
 **4) Validating results with trusted resolvers**
 
-Once, all the alive subdomains are found, puredns again runs the DNS resolution process over the obtained lists again in order to filter out false-positives. But the catch here is that, this DNS resolution process uses "[**Trusted DNS resolvers**](https://raw.githubusercontent.com/six2dez/resolvers\_reconftw/main/resolvers\_trusted.txt)" inorder to verify the results for the final time. This double resolution process helps in discarding those false-positive results. The main advantage of using Trusted DNS resolvers like Google DNS (`8.8.8.8` , `8.8.4.4`), Cloudflare(`1.1.1.1`) is to avoid DNS poisoned responses or other discrepancies that normal resolvers cause.
+Once, all the alive subdomains are found, puredns again runs the DNS resolution process over the obtained lists again in order to filter out false-positives. But the catch here is that, this DNS resolution process uses "[**Trusted DNS resolvers**](https://raw.githubusercontent.com/six2dez/resolvers_reconftw/main/resolvers_trusted.txt)" inorder to verify the results for the final time. This double resolution process helps in discarding those false-positive results. The main advantage of using Trusted DNS resolvers like Google DNS (`8.8.8.8` , `8.8.4.4`), Cloudflare(`1.1.1.1`) is to avoid DNS poisoned responses or other discrepancies that normal resolvers cause.
 
 ### Installing Puredns:
 
@@ -124,8 +124,8 @@ The whole effort of DNS bruteforcing is a waste if you don't use a good subdomai
 **1) Assetnote** [**best-dns-wordlist.txt**](https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt) (**9 Million**) ⭐\
 [Assetnote](https://wordlists.assetnote.io/) wordlists are the best. No doubt this is the best subdomain bruteforcing wordlist. But highly recommended that you run this in your VPS. Running on a home system will take hours also the results wouldn't be accurate. This wordlist will definitely give you those hidden subdomains.
 
-**2) n0kovo** [**n0kovo\_subdomains\_huge.txt**](https://github.com/n0kovo/n0kovo\_subdomains/blob/main/n0kovo\_subdomains\_huge.txt) (**3 Million**)\
-[N0kovo ](https://github.com/n0kovo)created this wordlist by scanning the whole IPv4 and collecting all the subdomain names from the TLS certificates. You can check out [this blog](https://n0kovo.github.io/posts/subdomain-enumeration-creating-a-highly-efficient-wordlist-by-scanning-the-entire-internet/#benchmarking-) to see how good this bruteforcing wordlist performs as compared other big wordlists. So, if you are target contains a lot of wildcards this would be best wordlist for bruteforcing_(considering the computation bottleneck for wildcard filtering)._
+**2) n0kovo** [**n0kovo\_subdomains\_huge.txt**](https://github.com/n0kovo/n0kovo_subdomains/blob/main/n0kovo_subdomains_huge.txt) (**3 Million**)\
+[N0kovo ](https://github.com/n0kovo)created this wordlist by scanning the whole IPv4 and collecting all the subdomain names from the TLS certificates. You can check out [this blog](https://n0kovo.github.io/posts/subdomain-enumeration-creating-a-highly-efficient-wordlist-by-scanning-the-entire-internet/#benchmarking-) to see how good this bruteforcing wordlist performs as compared other big wordlists. So, if you are target contains a lot of wildcards this would be best wordlist for bruteforcin&#x67;_(considering the computation bottleneck for wildcard filtering)._
 
 **3) Smaller** [**wordlist**](https://gist.github.com/six2dez/a307a04a222fab5a57466c51e1569acf/raw) (**102k** )\
 Created by [six2dez](https://github.com/six2dez) is suitable to be run if you are using your personal computer which is consuming your home wifi router internet.\

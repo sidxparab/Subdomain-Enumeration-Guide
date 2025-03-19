@@ -22,7 +22,7 @@ Gotator is DNS wordlist generator tool. It is used to generate various combinati
 ### Features:
 
 * Permute numbers up and down (**dev2** --> `dev0`, `dev1`, `dev2`, `dev3`,`dev4`)
-* 3 levels of depth (**`dev`.`demo`.`admin`.**example.com)
+* 3 levels of depth (**`dev`.`demo`.`admin`.**&#x65;xample.com)
 * Controls generation of duplicate permutations
 * Option to add external permutation list
 * Option to permute amongst the subdomains

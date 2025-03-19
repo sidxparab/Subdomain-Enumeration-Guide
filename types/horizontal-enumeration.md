@@ -4,7 +4,7 @@ While performing a security assessment our main goal is to map out all the root 
 
 From the below image you can get an idea of what a **horizontal domain correlation** is:
 
-![](../.gitbook/assets/enumeration-2-.png)
+![](<../.gitbook/assets/Enumeration (2).png>)
 
 \
 Let's look at how to find these related horizontal domains.
@@ -84,7 +84,7 @@ This means that, since we already know the IP space of an organization we can, w
 **But how?**\
 DNS PTR records (pointer record) helps us to achieve this. Using [**dnsx**](https://github.com/projectdiscovery/dnsx) tool we can query a PTR record of an IP address and find the associated hostname/domain name.
 
-**Apple Inc.** :apple:  owns **ASN714** which represents IP range **17.0.0.0/8.** So now, lets perform reverse DNS queries to find out the domain names**.**
+**Apple Inc.** :apple:  owns **ASN714** which represents IP range **17.0.0.0/8.** So now, lets perform reverse DNS queries to find out the domain name&#x73;**.**
 
 ### Running:
 

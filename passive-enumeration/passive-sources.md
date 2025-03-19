@@ -94,7 +94,7 @@ amass enum -passive -d example.com -config config.ini -o output.txt
 
 {% hint style="success" %}
 :man\_mage:**Tip**: After configuring your config file in order to verify whether the API keys have been correctly set up or not you can use this command:\
-_amass enum -list -config config.ini_
+&#xNAN;_&#x61;mass enum -list -config config.ini_
 {% endhint %}
 
 ###

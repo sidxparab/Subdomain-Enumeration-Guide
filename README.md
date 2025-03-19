@@ -4,17 +4,17 @@ description: Comprehensive Subdomain Enumeration Guide
 
 # Home 🏠
 
-## Subdomain Enumeration Guide 2024 📖
+## Subdomain Enumeration Guide 2025 📖
 
-This guide contains all the required knowledge for performing a good subdomain enumeration. I have tried to cover each technique and explained it from a beginner's perspective. Each of the techniques used has a detailed explanation about why this technique was used and how to perform them. I have tried to link various gists, charts, statistics for a better understanding of the concept.
+Welcome to the 2025 edition of the Subdomain Enumeration Guide! This comprehensive guide is designed to equip you with all the knowledge needed to perform effective subdomain enumeration. I’ve made sure to explain each technique in a way that's easy to understand, especially for beginners. You’ll find detailed explanations of why each technique is used and step-by-step instructions on how to implement them.
 
-There exists various tools over the internet which perform the same tasks. So, I have tried to include only those tools that yield the best results compared to other tools from the same category.
+Throughout the guide, I’ve linked to various gists, charts, and statistics to provide a deeper understanding of the concepts. Since there are many tools available online that can perform subdomain enumeration, I’ve focused on highlighting the ones that consistently deliver the best results compared to others in the same category.
 
-I encourage y'all to go through this guide and try to build your **own reconnaissance methodology**. I believe each one should have their own methodology and keep trying out new things and find out which fits best for them.&#x20;
-
-I'm too a beginner in this field and have tried my best to explain the right concepts. If you think any of the content is wrongly explained, I am always open to listening to you.
+I encourage you to go through the guide and develop your **own reconnaissance methodology**. Everyone has their unique approach, and I believe experimenting with different techniques will help you discover what works best for you. While I’m also a beginner in this field, I’ve put in my best effort to explain the concepts clearly. If you find any inaccuracies or areas that need improvement, please don’t hesitate to reach out—I’m always open to feedback.
 
 Last but not the least, I would like to thank [**six2dez**](https://twitter.com/Six2dez1) for supporting and helping me during my learning phase, who's outcome you can see in this guide.
+
+Happy learning and happy hunting!
 
 
 

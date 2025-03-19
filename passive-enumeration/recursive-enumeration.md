@@ -14,9 +14,9 @@ For a better understanding look at the image below:
 
 ### Things to keep in mind:
 
-* This technique is only useful when your target has a large number of multi-level subdomains_(not effective for small & medium scope targets)._
+* This technique is only useful when your target has a large number of multi-level subdomain&#x73;_(not effective for small & medium scope targets)._
 * It is recommended to execute this technique as the final step, exclusively on a validated list of subdomains that you have collected through other Passive + Active techniques.
-* This techniques may consume all your passive DNS service's API keys quota_(if they are configured)._&#x20;
+* This techniques may consume all your passive DNS service's API keys quot&#x61;_(if they are configured)._&#x20;
 * This techniques takes time to return the final results.
 
 ### Workflow:

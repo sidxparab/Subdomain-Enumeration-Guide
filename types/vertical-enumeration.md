@@ -4,7 +4,7 @@ Vertical Enumeration or Vertical domain correlation is a process of finding out 
 
 Here, we find different levels of subdomains of a particular root/main domain.
 
-![](../.gitbook/assets/enumeration-2-.png)
+![](<../.gitbook/assets/Enumeration (2).png>)
 
 Vertical Enumeration can be performed with the help of below mentioned techniques:&#x20;
 
