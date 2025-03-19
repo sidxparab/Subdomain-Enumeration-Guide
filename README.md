@@ -14,8 +14,7 @@ I encourage you to go through the guide and develop your **own reconnaissance me
 
 Last but not the least, I would like to thank [**six2dez**](https://twitter.com/Six2dez1) for supporting and helping me during my learning phase, who's outcome you can see in this guide.
 
-Happy learning and happy hunting!
-
+Happy learning and happy hunting!\
 
 
 **Twitter**:   [@sidxparab](https://twitter.com/sidxparab)
